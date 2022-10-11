@@ -8,8 +8,8 @@
       "index": {
         "title": "Playstreets Brussels",
         "description": "Everything you need to organize a playstreet in Brussels",
-        "image": "https://playstreets.brussels/cryptoartbrussels-logo.jpg",
-        "favicon": "https://playstreets.brussels/favicon.gif",
+        "image": "/images/playstreets.brussels/cover-color.png",
+        "favicon": "/images/playstreets.brussels/favicon.png",
         "googleDocId": "1ZnK8rr87bmMoQGGLEMvqezDDfQUoc8PgcgMC69F0xkM"
       }
     }
@@ -36,9 +36,9 @@
       "index": {
         "title": "All for Climate DAO",
         "description": "A community of active citizens creating a more sustainable future",
-        "image": "https://dao.allforclimate.earth/images/allforclimate-logo-black.png",
-        "favicon": "/images/allforclimate-favicon.png",
-        "icon": "/images/allforclimate-icon-black.png",
+        "image": "/images/allforclimate.earth/allforclimate-logo-black.png",
+        "favicon": "/images/allforclimate.earth/allforclimate-favicon.png",
+        "icon": "/images/allforclimate.earth/allforclimate-icon-black.png",
         "googleDocId": "1QPGenxAvjHlnonviYQrjqrdFHDsvX8UEqBrIyn5wZpM"
       },
       "values": {
@@ -142,8 +142,8 @@
       "index": {
         "title": "DAO Brussels - crypto citizens of Brussels",
         "description": "The community of Crypto Citizens of Brussels. Join us to meet fellow citizens interested in crypto, web3, DAOs, cryptoart, NFTs, DeFI, ReFI, ...",
-        "image": "https://dao.brussels/images/DAOBrussels-logo-300px.jpg",
-        "favicon": "https://dao.brussels/favicon.gif",
+        "image": "/images/dao.brussels/DAOBrussels-logo-300px.jpg",
+        "favicon": "/images/dao.brussels/favicon.gif",
         "googleDocId": "1_RcH-bZdOTicDFoPSn3Vw86WOc6RawRcMrHAcuaeVKU"
       },
       "events": {
@@ -187,7 +187,7 @@
       "index": {
         "title": "Citizen Spring 🌻",
         "description": "Citizen initiatives to rebuild local communities",
-        "image": "https://citizenspring.earth/citizenspring-logo-flower-transparent-medium.png",
+        "image": "/images/citizenspring.earth/citizenspring-logo-flower-transparent-medium.png",
         "favicon": "/favicon.png",
         "googleDocId": "1gEw7u-Fh3ZDhqy_qCzvyMKIHt7o9Ac584kcJQrEjceg"
       },
@@ -210,7 +210,7 @@
         "title": "Citizen Spring Academy 🌱🌻",
         "description": "Get €5.000 to start a new sustainable place in Brussels with the help of a fellow citizen entrepreneur.",
         "googleDocId": "1Ru5vxtTuOQOsOldapez1DaLUBatQjdf2tXI_WCrRrz8",
-        "image": "https://citizenspring.earth/citizenspring-academy-fb.png"
+        "image": "/images/citizenspring.earth/citizenspring-academy-fb.png"
       },
       "house": {
         "googleDocId": "16SdrHEPc6UvyNbROeksQrFjeMSIJs_aK-mN40cjsPe8"
@@ -219,13 +219,13 @@
         "title": "Citizen Corner 🌱🌻 ",
         "description": "A place in Schaerbeek, Brussels, for citizens to meet, learn and co-create.",
         "googleDocId": "1Gpq1Jzb7GBK9YQqgKnP8K8ShU3IPPWfD93qmrepQPm4",
-        "image": "https://citizenspring.earth/citizencorner-building.jpg"
+        "image": "/images/citizenspring.earth/citizencorner-building.jpg"
       },
       "cryptoart": {
         "title": "Cryptoart Corner 🎨 💻",
         "description": "A place in the capital of europe to bring local artists to the crypto world",
         "googleDocId": "13Q7o_jQUZXRpwgpj0r9_Gr0OGrFr9jhXouf2fY9QYGs",
-        "image": "https://citizenspring.earth/cryptoartcorner.webp"
+        "image": "/images/citizenspring.earth/cryptoartcorner.webp"
       }
     }
   },
@@ -238,15 +238,15 @@
       "index": {
         "title": "Regens Unite",
         "description": "Meet fellow regens that have different pieces of the puzzle 🧩 to regenerate people 🌱, communities 🌻 and the planet 🌍",
-        "image": "/images/regensunite-banner-small.jpg",
-        "favicon": "/images/regensunite-favicon.gif",
+        "image": "/images/regensunite.earth/regensunite-banner-small.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "1hhINyD2nwdhXX3nAyaZp_T89znWaNZ4jOhAxX08nCrg"
       },
       "staging": {
         "title": "STAGING - Regens Unite - 2-day conversation to move from sustain to regen",
         "description": "May 19-20, join us in Brussels to explore together how we can move the conversation from sustain to regen.",
-        "image": "/images/regensunite-logo.gif",
-        "favicon": "/images/regensunite-favicon.gif",
+        "image": "/images/regensunite.earth/regensunite-logo.gif",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "1vRRNapSrmgHLy-si79fV3bcWh4LwrTOPZuWHeEaqGZ0"
       },
       "principles": {
@@ -277,8 +277,8 @@
       "brussels": {
         "title": "Regens Unite - 2-day conversation in Brussels to move from sustain to regen",
         "description": "Join us in Brussels to explore together how we can move the conversation from sustain to regen.",
-        "image": "/images/regensunite-banner-small-brussels-2022.jpg",
-        "favicon": "/images/regensunite-favicon.gif",
+        "image": "/images/regensunite.earth/regensunite-banner-small-brussels-2022.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "1FYy-LUa0qeEbDqnBavqcrMHLY_bzeJB2a3HWJsRydCU"
       },
       "brussels/program": {
@@ -309,8 +309,8 @@
       "berlin": {
         "title": "Regens Unite - 2-day conversation in Berlin to move from sustain to regen",
         "description": "September 16-17, join us in Berlin to explore together how we can move the conversation from sustain to regen.",
-        "image": "/images/regensunite-banner-small-berlin-2022.jpg",
-        "favicon": "/images/regensunite-favicon.gif",
+        "image": "/images/regensunite.earth/regensunite-banner-small-berlin-2022.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "16Zmy1MjANz1hwxl6BT7QlfTqlBLiEsNQrnM5YaDVi_I"
       },
       "berlin/contributions": {
@@ -331,8 +331,8 @@
       "amsterdam": {
         "title": "Regens Unite - 2-day conversation in Amsterdam to move from sustain to regen",
         "description": "September 22-24, join us in Amsterdam to explore together how we can move the conversation from sustain to regen.",
-        "image": "/images/regensunite-banner-small.jpg",
-        "favicon": "/images/regensunite-favicon.gif",
+        "image": "/images/regensunite.earth/regensunite-banner-small.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "1nyB-xpRS2o_9hF5zOcA2tMB1o-au8i7M5bAcMd8Jvck"
       },
       "amsterdam/contributions": {
@@ -353,8 +353,8 @@
       "bogota": {
         "title": "Regens Unite - 2-day conversation in Bogotá to move from sustain to regen",
         "description": "October 11-14, join us in Bogotá to explore together how we can move the conversation from sustain to regen.",
-        "image": "/images/regensunite-banner-small.jpg",
-        "favicon": "/images/regensunite-favicon.gif",
+        "image": "/images/regensunite.earth/regensunite-banner-small.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "1yTDOrz9Mno3d-KHRzJ04xylusktUiBtiEkF57uFYHuY"
       },
       "bogota/contributions": {

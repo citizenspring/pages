@@ -69,11 +69,13 @@ function Outline({ homeTitle, homeIcon, outline, onChange }) {
           <Link href="/">
             <a title="Back to homepage">
               <div className="pl-3 pt-6 flex">
-                <img
-                  src={homeIcon}
-                  alt="favicon"
-                  className="h-7 mt-8 ml-0 mr-2"
-                />
+                {homeIcon && (
+                  <img
+                    src={homeIcon}
+                    alt="favicon"
+                    className="h-7 mt-8 ml-0 mr-2"
+                  />
+                )}
                 <h2>{homeTitle}</h2>
               </div>
             </a>
