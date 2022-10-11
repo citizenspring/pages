@@ -70,6 +70,7 @@ export async function getStaticProps({ params }) {
   try {
     pageInfo = getPageMetadata(host, slug);
   } catch (e) {
+    console.log(">>> error", e);
     error = "invalid_host";
     pageInfo = {};
   }

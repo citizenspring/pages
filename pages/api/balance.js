@@ -109,7 +109,7 @@ export default async (req, res) => {
     data = await getOpenCollectiveBalance(req.query.address);
   } else {
     const apicall = api_endpoint(chain, req.query.address, req.query.token);
-    data = await fetch(apicall).then((res) => res.json());
+    data = await fetch(apicall).then((response) => response.json());
     decimals = tokenContractAddresses[chain][token].decimals;
   }
 
@@ -129,10 +129,11 @@ export default async (req, res) => {
   }
 
   if (data.message === "OK") {
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=600, stale-while-revalidate=1200"
-    );
+    res.setHeader &&
+      res.setHeader(
+        "Cache-Control",
+        "public, s-maxage=600, stale-while-revalidate=1200"
+      );
   }
 
   res.status(200).json(result);
