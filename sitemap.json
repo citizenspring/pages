@@ -14,14 +14,14 @@
       }
     }
   },
-  "docs.community": {
+  "pages.citizenspring.earth": {
     "hosts": [
-      "docs.community",
-      "docs.local"
+      "pages.citizenspring.earth",
+      "pages.local"
     ],
     "sitemap": {
       "index": {
-        "title": "docs.community: a quick website for your community",
+        "title": "pages.citizenspring.earth: a quick website for your citizen initiative",
         "description": "Create a quick website that anyone in your community can edit",
         "googleDocId": "1uYVq7EfSbRh8dP4xSaEKoLMB9B2Y-_bMtkkFX-hWDEw"
       }
