@@ -23,6 +23,176 @@ module.exports = {
         has: [
           {
             type: "host",
+            value: "drive.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://drive.google.com/drive/folders/10F8oO59nZo_Yja8Fz8utGDinCuB8VQe8?usp=sharing",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "calendar.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://calendar.google.com/calendar/embed?src=apc0sg19i1ic703d5g1d53tpss%40group.calendar.google.com&ctz=Europe%2FBrussels",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "facebook.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://facebook.com/citizencornerbxl",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "group.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://facebook.com/groups/citizencorner",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "map.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://goo.gl/maps/jXiHm57z77CLxURh8",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "donate.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://opencollective.com/citizencorner/donate",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "budget.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://opencollective.com/citizencorner",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "discord.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://discord.gg/xyxQhRft8x",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "drive.citizenspring.earth",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://drive.google.com/drive/u/0/folders/1ooAOhv3OGXAforyuYUA9i2B0kb1uP471",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "drive.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://drive.google.com/drive/folders/1r3kSwu8_w4ju0fn5TQOhg7HCQW2XwnmH",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "discord.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://discord.gg/awfSTf6EHK",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "youtube.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://www.youtube.com/channel/UClgbKT6NhY2Au6xn_TquBYg",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "calendar.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://calendar.google.com/calendar/embed?src=haijn9je0u2ci9efj7g0it8tk4%40group.calendar.google.com&ctz=Europe%2FBrussels",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "zoom.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://us02web.zoom.us/j/6025635806",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "telegram.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
             value: "drive.regensunite.earth",
           },
         ],
