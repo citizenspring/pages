@@ -229,6 +229,47 @@
       }
     }
   },
+  "citizencorner.brussels": {
+    "hosts": [
+      "citizencorner.brussels",
+      "citizencorner.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Citizen Corner Brussels",
+        "description": "A temporary occupation for citizens in Bienfaiteurs, Brussels",
+        "image": "https://citizencorner.brussels/citizencorner-building-800.jpg",
+        "googleDocId": "1Fx9CUZHLzAH-P54VlGf_zexKc05dEoBSn-WgPDntBLY"
+      },
+      "photos": {
+        "googleDocId": "11dJXCu2LY2Mb8GGPRhF-DxxbW8z4gYOUYKmtvGzThAw"
+      },
+      "events": {
+        "googleDocId": "1HsQ5uSdds1QPZL6eg6Fhdk87AgabPzGqszJ_Q3En2Xo"
+      },
+      "organise": {
+        "googleDocId": "1_wnjRjuXjw4prNZzIaZt5TqOPsAe55H6IsWKHrcczvU",
+        "aliases": [
+          "organize",
+          "pricing"
+        ]
+      },
+      "about": {
+        "googleDocId": "1cu6Rq-Qfk06Tl8jRpWtAxzLUZzqqPaJu51GX0P1MFSQ"
+      },
+      "0xbirthday": {
+        "title": "🎂 Xavier's Birthday 15/01 🎉🥳",
+        "description": "Kids friendlly afternoon, adult friendly evening. Please RSVP. At the Citizen Corner, Schaerbeek.",
+        "googleDocId": "1JDZ-8O9hzsyRiXYoImBuim0QbP11ZQAQhHlmioFix_0",
+        "image": "https://citizencorner.brussels/_next/image?url=https%3A%2F%2Flh6.googleusercontent.com%2FGGcOUBIT9G5SimknZhlBLXRDU-jZmSPEW9LEy_uAVPw5DoDuBc1XPuzs6OIeZAQepE3MKQUW86kSVzG_JXRU5JJxPdfx5TOthcx5nMcMXCKemMpmYrdpn4db_GfHQa0MwA&w=750&q=75"
+      },
+      "contribute": {
+        "title": "Citizen Corner - Contribute",
+        "description": "Looking for ways to contribute? Check out this list of things we need to keep the Citizen Corner running.",
+        "googleDocId": "1LIIf0EOpfvaEpdxVhdrmU07exELiMK3bQ8uLOLaXUlI"
+      }
+    }
+  },
   "regensunite.earth": {
     "hosts": [
       "regensunite.earth",

@@ -10,7 +10,6 @@ import sitemap from "../../sitemap.json";
 import { useEffect, useState } from "react";
 
 export async function getStaticPaths() {
-  console.log(">>> getStaticPaths");
   const paths = [];
   Object.keys(sitemap).forEach((hostKey) => {
     sitemap[hostKey].hosts.forEach((host) => {
@@ -64,14 +63,18 @@ export async function getStaticProps({ params }) {
     slug = params.path.join("/");
   }
 
-  let pageInfo;
+  let doc = {},
+    error = null,
+    pageInfo;
+
   try {
     pageInfo = getPageMetadata(host, slug);
   } catch (e) {
+    error = "invalid_host";
     pageInfo = {};
   }
 
-  const googleDocId = pageInfo.googleDocId || params.path[0];
+  const googleDocId = pageInfo.googleDocId || (params.path && params.path[0]);
 
   if (edit) {
     return {
@@ -81,11 +84,8 @@ export async function getStaticProps({ params }) {
     };
   }
 
-  let doc = {},
-    error = null;
-
   if (!googleDocId) {
-    error = "invalid_googledocid";
+    error = error || "invalid_googledocid";
   } else {
     try {
       doc = await getHTMLFromGoogleDocId(googleDocId);
