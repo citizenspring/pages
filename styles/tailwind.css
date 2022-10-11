@@ -1,0 +1,112 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  font-size: 11pt;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#outline .active {
+  color: red;
+}
+
+span {
+  font-size: 11pt;
+}
+
+.content a,
+.content span a {
+  text-decoration: none;
+  @apply no-underline text-green-600;
+}
+
+.content a:hover {
+  @apply text-green-800;
+}
+
+.content a:visited {
+  @apply text-green-500;
+}
+
+h1 {
+  @apply text-3xl mt-8 mb-4;
+}
+
+h2, h2 span,
+h3, h3 span {
+  @apply font-normal mt-8 mb-2 text-2xl;
+}
+
+h3 {
+  color: #333;
+  @apply text-xl;
+}
+
+h4 {
+  @apply mt-6 mb-2;
+}
+
+h5 {
+  @apply mt-4 mb-1;
+}
+
+hr {
+  border: none;
+  background-color: #eaeaea;
+  height: 1px;
+  width: 100%;
+  margin: 3rem 0 2rem 0;
+}
+
+div.pagebreak {
+  border-top: 1px solid;
+  @apply border-green-300 my-12 w-full;
+  height: 1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  @apply my-2;
+}
+
+ul li {
+  @apply list-disc ml-8 mt-1;
+}
+
+ol {
+  @apply px-8 my-2;
+  list-style: auto;
+}
+
+.imageWrapper.fullWidth {
+  @apply my-2 -mx-4;
+}
+
+.video {
+  @apply my-2 -mx-4;
+}
+
+img {
+  @apply my-2 -mx-4;
+  display: inline-block;
+}
+
+td {
+  @apply p-1;
+}

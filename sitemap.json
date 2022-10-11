@@ -1,0 +1,377 @@
+{
+  "playstreets.brussels": {
+    "hosts": [
+      "playstreets.brussels",
+      "playstreets.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Playstreets Brussels",
+        "description": "Everything you need to organize a playstreet in Brussels",
+        "image": "https://playstreets.brussels/cryptoartbrussels-logo.jpg",
+        "favicon": "https://playstreets.brussels/favicon.gif",
+        "googleDocId": "1ZnK8rr87bmMoQGGLEMvqezDDfQUoc8PgcgMC69F0xkM"
+      }
+    }
+  },
+  "docs.community": {
+    "hosts": [
+      "docs.community",
+      "docs.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "docs.community: a quick website for your community",
+        "description": "Create a quick website that anyone in your community can edit",
+        "googleDocId": "1uYVq7EfSbRh8dP4xSaEKoLMB9B2Y-_bMtkkFX-hWDEw"
+      }
+    }
+  },
+  "allforclimate.earth": {
+    "hosts": [
+      "dao.allforclimate.earth",
+      "dao.allforclimate.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "All for Climate DAO",
+        "description": "A community of active citizens creating a more sustainable future",
+        "image": "https://dao.allforclimate.earth/images/allforclimate-logo-black.png",
+        "favicon": "/images/allforclimate-favicon.png",
+        "icon": "/images/allforclimate-icon-black.png",
+        "googleDocId": "1QPGenxAvjHlnonviYQrjqrdFHDsvX8UEqBrIyn5wZpM"
+      },
+      "values": {
+        "title": "All for Climate DAO - our values",
+        "googleDocId": "1K93Z8xsLkkhqMoWIbAKi9Iy2ZdwWgmbgOV8io27UT54"
+      },
+      "jobs": {
+        "title": "All for Climate DAO - job offers",
+        "googleDocId": "1uQLzbZqDTI6VlcLcve1x7lQo0SMBuW37KViCa4EjqHk"
+      },
+      "workgroups": {
+        "title": "All for Climate DAO - workgroups & projects",
+        "aliases": [
+          "projects"
+        ],
+        "googleDocId": "1d2qyyfXs_tSjn7K3CWb5cRiaNHmPoEWZv-QZIOKOW8k"
+      },
+      "updates": {
+        "title": "All for Climate DAO - monthly updates",
+        "googleDocId": "1rPNM5SKvBZFJ3zF7tTB8QJJdlnpTJTfLVzwN1PwdDaE"
+      },
+      "calls": {
+        "aliases": [
+          "meetings"
+        ],
+        "title": "All for Climate DAO - calls",
+        "googleDocId": "1vK48_DBsyibGgGviG4S5opQjNqmCLdvwy4gTnTxLKuA"
+      },
+      "collectives": {
+        "title": "All for Climate DAO - collectives",
+        "googleDocId": "1xhZCvzf5lF3pjAWE3Ru9gCqwR5Wdwwpw2buMviC-GPY"
+      },
+      "collectives/ayowecca": {
+        "title": "Ayowecca - Uganda",
+        "description": "Protecting Natural Resources, Adaptation to #ClimateChange, Conservations, SRHR, Skills Development & Empowering Women & Children.",
+        "googleDocId": "17nHfcbkIliEpm3dJgGRHx8an-rMAO5LUu4FsRbaud0A"
+      },
+      "gitcoin": {
+        "title": "All for Climate DAO - Gitcoin Climate",
+        "aliases": [
+          "gitcoinclimate",
+          "gr12",
+          "gr13",
+          "gr14",
+          "gr15",
+          "gr16",
+          "gr17",
+          "gr18",
+          "gr19",
+          "gr20"
+        ],
+        "description": "Raise funds for your project with Gitcoin",
+        "googleDocId": "18dX1L5BwV0M9CHFGtEAaHoSV0ZyAG6kQMkrFTxXbaJ8"
+      },
+      "gitcoin/faq": {
+        "title": "All for Climate DAO - Gitcoin Climate - FAQ",
+        "description": "All you need to know to raise funds for your climate project with Gitcoin",
+        "googleDocId": "1zJYC0cOY_DB4JGzNuB8LJnJWn6rT_ZnHnWAa08obiFQ"
+      },
+      "gr13-pt": {
+        "title": "All for Climate DAO - Gitcoin Climate - Portuguese",
+        "description": "Arrecade fundos para o seu projeto com Gitcoin 🌱🌻",
+        "googleDocId": "1ENcBTsIDyrViKMilPAe5NV92Ar4MZzft7vSBrezFTLs"
+      },
+      "finance": {
+        "title": "All for Climate DAO - Finance Working Group",
+        "description": "Finance Working Group",
+        "googleDocId": "1hij-PDHERyNsodd39O2lvmPWbk7kZnI447wyR-1z4zA"
+      },
+      "bounties": {
+        "title": "All for Climate DAO - bounties",
+        "description": "Open bounties to contribute to All for Climate DAO",
+        "googleDocId": "16ev13mDsmlcm06j-qfcAXzLJpqQ6N8MqK0Z1lPJz-xQ"
+      },
+      "regens-unite-conference-brussels-2022": {
+        "title": "Regens Unite Conference 🔅 Brussels 2022 - All for Climate DAO",
+        "description": "A 2-day conference (+ 2-day hackathon) to unite all regens in the capital of Europe and explore the potential of Web3 to regenerate the earth and local communities.",
+        "googleDocId": "1Uy32OcbaXmBtkNkVjs_WgKMYMzdFE6ZlJU0REkFxmDA"
+      },
+      "contribute": {
+        "title": "All for Climate DAO - contribute (open roles)",
+        "aliases": [
+          "openroles"
+        ],
+        "description": "Looking for ways to contribute at the intersection of climate and web3?",
+        "googleDocId": "1mSgaDyUFr_hrsU4vcZEdAmCOwwjcjrklt3MI24WjsNE"
+      },
+      "results": {
+        "googleDocId": "1fl6oyF7Pr4RVIl6kwxNdjg_46dDVOGWXBN5xRfgYKrY",
+        "title": "All for Climate DAO - results",
+        "description": "Keep track of our impact as a DAO, our achievements, our results, etc."
+      }
+    }
+  },
+  "dao.brussels": {
+    "hosts": [
+      "dao.brussels",
+      "dao.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "DAO Brussels - crypto citizens of Brussels",
+        "description": "The community of Crypto Citizens of Brussels. Join us to meet fellow citizens interested in crypto, web3, DAOs, cryptoart, NFTs, DeFI, ReFI, ...",
+        "image": "https://dao.brussels/images/DAOBrussels-logo-300px.jpg",
+        "favicon": "https://dao.brussels/favicon.gif",
+        "googleDocId": "1_RcH-bZdOTicDFoPSn3Vw86WOc6RawRcMrHAcuaeVKU"
+      },
+      "events": {
+        "title": "Crypto events in Brussels - DAO Brussels",
+        "googleDocId": "1x_VJ8nWebSyDkyCrph2WB8bm010iNMPeUZeME7As9-Y",
+        "description": "Meet fellow citizens in Brussels interested in all things crypto, web3, NFTs, DAOs, blockchains, cryptogames, DeFI, ReFI, ..."
+      },
+      "daosummit": {
+        "title": "DAO Summit - a week to discover working for communities - DAO Brussels",
+        "googleDocId": "1WfX59hHSMalOe2_jO5_w_PkpsoRcQef3NDSSiBGj03k",
+        "description": "Discover the new DAO economy where you can make a living working for communities."
+      },
+      "faq": {
+        "title": "DAO Brussels - FAQ",
+        "googleDocId": "1q3u64wxqUpMNRR4QHdm8_i3a7otrcyAbKopqJoLQ9ag",
+        "description": "All the questions you need to know about DAO Brussels and crypto, answered by the community."
+      },
+      "glossary": {
+        "title": "DAO Brussels - Glossary",
+        "googleDocId": "1-Xc0KqVU2H6cjU7w6pSX35wiDtdjqxGUDLdc6Hyynuk",
+        "description": "All the vocabulary you need to make sense of the world of crypto and web3."
+      },
+      "reports": {
+        "title": "DAO Brussels - Reports on Crypto",
+        "googleDocId": "1XVRmEu3JvzZAdtGq5_thDVBqYa9Jxj3yVUN1umdg7x4",
+        "description": "Reports from various well established institutions about crypto and web3."
+      },
+      "solarpunk-nft-contest": {
+        "title": "Solarpunk NFT contest imagine.brussels - DAO Brussels",
+        "googleDocId": "14moXm8QT99c_oQ8G2j6WT2YfrXPGaUKRSdsM6rjqsnk",
+        "description": "Contest to reimagine the streets of Brussels and help local artists discover the world of NFTs in the process."
+      }
+    }
+  },
+  "citizenspring.earth": {
+    "hosts": [
+      "citizenspring.earth",
+      "citizenspring.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Citizen Spring 🌻",
+        "description": "Citizen initiatives to rebuild local communities",
+        "image": "https://citizenspring.earth/citizenspring-logo-flower-transparent-medium.png",
+        "favicon": "/favicon.png",
+        "googleDocId": "1gEw7u-Fh3ZDhqy_qCzvyMKIHt7o9Ac584kcJQrEjceg"
+      },
+      "about": {
+        "googleDocId": "1iT52-iZixBxFTsJjQo6SYAixaKtZIM5Gg3ZsAal6B4E"
+      },
+      "faq": {
+        "googleDocId": "1oE7zKzwXV0V3ME5NWRDjENmRrqQKIFYIhPdCphsgYQA"
+      },
+      "citizenbikegarden": {
+        "description": "A citizen initiative to build a bike shed with a community garden and a blackboard to communicate with neighbors",
+        "googleDocId": "1U_Yxqb2UyE0_47d6SeD_k79fkLZmOtLn8XTPAuuNBsA"
+      },
+      "citizengarden": {
+        "title": "Citizen Garden",
+        "description": "A tiny community garden trying to find its place in a city made for cars",
+        "googleDocId": "1_GPtdLQ2hx-fGCjvRC9dlSZ2Qdd8od5ap5IsJ909EuE"
+      },
+      "academy": {
+        "title": "Citizen Spring Academy 🌱🌻",
+        "description": "Get €5.000 to start a new sustainable place in Brussels with the help of a fellow citizen entrepreneur.",
+        "googleDocId": "1Ru5vxtTuOQOsOldapez1DaLUBatQjdf2tXI_WCrRrz8",
+        "image": "https://citizenspring.earth/citizenspring-academy-fb.png"
+      },
+      "house": {
+        "googleDocId": "16SdrHEPc6UvyNbROeksQrFjeMSIJs_aK-mN40cjsPe8"
+      },
+      "citizencorner": {
+        "title": "Citizen Corner 🌱🌻 ",
+        "description": "A place in Schaerbeek, Brussels, for citizens to meet, learn and co-create.",
+        "googleDocId": "1Gpq1Jzb7GBK9YQqgKnP8K8ShU3IPPWfD93qmrepQPm4",
+        "image": "https://citizenspring.earth/citizencorner-building.jpg"
+      },
+      "cryptoart": {
+        "title": "Cryptoart Corner 🎨 💻",
+        "description": "A place in the capital of europe to bring local artists to the crypto world",
+        "googleDocId": "13Q7o_jQUZXRpwgpj0r9_Gr0OGrFr9jhXouf2fY9QYGs",
+        "image": "https://citizenspring.earth/cryptoartcorner.webp"
+      }
+    }
+  },
+  "regensunite.earth": {
+    "hosts": [
+      "regensunite.earth",
+      "regensunite.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Regens Unite",
+        "description": "Meet fellow regens that have different pieces of the puzzle 🧩 to regenerate people 🌱, communities 🌻 and the planet 🌍",
+        "image": "/images/regensunite-banner-small.jpg",
+        "favicon": "/images/regensunite-favicon.gif",
+        "googleDocId": "1hhINyD2nwdhXX3nAyaZp_T89znWaNZ4jOhAxX08nCrg"
+      },
+      "staging": {
+        "title": "STAGING - Regens Unite - 2-day conversation to move from sustain to regen",
+        "description": "May 19-20, join us in Brussels to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite-logo.gif",
+        "favicon": "/images/regensunite-favicon.gif",
+        "googleDocId": "1vRRNapSrmgHLy-si79fV3bcWh4LwrTOPZuWHeEaqGZ0"
+      },
+      "principles": {
+        "title": "Regens Unite - Principles",
+        "description": "Principles for our Commons.",
+        "googleDocId": "1fjd08OaFlWmMKlpAKKdMNzPkhcuPl7qEs9PRyT6X6QE"
+      },
+      "sponsoring": {
+        "title": "Regens Unite - Sponsoring",
+        "description": "Help us make this regenerative event happen.",
+        "googleDocId": "1W6a1M39lqdFYeUYU_WWgklUBJM4oCMu23kpjXI5C-Rs"
+      },
+      "finance": {
+        "title": "Regens Unite - Finance Working Group",
+        "description": "Working group to manage the finance of Regens Unite Brussels.",
+        "googleDocId": "1pw0EAubWTok6ikG3sFZAv9ZUntY7DQjlh03OATPvFKQ"
+      },
+      "participants": {
+        "title": "Regens Unite - Confirmed Participants",
+        "description": "Join those fabulous regens who have already confirmed their attendance.",
+        "googleDocId": "1zcrFUf2XOTk7Vmt7I2hXhxgujpOoheGSo13vs0pJ6K8"
+      },
+      "facilitators": {
+        "title": "Regens Unite - Facilitators Working Group",
+        "description": "Working group to facilitate the event.",
+        "googleDocId": "1uq6nuj8UldXE3KpvzIcj4xpgfGZQzqYudN18fykhgOE"
+      },
+      "brussels": {
+        "title": "Regens Unite - 2-day conversation in Brussels to move from sustain to regen",
+        "description": "Join us in Brussels to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite-banner-small-brussels-2022.jpg",
+        "favicon": "/images/regensunite-favicon.gif",
+        "googleDocId": "1FYy-LUa0qeEbDqnBavqcrMHLY_bzeJB2a3HWJsRydCU"
+      },
+      "brussels/program": {
+        "title": "Regens Unite - Program",
+        "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
+        "googleDocId": "1dxEdMSZzEN9GIZR5u00wcxWjmA5NSuuW8lbCTUc5dqk"
+      },
+      "brussels/info": {
+        "title": "Regens Unite - Practical Information",
+        "description": "All about where Regens will meet in Brussels May 19-20 2022.",
+        "googleDocId": "1-R1TpYkB6xRMrrrcMI4gYfM0hrnl1ij0-mCIA7et9Zo"
+      },
+      "brussels/contributions": {
+        "title": "Regens Unite Brussels - contributions",
+        "description": "Help us make Regens Unite happen. Contribute!",
+        "googleDocId": "1VMmPmMTRj_iFz_tYYjHMS2DVPNe3puIx_QOAh8GXuzk"
+      },
+      "brussels/venue": {
+        "title": "Regens Unite - Venue",
+        "description": "All about where Regens will meet in Brussels May 19-20 2022.",
+        "googleDocId": "1cwrnfc8LJv2xyOMccDZM1GtHZhbgtLxgws0ypjbQ-kk"
+      },
+      "brussels/travelfund": {
+        "title": "Regens Unite - Travel Fund",
+        "description": "All you need to know to contribute to the travel fund or to get your travel costs reimbursed.",
+        "googleDocId": "1Df9HGdYftOvFiA9kTJVJSmcRo6BVPAZ7b0vdF2018nI"
+      },
+      "berlin": {
+        "title": "Regens Unite - 2-day conversation in Berlin to move from sustain to regen",
+        "description": "September 16-17, join us in Berlin to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite-banner-small-berlin-2022.jpg",
+        "favicon": "/images/regensunite-favicon.gif",
+        "googleDocId": "16Zmy1MjANz1hwxl6BT7QlfTqlBLiEsNQrnM5YaDVi_I"
+      },
+      "berlin/contributions": {
+        "title": "Regens Unite Berlin - contributions",
+        "description": "Help us make Regens Unite happen. Contribute!",
+        "googleDocId": "1JyYrhSVEqqaIp3CsxUtvHRvgoiz9Aljg87TtgXZF0o0"
+      },
+      "berlin/info": {
+        "title": "Regens Unite Berlin - Practical Information",
+        "description": "All about where Regens will meet in Berlin September 16-17.",
+        "googleDocId": "1j32PX8EppcGLO0tXtnoIhMkFyw8G3s7vwKGERgLEBzg"
+      },
+      "berlin/program": {
+        "title": "Regens Unite Berlin - Program",
+        "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
+        "googleDocId": "1JoK7BcY8PEOpy4eOGp737yJzj7Ab0Mw1r5TIgdCzXGE"
+      },
+      "amsterdam": {
+        "title": "Regens Unite - 2-day conversation in Amsterdam to move from sustain to regen",
+        "description": "September 22-24, join us in Amsterdam to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite-banner-small.jpg",
+        "favicon": "/images/regensunite-favicon.gif",
+        "googleDocId": "1nyB-xpRS2o_9hF5zOcA2tMB1o-au8i7M5bAcMd8Jvck"
+      },
+      "amsterdam/contributions": {
+        "title": "Regens Unite Amsterdam - contributions",
+        "description": "Help us make Regens Unite happen. Contribute!",
+        "googleDocId": "1fuIBSBe7HHQfSnSbPEANyqOr1oWiv2F5qMVJmnd0ZzQ"
+      },
+      "amsterdam/info": {
+        "title": "Regens Unite Amsterdam - Practical Information",
+        "description": "All about where Regens will meet in Amsterdam September 22-24.",
+        "googleDocId": "1-XIR_p2NW3WfSwRGlKV5AiEWUL-T09x0Xz7-1t0NvqA"
+      },
+      "amsterdam/program": {
+        "title": "Regens Unite Amsterdam - Program",
+        "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
+        "googleDocId": "15LwroxQCsh54HZ2EYzeviZfSLav0MZy553bqBgVDGUA"
+      },
+      "bogota": {
+        "title": "Regens Unite - 2-day conversation in Bogotá to move from sustain to regen",
+        "description": "October 11-14, join us in Bogotá to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite-banner-small.jpg",
+        "favicon": "/images/regensunite-favicon.gif",
+        "googleDocId": "1yTDOrz9Mno3d-KHRzJ04xylusktUiBtiEkF57uFYHuY"
+      },
+      "bogota/contributions": {
+        "title": "Regens Unite Bogotá - contributions",
+        "description": "Help us make Regens Unite happen. Contribute!",
+        "googleDocId": "1nz2MfT96eztHOsHYxa1imW91AjViKGzdHL8hqMVay3o"
+      },
+      "bogota/info": {
+        "title": "Regens Unite Bogotá - Practical Information",
+        "description": "All about where Regens will meet in Bogotá October 11-14.",
+        "googleDocId": "1R4U1qXK4CGpjO1jFiFnnoLdPqYMwTz3rVXYIc9JHkwM"
+      },
+      "bogota/program": {
+        "title": "Regens Unite Bogotá - Program",
+        "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
+        "googleDocId": "1EUYX2qrm7op7RvkXwdfdNHpad2BUpAfLpGo7_LhQxrQ"
+      }
+    }
+  }
+}
