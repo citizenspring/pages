@@ -209,7 +209,7 @@ export default function Home({ page }) {
   useEffect(() => {
     // we only highlight the current section on large screens
     // where the outline is visible side by side
-    if (window.innerWidth < 768) return false;
+    if (window.innerWidth < 768) return () => {};
 
     function addListeners() {
       window.addEventListener("scroll", logit);
