@@ -144,13 +144,15 @@ export default function Home({ page }) {
   } = page;
   const [currentSection, setCurrentSection] = useState();
   const [currentDocWidth, setCurrentDocWidth] = useState(0);
-
   let defaultValues;
   try {
     defaultValues = getPageMetadata(page.host, "index");
   } catch (e) {
     defaultValues = {};
   }
+
+  const homeIcon =
+    icon || favicon || defaultValues.icon || defaultValues.favicon;
 
   function changeCurrentSection(section) {
     setCurrentSection(section);
@@ -253,7 +255,7 @@ export default function Home({ page }) {
         {outline && (
           <Outline
             homeTitle={title}
-            homeIcon={icon || favicon}
+            homeIcon={homeIcon}
             outline={outline}
             onChange={() => computeOffset()}
           />
@@ -266,7 +268,7 @@ export default function Home({ page }) {
               <RenderGoogleDoc html={body} />
               <Footer
                 homeTitle={title}
-                homeIcon={icon || favicon}
+                homeIcon={homeIcon}
                 googleDocId={googleDocId}
               />
             </div>

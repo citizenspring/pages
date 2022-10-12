@@ -129,11 +129,14 @@ export default async (req, res) => {
   }
 
   if (data.message === "OK") {
-    res.setHeader &&
+    if (!res.setHeader || typeof res.setHeader !== "function") {
+      console.log(">>> res.setHeader", typeof res.setHeader, res.setHeader);
+    } else {
       res.setHeader(
         "Cache-Control",
         "public, s-maxage=600, stale-while-revalidate=1200"
       );
+    }
   }
 
   res.status(200).json(result);
