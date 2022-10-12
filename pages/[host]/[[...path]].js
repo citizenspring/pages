@@ -18,7 +18,7 @@ export async function getStaticPaths() {
         paths.push({
           params: {
             host,
-            path: [sitemap[hostKey].sitemap[key].googleDocId],
+            path: [host, sitemap[hostKey].sitemap[key].googleDocId],
           },
         });
         if (sitemap[hostKey].sitemap[key].aliases) {
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
             paths.push({
               params: {
                 host,
-                path: [alias],
+                path: [host, ...alias.split("/")],
               },
             });
           });
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
         paths.push({
           params: {
             host,
-            path: [key],
+            path: [host, ...key.split("/")],
           },
         });
       });
