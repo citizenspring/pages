@@ -14,6 +14,28 @@
       }
     }
   },
+  "poca.earth": {
+    "hosts": [
+      "poca.earth",
+      "poca.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "POCA: Proof of Climate Action",
+        "description": "A community of active citizens creating a more sustainable future",
+        "image": "/images/allforclimate.earth/allforclimate-logo-black.png",
+        "favicon": "/images/allforclimate.earth/allforclimate-favicon.png",
+        "googleDocId": "1SIQn21ZDMvj7RR8Lg3TIplZwlknKdfu6z-5iSRv0WpM"
+      },
+      "gitcoin/gr15": {
+        "title": "Gitcoin for Climate GR15 POCA",
+        "description": "Proof of Climate Action for participating as a project in the Gitcoin for Climate GR15",
+        "image": "/images/poca.earth/gitcoin/gr15/POCA-GR15-medium-cropped.jpg",
+        "favicon": "/images/poca.earth/gitcoin/gr15/POCA-GR15-favicon.jpg",
+        "googleDocId": "1qBKE-9SBTB6CGTfrq3-bPdfIsFZyiTkx3n_-tAhOEKE"
+      }
+    }
+  },
   "pages.citizenspring.earth": {
     "hosts": [
       "pages.citizenspring.earth",
