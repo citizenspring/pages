@@ -179,6 +179,7 @@ export default function Home({ page }) {
 
     let section = null,
       index = 0;
+
     outline.forEach((item, i) => {
       if (y >= item.offsetTop - 60) {
         section = item.slug;
