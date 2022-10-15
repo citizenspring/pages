@@ -151,8 +151,8 @@ export default function Home({ page }) {
     defaultValues = {};
   }
 
-  const homeIcon =
-    icon || favicon || defaultValues.icon || defaultValues.favicon;
+  const homeTitle = defaultValues.title;
+  const homeIcon = defaultValues.icon || defaultValues.favicon;
 
   function changeCurrentSection(section) {
     setCurrentSection(section);
@@ -255,7 +255,7 @@ export default function Home({ page }) {
       <main className="relative min-h-screen md:flex w-full overflow-hidden">
         {outline && (
           <Outline
-            homeTitle={title}
+            homeTitle={homeTitle}
             homeIcon={homeIcon}
             outline={outline}
             onChange={() => computeOffset()}
@@ -268,7 +268,7 @@ export default function Home({ page }) {
             <div id="document">
               <RenderGoogleDoc html={body} />
               <Footer
-                homeTitle={title}
+                homeTitle={homeTitle}
                 homeIcon={homeIcon}
                 googleDocId={googleDocId}
               />
