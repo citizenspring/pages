@@ -298,7 +298,9 @@
   "regensunite.earth": {
     "hosts": [
       "regensunite.earth",
-      "regensunite.local"
+      "regensunite.local",
+      "pages.regensunite.earth",
+      "docs.regensunite.earth"
     ],
     "sitemap": {
       "index": {
@@ -319,6 +321,11 @@
         "title": "Regens Unite - Principles",
         "description": "Principles for our Commons.",
         "googleDocId": "1fjd08OaFlWmMKlpAKKdMNzPkhcuPl7qEs9PRyT6X6QE"
+      },
+      "retreat": {
+        "title": "Regens Unite - Retreat",
+        "description": "November 23-30th at La Matrice.space",
+        "googleDocId": "1_JwXbXcSwdZpCjopZffwrpba-y_PnCAkZKn-j_iXT5k"
       },
       "sponsoring": {
         "title": "Regens Unite - Sponsoring",
