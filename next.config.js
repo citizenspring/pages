@@ -205,6 +205,18 @@ module.exports = {
         has: [
           {
             type: "host",
+            value: "calendar.regensunite.earth",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://calendar.google.com/calendar/embed?src=59a5f6d5973c6a0836aec1ad3603090ac9b9c5ed46bbde8b01a06be34959c864%40group.calendar.google.com&ctz=Europe%2FBrussels",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
             value: "apply.regensunite.earth",
           },
         ],
