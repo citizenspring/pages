@@ -193,6 +193,17 @@ module.exports = {
         has: [
           {
             type: "host",
+            value: "summit.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://www.getrevue.co/profile/daosummit",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
             value: "drive.regensunite.earth",
           },
         ],
