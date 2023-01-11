@@ -107,12 +107,18 @@ export async function getStaticProps({ params }) {
     error = `Could not get the HTML for this Google Doc ID (${googleDocId})`;
   }
 
+  let imagePreview = pageInfo.image;
+  if (!imagePreview && doc.images) {
+    imagePreview = (doc.images.find((img) => img.width > 512) || doc.images[0])
+      .src;
+  }
+
   const page = {
     title: pageInfo.title || doc.title || null,
     description: pageInfo.description || doc.description || null,
     favicon: pageInfo.favicon || null,
     icon: pageInfo.icon || null,
-    image: pageInfo.image || null,
+    image: imagePreview || null,
     body: doc.body || null,
     outline: doc.outline || null,
     googleDocId: googleDocId || null,
