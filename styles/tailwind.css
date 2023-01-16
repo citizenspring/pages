@@ -128,5 +128,6 @@ img {
 
 td {
   @apply p-1;
+  padding: 5px;
   line-height: 1.2;
 }

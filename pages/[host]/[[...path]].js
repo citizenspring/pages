@@ -281,8 +281,15 @@ export default function Home({ page }) {
             </div>
           )}
         </div>
-        {/* make sure tailwind includes the .imageWrapper.fullWidth classes in production */}
-        <span className="imageWrapper fullWidth"></span>
+
+        {/* make sure tailwind includes the table tr td .imageWrapper.fullWidth classes in production */}
+        <table>
+          <tr>
+            <td>
+              <span className="imageWrapper fullWidth"></span>
+            </td>
+          </tr>
+        </table>
       </main>
     </div>
   );
