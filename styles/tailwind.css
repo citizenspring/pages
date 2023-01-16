@@ -62,8 +62,10 @@ h1 {
   @apply text-3xl mt-8 mb-4;
 }
 
-h2, h2 span,
-h3, h3 span {
+h2,
+h2 span,
+h3,
+h3 span {
   @apply font-normal mt-8 mb-2 text-2xl;
 }
 
@@ -126,4 +128,5 @@ img {
 
 td {
   @apply p-1;
+  line-height: 1.2;
 }
