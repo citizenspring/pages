@@ -395,31 +395,6 @@
         "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
         "googleDocId": "1FYy-LUa0qeEbDqnBavqcrMHLY_bzeJB2a3HWJsRydCU"
       },
-      "brussels/program": {
-        "title": "Regens Unite - Program",
-        "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
-        "googleDocId": "1dxEdMSZzEN9GIZR5u00wcxWjmA5NSuuW8lbCTUc5dqk"
-      },
-      "brussels/info": {
-        "title": "Regens Unite - Practical Information",
-        "description": "All about where Regens will meet in Brussels May 19-20 2022.",
-        "googleDocId": "1-R1TpYkB6xRMrrrcMI4gYfM0hrnl1ij0-mCIA7et9Zo"
-      },
-      "brussels/contributions": {
-        "title": "Regens Unite Brussels - contributions",
-        "description": "Help us make Regens Unite happen. Contribute!",
-        "googleDocId": "1VMmPmMTRj_iFz_tYYjHMS2DVPNe3puIx_QOAh8GXuzk"
-      },
-      "brussels/venue": {
-        "title": "Regens Unite - Venue",
-        "description": "All about where Regens will meet in Brussels May 19-20 2022.",
-        "googleDocId": "1cwrnfc8LJv2xyOMccDZM1GtHZhbgtLxgws0ypjbQ-kk"
-      },
-      "brussels/travelfund": {
-        "title": "Regens Unite - Travel Fund",
-        "description": "All you need to know to contribute to the travel fund or to get your travel costs reimbursed.",
-        "googleDocId": "1Df9HGdYftOvFiA9kTJVJSmcRo6BVPAZ7b0vdF2018nI"
-      },
       "berlin": {
         "title": "Regens Unite - 2-day conversation in Berlin to move from sustain to regen",
         "description": "September 16-17, join us in Berlin to explore together how we can move the conversation from sustain to regen.",
@@ -486,6 +461,53 @@
         "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
         "googleDocId": "1EUYX2qrm7op7RvkXwdfdNHpad2BUpAfLpGo7_LhQxrQ"
       }
+    }
+  },
+  "brussels.regensunite.earth": {
+    "hosts": [
+      "brussels.regensunite.earth",
+      "brussels.regensunite.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Regens Unite - 2-day conversation in Brussels to move from sustain to regen",
+        "description": "Join us in Brussels to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite.earth/regensunite-banner-small-brussels-2022.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
+        "googleDocId": "1FYy-LUa0qeEbDqnBavqcrMHLY_bzeJB2a3HWJsRydCU"
+      },
+      "2022": {
+        "title": "Regens Unite Brussels 2022 - 2-day conversation in Brussels to move from sustain to regen",
+        "description": "Join us in Brussels to explore together how we can move the conversation from sustain to regen.",
+        "image": "/images/regensunite.earth/regensunite-banner-small-brussels-2022.jpg",
+        "favicon": "/images/regensunite.earth/regensunite-favicon.gif",
+        "googleDocId": "1_1l21M3e7lWeq-GjOlQxmEXcD8Za4wXEQ7i3s7MbVcg"
+      },
+      "2022/program": {
+        "title": "Regens Unite - Program",
+        "description": "We are designing the program while you are reading this, working with all suggestions from participants.",
+        "googleDocId": "1dxEdMSZzEN9GIZR5u00wcxWjmA5NSuuW8lbCTUc5dqk"
+      },
+      "2022/info": {
+        "title": "Regens Unite - Practical Information",
+        "description": "All about where Regens will meet in Brussels May 19-20 2022.",
+        "googleDocId": "1-R1TpYkB6xRMrrrcMI4gYfM0hrnl1ij0-mCIA7et9Zo"
+      },
+      "2022/contributions": {
+        "title": "Regens Unite Brussels - contributions",
+        "description": "Help us make Regens Unite happen. Contribute!",
+        "googleDocId": "1VMmPmMTRj_iFz_tYYjHMS2DVPNe3puIx_QOAh8GXuzk"
+      },
+      "2022/venue": {
+        "title": "Regens Unite - Venue",
+        "description": "All about where Regens will meet in Brussels May 19-20 2022.",
+        "googleDocId": "1cwrnfc8LJv2xyOMccDZM1GtHZhbgtLxgws0ypjbQ-kk"
+      },
+      "2022/travelfund": {
+        "title": "Regens Unite - Travel Fund",
+        "description": "All you need to know to contribute to the travel fund or to get your travel costs reimbursed.",
+        "googleDocId": "1Df9HGdYftOvFiA9kTJVJSmcRo6BVPAZ7b0vdF2018nI"
+      },
     }
   }
 }
