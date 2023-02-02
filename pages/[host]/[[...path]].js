@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getHTMLFromGoogleDocId } from "../../lib/googledoc";
-import { getPageMetadata } from "../../lib/lib";
+import { getPageMetadata, absoluteUrl } from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
 import ErrorNotPublished from "../../components/ErrorNotPublished";
@@ -49,7 +49,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, req }) {
   let path, edit;
   let slug = "index";
   const host = params.host;
@@ -152,6 +152,7 @@ export default function Home({ page }) {
     googleDocId,
     error,
     iframeSrc,
+    host,
   } = page;
 
   let defaultValues;
@@ -174,7 +175,7 @@ export default function Home({ page }) {
         title={title}
         description={description || defaultValues.description}
         favicon={favicon || defaultValues.favicon}
-        image={image || defaultValues.image}
+        image={absoluteUrl(image || defaultValues.image, host)}
       />
     );
 
