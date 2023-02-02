@@ -271,9 +271,10 @@ export default function Home({ page }) {
         <link rel="icon" href={favicon || defaultValues.favicon} />
         <meta
           name="description"
+          property="og:description"
           content={description || defaultValues.description}
         />
-        <meta name="og:image" content={image || defaultValues.image} />
+        <meta property="og:image" content={image || defaultValues.image} />
       </Head>
 
       <main className="relative min-h-screen md:flex w-full overflow-hidden">

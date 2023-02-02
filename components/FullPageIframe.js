@@ -23,8 +23,12 @@ export default function FullPageIframe({
         />
         <title>{title}</title>
         <link rel="icon" href={favicon} />
-        <meta name="description" content={description} />
-        <meta name="og:image" content={image} />
+        <meta
+          property="og:description"
+          name="description"
+          content={description}
+        />
+        <meta property="og:image" content={image} />
       </Head>
       <Script src="https://tally.so/widgets/embed.js" />
       <body>
