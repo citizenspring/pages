@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getHTMLFromGoogleDocId } from "../../lib/googledoc";
-import { getPageMetadata, absoluteUrl } from "../../lib/lib";
+import { getPageMetadata, absoluteUrl, imageType } from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
 import ErrorNotPublished from "../../components/ErrorNotPublished";
@@ -275,7 +275,14 @@ export default function Home({ page }) {
           property="og:description"
           content={description || defaultValues.description}
         />
-        <meta property="og:image" content={image || defaultValues.image} />
+        <meta
+          property="og:image"
+          content={absoluteUrl(image || defaultValues.image)}
+        />
+        <meta
+          property="og:image:type"
+          content={imageType(image || defaultValues.image)}
+        />
       </Head>
 
       <main className="relative min-h-screen md:flex w-full overflow-hidden">

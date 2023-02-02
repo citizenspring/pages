@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Script from "next/script";
 
+import { imageType } from "../lib/lib";
+
 export default function FullPageIframe({
   src,
   title,
@@ -29,6 +31,7 @@ export default function FullPageIframe({
           content={description}
         />
         <meta property="og:image" content={image} />
+        <meta property="og:image:type" content={imageType(image)} />
       </Head>
       <Script src="https://tally.so/widgets/embed.js" />
       <body>
