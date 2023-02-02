@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import ErrorNotPublished from "../../components/ErrorNotPublished";
 import ErrorInvalidDocId from "../../components/ErrorInvalidDocId";
 import RenderGoogleDoc from "../../components/RenderGoogleDoc";
+import FullPageIframe from "../../components/FullPageIframe";
 import sitemap from "../../sitemap.json";
 import { useEffect, useState } from "react";
 
@@ -76,7 +77,7 @@ export async function getStaticProps({ params }) {
   }
 
   const googleDocId = pageInfo.googleDocId || (params.path && params.path[0]);
-
+  const iframeSrc = pageInfo.iframeSrc;
   if (edit) {
     return {
       redirect: {
@@ -85,26 +86,28 @@ export async function getStaticProps({ params }) {
     };
   }
 
-  if (!googleDocId) {
-    error = error || "invalid_googledocid";
-  } else {
-    try {
-      doc = await getHTMLFromGoogleDocId(googleDocId);
-    } catch (e) {
-      error = e.message;
-      if (error === "not_published") {
-        return {
-          redirect: {
-            destination: `https://docs.google.com/document/d/${googleDocId}/edit`,
-          },
-        };
+  if (!iframeSrc) {
+    if (!googleDocId) {
+      error = error || "invalid_googledocid";
+    } else {
+      try {
+        doc = await getHTMLFromGoogleDocId(googleDocId);
+      } catch (e) {
+        error = e.message;
+        if (error === "not_published") {
+          return {
+            redirect: {
+              destination: `https://docs.google.com/document/d/${googleDocId}/edit`,
+            },
+          };
+        }
       }
     }
-  }
 
-  if (!doc) {
-    doc = {};
-    error = `Could not get the HTML for this Google Doc ID (${googleDocId})`;
+    if (!doc) {
+      doc = {};
+      error = `Could not get the HTML for this Google Doc ID (${googleDocId})`;
+    }
   }
 
   let imagePreview = pageInfo.image;
@@ -122,6 +125,7 @@ export async function getStaticProps({ params }) {
     body: doc.body || null,
     outline: doc.outline || null,
     googleDocId: googleDocId || null,
+    iframeSrc: iframeSrc || null,
     host,
     error,
   };
@@ -147,9 +151,9 @@ export default function Home({ page }) {
     image,
     googleDocId,
     error,
+    iframeSrc,
   } = page;
-  const [currentSection, setCurrentSection] = useState();
-  const [currentDocWidth, setCurrentDocWidth] = useState(0);
+
   let defaultValues;
   try {
     defaultValues = getPageMetadata(page.host, "index");
@@ -159,6 +163,20 @@ export default function Home({ page }) {
 
   const homeTitle = defaultValues.title;
   const homeIcon = defaultValues.icon || defaultValues.favicon;
+
+  const [currentSection, setCurrentSection] = useState();
+  const [currentDocWidth, setCurrentDocWidth] = useState(0);
+
+  if (iframeSrc)
+    return (
+      <FullPageIframe
+        src={iframeSrc}
+        title={title}
+        description={description || defaultValues.description}
+        favicon={favicon || defaultValues.favicon}
+        image={image || defaultValues.image}
+      />
+    );
 
   function changeCurrentSection(section) {
     setCurrentSection(section);
