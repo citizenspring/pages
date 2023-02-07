@@ -78,10 +78,19 @@ export async function getStaticProps({ params, req }) {
 
   const googleDocId = pageInfo.googleDocId || (params.path && params.path[0]);
   const iframeSrc = pageInfo.iframeSrc;
+
   if (edit) {
     return {
       redirect: {
         destination: `https://docs.google.com/document/d/${googleDocId}/edit`,
+      },
+    };
+  }
+
+  if (pageInfo.redirect) {
+    return {
+      redirect: {
+        destination: pageInfo.redirect,
       },
     };
   }
