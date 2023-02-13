@@ -333,7 +333,17 @@
       "newsletters/2023/janvier": {
         "title": "Prochains événements au Citizen Corner - newsletter janvier 2023",
         "description": "Restez au courant de ce qui se passe au Citizen Corner avec la newsletter",
-        "googleDocId": "19QT-MV_1GBDSCHNFaN5R3RAoha5UzIox7UV0wrggCZU"
+        "googleDocId": "1Bqj-4dBE4FoH1iMEFA7gw5qp6CY9wUWMjaCV1Yx7oTI"
+      },
+      "newsletters/2023/february": {
+        "title": "Upcoming events at the Citizen Corner - newsletter February 2023",
+        "description": "Stay up to date with the newsletter of the Citizen Corner",
+        "googleDocId": "1rucvKU34MtvZiGbW5u6VF38vzIiYTf15qjYHO1lD1L0"
+      },
+      "newsletters/2023/février": {
+        "title": "Prochains événements au Citizen Corner - newsletter février 2023",
+        "description": "Restez au courant de ce qui se passe au Citizen Corner avec la newsletter",
+        "googleDocId": "1990h6J3_wWY6zEoCQSQIOVJwgzKQH1RrsgeVV485Duo"
       },
       "contribute": {
         "title": "Citizen Corner - Contribute",

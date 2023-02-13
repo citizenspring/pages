@@ -193,11 +193,11 @@ module.exports = {
         has: [
           {
             type: "host",
-            value: "summit.dao.brussels",
+            value: "notion.regensunite.earth",
           },
         ],
         permanent: false,
-        destination: "https://www.getrevue.co/profile/daosummit",
+        destination: "https://notion.so/regensunite",
       },
       {
         source: "/(.*)",
