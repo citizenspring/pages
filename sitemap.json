@@ -352,6 +352,21 @@
       }
     }
   },
+  "griffonsummercamp.earth": {
+    "hosts": [
+      "griffon.regensunite.earth",
+      "griffon.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Griffon Summer Camp - August 2023",
+        "description": "A regenerative community experience in Ottignies",
+        "image": "/images/griffon.regensunite.earth/griffon-large.jpg",
+        "favicon": "/images/griffon.regensunite.earth/griffon-256px.jpg",
+        "googleDocId": "1qaw2Rg1TUrMrvjcEe8thGVhYYWUSVzZFojg80-MOCao"
+      }
+    }
+  },
   "regensunite.earth": {
     "hosts": [
       "regensunite.earth",
