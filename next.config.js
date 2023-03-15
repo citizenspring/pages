@@ -113,6 +113,17 @@ module.exports = {
         has: [
           {
             type: "host",
+            value: "whatsapp.citizencorner.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://chat.whatsapp.com/GWPZyBseJalHomDjIFu1sm",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
             value: "drive.citizenspring.earth",
           },
         ],
@@ -142,6 +153,17 @@ module.exports = {
         ],
         permanent: false,
         destination: "https://discord.gg/awfSTf6EHK",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "whatsapp.dao.brussels",
+          },
+        ],
+        permanent: false,
+        destination: "https://chat.whatsapp.com/JQ4fttn0KEH79xAyryYs4e",
       },
       {
         source: "/(.*)",
