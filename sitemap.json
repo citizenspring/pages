@@ -160,6 +160,21 @@
       }
     }
   },
+  "citizenwallet.xyz": {
+    "hosts": [
+      "citizenwallet.xyz",
+      "citizenwallet.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Citizen Wallet",
+        "description": "A crypto wallet for citizens to rebuild communities",
+        "image": "/images/citizenwallet.xyz/citizenwallet-image.png",
+        "favicon": "/images/citizenwallet.xyz/citizenwallet-icon.png",
+        "googleDocId": "1mHwwebrTmk2u2Sxc7D8PmcTwwIaBGTrqeorltoB5VDc"
+      }
+    }
+  },
   "dao.brussels": {
     "hosts": [
       "dao.brussels",
