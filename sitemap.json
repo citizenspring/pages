@@ -177,7 +177,18 @@
         "favicon": "/images/citizenwallet.xyz/citizenwallet-icon.png",
         "googleDocId": "1mHwwebrTmk2u2Sxc7D8PmcTwwIaBGTrqeorltoB5VDc"
       },
-      "privacypolicy": {
+      "faq": {
+        "title": "Citizen Wallet - FAQ",
+        "googleDocId": "1FeUSm0v80f2SNECan9lALrW4nZLmcAeGhR6XlbfpjpE"
+      },
+      "about": {
+        "title": "Citizen Wallet - About",
+        "googleDocId": "kd0MuJ6OYHs4dXhXtlrvRPqXvOX7bcPCjBJIU0"
+      },
+      "privacy": {
+        "aliases": [
+          "privacypolicy"
+        ],
         "title": "Citizen Wallet - Privacy Policy",
         "googleDocId": "1UuCFNIrfhh45eCsvLiBrVr6SwpP4lWFRY9HszFqF44E"
       }
