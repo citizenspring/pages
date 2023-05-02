@@ -148,6 +148,18 @@ module.exports = {
         has: [
           {
             type: "host",
+            value: "drive.citizenwallet.xyz",
+          },
+        ],
+        permanent: false,
+        destination:
+          "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
+      },
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
             value: "discord.dao.brussels",
           },
         ],
