@@ -1,3 +1,64 @@
+const subdomainsRedirections = {
+  "citizenwallet.xyz": {
+    signal:
+      "https://signal.group/#CjQKIK7lRZGN89uFUJqZ31npeVKbVHfo5Z15yl9XFoAeh2OrEhDfnmWNlW98l-OpBKzAnPET",
+    drive: "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
+    miro: "http://miro.com/app/board/uXjVMd0Js_E=/",
+  },
+  "citizencorner.brussels": {
+    calendar:
+      "https://calendar.google.com/calendar/embed?src=apc0sg19i1ic703d5g1d53tpss%40group.calendar.google.com&ctz=Europe%2FBrussels",
+    drive:
+      "https://drive.google.com/drive/folders/10F8oO59nZo_Yja8Fz8utGDinCuB8VQe8?usp=sharing",
+    facebook: "https://facebook.com/citizencornerbxl",
+    donate: "https://opencollective.com/citizencorner/donate",
+    map: "https://goo.gl/maps/jXiHm57z77CLxURh8",
+    budget: "https://opencollective.com/citizencorner",
+    discord: "https://discord.gg/xyxQhRft8x",
+    whatsapp: "https://chat.whatsapp.com/GWPZyBseJalHomDjIFu1sm",
+  },
+  "citizenspring.earth": {
+    drive:
+      "https://drive.google.com/drive/u/0/folders/1ooAOhv3OGXAforyuYUA9i2B0kb1uP471",
+  },
+  "dao.brussels": {
+    drive:
+      "https://drive.google.com/drive/folders/1r3kSwu8_w4ju0fn5TQOhg7HCQW2XwnmH",
+    discord: "https://discord.gg/awfSTf6EHK",
+    whatsapp: "https://chat.whatsapp.com/JQ4fttn0KEH79xAyryYs4e",
+    zoom: "https://us02web.zoom.us/j/6025635806",
+    telegram: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
+    calendar:
+      "https://calendar.google.com/calendar/embed?src=haijn9je0u2ci9efj7g0it8tk4%40group.calendar.google.com&ctz=Europe%2FBrussels",
+  },
+  "regensunite.earth": {
+    notion: "https://notion.so/regensunite",
+    drive:
+      "https://drive.google.com/drive/u/0/folders/10MMk0j6A1cMOSDIRdWxv0FCSwHXg7sAE",
+    calendar:
+      "https://calendar.google.com/calendar/embed?src=729ti6j2pin4og5kmbsr7ich78%40group.calendar.google.com&ctz=Europe%2FBrussels",
+    apply:
+      "https://jz04xmgcexm.typeform.com/to/HQxBKQdg?typeform-source=apply.regensunite.earth",
+    discord: "https://discord.gg/QcfPAJaWb2",
+    bogota: "https://regensunite.co/bogota",
+    zoom: "https://us02web.zoom.us/j/6025635806",
+    brussels: "https://www.regensunite.earth/event/regens-unite-brussels-2023",
+  },
+  "allforclimate.earth": {
+    drive:
+      "https://drive.google.com/drive/u/0/folders/1g14Qyf_DmvGuevk4Ks5NgfkWPN5V6H6O",
+    zoom: "https://us02web.zoom.us/j/6025635806",
+    join: "https://jz04xmgcexm.typeform.com/to/lPbcL9nj?typeform-source=join.allforclimate.earth",
+    dework: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
+    bounties: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
+    tasks: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
+    projects: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
+    calendar:
+      "https://calendar.google.com/calendar/u/0/embed?src=c_kcbdb0ulem2nivoiugvfbmhjb8@group.calendar.google.com",
+    discord: "https://discord.gg/7Cb6Nf2MgM",
+  },
+};
+
 module.exports = {
   env: {
     OC_GRAPHQL_API: "https://api.opencollective.com/graphql/v1/",
@@ -17,406 +78,29 @@ module.exports = {
     ],
   },
   async redirects() {
-    return [
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "drive.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://drive.google.com/drive/folders/10F8oO59nZo_Yja8Fz8utGDinCuB8VQe8?usp=sharing",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "calendar.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://calendar.google.com/calendar/embed?src=apc0sg19i1ic703d5g1d53tpss%40group.calendar.google.com&ctz=Europe%2FBrussels",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "facebook.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://facebook.com/citizencornerbxl",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "group.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://facebook.com/groups/citizencorner",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "map.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://goo.gl/maps/jXiHm57z77CLxURh8",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "donate.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://opencollective.com/citizencorner/donate",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "budget.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://opencollective.com/citizencorner",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "discord.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://discord.gg/xyxQhRft8x",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "whatsapp.citizencorner.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://chat.whatsapp.com/GWPZyBseJalHomDjIFu1sm",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "drive.citizenspring.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://drive.google.com/drive/u/0/folders/1ooAOhv3OGXAforyuYUA9i2B0kb1uP471",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "drive.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://drive.google.com/drive/folders/1r3kSwu8_w4ju0fn5TQOhg7HCQW2XwnmH",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "drive.citizenwallet.xyz",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "discord.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://discord.gg/awfSTf6EHK",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "whatsapp.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://chat.whatsapp.com/JQ4fttn0KEH79xAyryYs4e",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "youtube.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://www.youtube.com/channel/UClgbKT6NhY2Au6xn_TquBYg",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "calendar.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://calendar.google.com/calendar/embed?src=haijn9je0u2ci9efj7g0it8tk4%40group.calendar.google.com&ctz=Europe%2FBrussels",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "zoom.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://us02web.zoom.us/j/6025635806",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "telegram.dao.brussels",
-          },
-        ],
-        permanent: false,
-        destination: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "notion.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://notion.so/regensunite",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "drive.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://drive.google.com/drive/u/0/folders/10MMk0j6A1cMOSDIRdWxv0FCSwHXg7sAE",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "calendar.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://calendar.google.com/calendar/embed?src=59a5f6d5973c6a0836aec1ad3603090ac9b9c5ed46bbde8b01a06be34959c864%40group.calendar.google.com&ctz=Europe%2FBrussels",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "apply.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://jz04xmgcexm.typeform.com/to/HQxBKQdg?typeform-source=apply.regensunite.earth",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "zoom.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://us02web.zoom.us/j/6025635806",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "calendar.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://calendar.google.com/calendar/embed?src=729ti6j2pin4og5kmbsr7ich78%40group.calendar.google.com&ctz=Europe%2FBrussels",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "discord.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://discord.gg/QcfPAJaWb2",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "bogota.regensunite.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://regensunite.co/bogota",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "drive.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://drive.google.com/drive/u/0/folders/1g14Qyf_DmvGuevk4Ks5NgfkWPN5V6H6O",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "join.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://jz04xmgcexm.typeform.com/to/lPbcL9nj?typeform-source=join.allforclimate.earth",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "zoom.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://us02web.zoom.us/j/6025635806",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "dework.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "bounties.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "tasks.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "projects.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://dework.xyz/o/all-for-clim-5YSFCGX71LR0qVyvqsL2w5",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "calendar.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination:
-          "https://calendar.google.com/calendar/u/0/embed?src=c_kcbdb0ulem2nivoiugvfbmhjb8@group.calendar.google.com",
-      },
-      {
-        source: "/(.*)",
-        has: [
-          {
-            type: "host",
-            value: "discord.allforclimate.earth",
-          },
-        ],
-        permanent: false,
-        destination: "https://discord.gg/7Cb6Nf2MgM",
-      },
-    ];
+    const domains = Object.keys(subdomainsRedirections);
+    const redirections = [];
+    domains.forEach((domain) => {
+      console.log("\nRedirections for", domain);
+      const subdomains = Object.keys(subdomainsRedirections[domain]);
+      subdomains.forEach((subdomain) => {
+        console.log(
+          `> ${subdomain}.${domain} -> ${subdomainsRedirections[domain][subdomain]}`
+        );
+        redirections.push({
+          source: "/(.*)",
+          has: [
+            {
+              type: "host",
+              value: `${subdomain}.${domain}`,
+            },
+          ],
+          permanent: false,
+          destination: subdomainsRedirections[domain][subdomain],
+        });
+      });
+    });
+    return redirections;
   },
   async rewrites() {
     return [
