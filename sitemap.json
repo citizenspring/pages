@@ -165,6 +165,10 @@
       "citizenwallet.xyz",
       "citizenwallet.local"
     ],
+    "theme": {
+      "primaryColor": "#000000",
+      "secondaryColor": "#FFFFFF"
+    },
     "sitemap": {
       "index": {
         "title": "Citizen Wallet",
@@ -172,6 +176,10 @@
         "image": "/images/citizenwallet.xyz/citizenwallet-image.png",
         "favicon": "/images/citizenwallet.xyz/citizenwallet-icon.png",
         "googleDocId": "1mHwwebrTmk2u2Sxc7D8PmcTwwIaBGTrqeorltoB5VDc"
+      },
+      "privacypolicy": {
+        "title": "Citizen Wallet - Privacy Policy",
+        "googleDocId": "1UuCFNIrfhh45eCsvLiBrVr6SwpP4lWFRY9HszFqF44E"
       }
     }
   },
