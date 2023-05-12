@@ -4,6 +4,7 @@ const subdomainsRedirections = {
       "https://signal.group/#CjQKIK7lRZGN89uFUJqZ31npeVKbVHfo5Z15yl9XFoAeh2OrEhDfnmWNlW98l-OpBKzAnPET",
     drive: "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
     miro: "http://miro.com/app/board/uXjVMd0Js_E=/",
+    deck: "https://drive.google.com/open?id=1IbPCN0Zzmp-NYE8S1AP1Hz1z4VxNU-it",
   },
   "citizencorner.brussels": {
     calendar:
