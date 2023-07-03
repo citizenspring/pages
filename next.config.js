@@ -7,6 +7,8 @@ const subdomainsRedirections = {
     calendar:
       "https://calendar.google.com/calendar/embed?src=c19265b9b3f270a100ed7ddf0c077dbedae83f84f439186e0996e0c71b7365f6%40group.calendar.google.com&ctz=Europe%2FBrussels",
     deck: "https://drive.google.com/open?id=1JANeY8e-EfmKXM8mqTTKtwOgYZ4xbE1I",
+    tasks: "https://app.dework.xyz/citizenwallet",
+    discord: "https://discord.gg/fsdmswqqMm",
   },
   "citizencorner.brussels": {
     calendar:
