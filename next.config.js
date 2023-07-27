@@ -1,9 +1,17 @@
 const subdomainsRedirections = {
+  "citizendao.earth": {
+    drive:
+      "https://drive.google.com/drive/folders/1TqHruYroZDoVvDXOgz8823E5GofxHSeH",
+  },
   "citizenwallet.xyz": {
     signal:
       "https://signal.group/#CjQKIK7lRZGN89uFUJqZ31npeVKbVHfo5Z15yl9XFoAeh2OrEhDfnmWNlW98l-OpBKzAnPET",
     drive: "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
     miro: "http://miro.com/app/board/uXjVMd0Js_E=/",
+    wireframes:
+      "https://www.figma.com/file/bH8gD0i9xsPsHyXKga67LT/wireframes?type=design&node-id=0-1&mode=design&t=Htqwd5dMKDZfDtiz-0",
+    figma:
+      "https://www.figma.com/files/team/1266323262588917604/Citizen-Wallet",
     calendar:
       "https://calendar.google.com/calendar/embed?src=c19265b9b3f270a100ed7ddf0c077dbedae83f84f439186e0996e0c71b7365f6%40group.calendar.google.com&ctz=Europe%2FBrussels",
     deck: "https://drive.google.com/open?id=1JANeY8e-EfmKXM8mqTTKtwOgYZ4xbE1I",
