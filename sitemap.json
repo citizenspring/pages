@@ -170,6 +170,10 @@
     }
   },
   "openfacilitation.brussels": {
+    "hosts": [
+      "openfacilitation.brussels",
+      "openfacilitation.brussels.local"
+    ],
     "sitemap": {
       "index": {
         "title": "Open Facilitation - Brussels",
