@@ -161,6 +161,10 @@
     }
   },
   "citizendao.earth": {
+    "hosts": [
+      "citizendao.earth",
+      "citizendao.earth.local"
+    ],
     "sitemap": {
       "index": {
         "title": "Citizen DAO",
