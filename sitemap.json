@@ -160,6 +160,26 @@
       }
     }
   },
+  "citizendao.earth": {
+    "sitemap": {
+      "index": {
+        "title": "Citizen DAO",
+        "description": "Support citizen initiatives to develop their own community currencies",
+        "googleDocId": "1a89T4CaDNuu8peVUATxSpw8QHIArAFWo48jwqJK_Pa4"
+      }
+    }
+  },
+  "openfacilitation.brussels": {
+    "sitemap": {
+      "index": {
+        "title": "Open Facilitation - Brussels",
+        "description": "The community of facilitators in the capital of Europe",
+        "image": "/images/openfacilitation.brussels/openfacilitation-logo-medium.jpg",
+        "favicon": "/images/openfacilitation.brussels/openfacilitation-logo-small.jpg",
+        "googleDocId": "1hhaGpE_sRdUWRm7DPTndvfH1pkWZYOA1d2vAC5hBZMw"
+      }
+    }
+  },
   "citizenwallet.xyz": {
     "hosts": [
       "citizenwallet.xyz",
@@ -548,6 +568,10 @@
       "brussels.regensunite.earth",
       "brussels.regensunite.local"
     ],
+    "email": {
+      "fromName": "Regens Unite Brussels",
+      "fromEmail": "brussels@regensunite.earth"
+    },
     "sitemap": {
       "index": {
         "title": "Regens Unite Brussels - May 26-27 2023",
@@ -562,6 +586,10 @@
         "description": "Create your own schedule during Regens Unite Brussels 2023",
         "googleDocId": "1FYy-LUa0qeEbDqnBavqcrMHLY_bzeJB2a3HWJsRydCU",
         "redirect": "https://regensunitebrussels.sessionize.com"
+      },
+      "newsletter/202301": {
+        "title": "Regens Unite Brussels 2023 - Follow up email",
+        "googleDocId": "1Xguzoi_e5El31Mv9nZkzSaPKUWZ1wtNx2zKHBtpM84I"
       },
       "2022": {
         "title": "Regens Unite Brussels 2022 - 2-day conversation in Brussels to move from sustain to regen",
