@@ -4,6 +4,7 @@ const subdomainsRedirections = {
       "https://drive.google.com/drive/folders/1TqHruYroZDoVvDXOgz8823E5GofxHSeH",
   },
   "citizenwallet.xyz": {
+    zoom: "https://us02web.zoom.us/j/6025635806",
     signal:
       "https://signal.group/#CjQKIK7lRZGN89uFUJqZ31npeVKbVHfo5Z15yl9XFoAeh2OrEhDfnmWNlW98l-OpBKzAnPET",
     drive: "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
@@ -31,6 +32,7 @@ const subdomainsRedirections = {
     whatsapp: "https://chat.whatsapp.com/GWPZyBseJalHomDjIFu1sm",
   },
   "citizenspring.earth": {
+    zoom: "https://us02web.zoom.us/j/6025635806",
     drive:
       "https://drive.google.com/drive/u/0/folders/1ooAOhv3OGXAforyuYUA9i2B0kb1uP471",
   },
