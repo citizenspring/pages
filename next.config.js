@@ -48,6 +48,8 @@ const subdomainsRedirections = {
   },
   "regensunite.earth": {
     notion: "https://notion.so/regensunite",
+    figma:
+      "https://www.figma.com/file/3E7rdQwyLe29SY8OeIaHdB/RU-Brand-%2F-Website?type=design&node-id=188%3A3554&mode=design&t=n1XGGcyrz50Iid7i-1",
     drive:
       "https://drive.google.com/drive/u/0/folders/10MMk0j6A1cMOSDIRdWxv0FCSwHXg7sAE",
     calendar:
@@ -58,6 +60,7 @@ const subdomainsRedirections = {
     bogota: "https://regensunite.co/bogota",
     zoom: "https://us02web.zoom.us/j/6025635806",
     brussels: "https://www.regensunite.earth/event/regens-unite-brussels-2023",
+    london: "https://www.regensunite.earth/event/regens-unite-london",
   },
   "allforclimate.earth": {
     drive:
