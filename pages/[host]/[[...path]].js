@@ -3,7 +3,6 @@ import { getHTMLFromGoogleDocId } from "../../lib/googledoc";
 import { getPageMetadata, absoluteUrl, imageType } from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
-import ErrorNotPublished from "../../components/ErrorNotPublished";
 import ErrorInvalidDocId from "../../components/ErrorInvalidDocId";
 import RenderGoogleDoc from "../../components/RenderGoogleDoc";
 import FullPageIframe from "../../components/FullPageIframe";
@@ -16,10 +15,11 @@ export async function getStaticPaths() {
     sitemap[hostKey].hosts.forEach((host) => {
       Object.keys(sitemap[hostKey].sitemap).forEach((key) => {
         if (key.match(/^collectives/)) return;
+        if (sitemap[hostKey].sitemap[key].redirect) return; // `redirect` can not be returned from getStaticProps during prerendering
         paths.push({
           params: {
             host,
-            path: [host, sitemap[hostKey].sitemap[key].googleDocId],
+            path: [sitemap[hostKey].sitemap[key].googleDocId],
           },
         });
         if (sitemap[hostKey].sitemap[key].aliases) {
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
             paths.push({
               params: {
                 host,
-                path: [host, ...alias.split("/")],
+                path: [...alias.split("/")],
               },
             });
           });
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
         paths.push({
           params: {
             host,
-            path: [host, ...key.split("/")],
+            path: [...key.split("/")],
           },
         });
       });
@@ -49,7 +49,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params, req }) {
+export async function getStaticProps({ params }) {
   let path, edit;
   let slug = "index";
   const host = params.host;
@@ -121,8 +121,11 @@ export async function getStaticProps({ params, req }) {
 
   let imagePreview = pageInfo.image;
   if (!imagePreview && doc.images) {
-    imagePreview = (doc.images.find((img) => img.width > 512) || doc.images[0])
-      .src;
+    imagePreview = (
+      doc.images.find((img) => img.width > 512) ||
+      doc.images[0] ||
+      {}
+    ).src;
   }
 
   const page = {
