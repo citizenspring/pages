@@ -461,7 +461,7 @@
   },
   "docs.regensunite.earth": {
     "hosts": [
-      "regensunite.local",
+      "docs.regensunite.local",
       "pages.regensunite.earth"
     ],
     "sitemap": {

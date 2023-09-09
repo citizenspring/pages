@@ -34,6 +34,10 @@ const getOpenCollectiveBalance = async (collectiveSlug) => {
 
 const tokenContractAddresses = {
   ethereum: {
+    ETH: {
+      address: "",
+      decimals: 18,
+    },
     WETH: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       decimals: 18,
@@ -87,6 +91,8 @@ const apihosts = {
 const api_endpoint = (chain, address, token) => {
   const apihost = apihosts[chain || "ethereum"];
 
+  // console.log(">>> api_endpoint", chain, address, token);
+
   if (!token)
     return `${apihost}&module=account&action=balance&address=${address}&tag=latest`;
 
@@ -109,7 +115,11 @@ export default async (req, res) => {
     data = await getOpenCollectiveBalance(req.query.address);
   } else {
     const apicall = api_endpoint(chain, req.query.address, req.query.token);
-    data = await fetch(apicall).then((response) => response.json());
+    try {
+      data = await fetch(apicall).then((response) => response.json());
+    } catch (e) {
+      console.log(">>> Error fetching", apicall, e);
+    }
     decimals = tokenContractAddresses[chain][token].decimals;
   }
 
@@ -122,22 +132,27 @@ export default async (req, res) => {
     token,
   };
 
-  if (result.balance != "0" && decimals != 18) {
-    for (let i = 0; i < 18 - decimals; i++) {
-      result.balance += "0";
-    }
-  }
+  switch (data.message) {
+    case "NOTOK":
+      result.balance = undefined;
+      result.error = data.result;
+      break;
+    default:
+      if (result.balance != "0" && decimals != 18) {
+        for (let i = 0; i < 18 - decimals; i++) {
+          result.balance += "0";
+        }
+      }
 
-  if (data.message === "OK") {
-    if (!res.setHeader || typeof res.setHeader !== "function") {
-      console.log(">>> res.setHeader", typeof res.setHeader, res.setHeader);
-    } else {
-      res.setHeader(
-        "Cache-Control",
-        "public, s-maxage=600, stale-while-revalidate=1200"
-      );
-    }
+      if (!res.setHeader || typeof res.setHeader !== "function") {
+        console.log(">>> res.setHeader", typeof res.setHeader, res.setHeader);
+      } else {
+        res.setHeader(
+          "Cache-Control",
+          "public, s-maxage=600, stale-while-revalidate=1200"
+        );
+      }
   }
-
-  res.status(200).json(result);
+  // console.log(">>> result", result);
+  return res.status(200).json(result);
 };

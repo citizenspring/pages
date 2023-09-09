@@ -21,7 +21,7 @@ const api_endpoint = (chain, address, token) => {
 function BalanceWidget({ chain, address, token }) {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const apicall = api_endpoint(chain, address, token);
-  console.log(">>> api call", apicall);
+  // console.log(">>> api call", apicall);
   const { data, error } = useSWR(apicall, fetcher);
 
   if (error) return "An error has occurred.";
@@ -29,6 +29,7 @@ function BalanceWidget({ chain, address, token }) {
 
   console.log(">>> data received", data);
 
+  if (data.error) return data.error;
   if (isNaN(parseFloat(data.balance))) return "Invalid response";
 
   return (
