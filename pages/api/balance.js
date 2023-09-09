@@ -90,15 +90,13 @@ const apihosts = {
 
 const api_endpoint = (chain, address, token) => {
   const apihost = apihosts[chain || "ethereum"];
+  const tokenAddress =
+    token && tokenContractAddresses[chain || "ethereum"][token].address;
 
-  // console.log(">>> api_endpoint", chain, address, token);
-
-  if (!token)
+  if (!token || !tokenAddress)
     return `${apihost}&module=account&action=balance&address=${address}&tag=latest`;
 
-  return `${apihost}&module=account&action=tokenbalance&contractaddress=${
-    tokenContractAddresses[chain || "ethereum"][token].address
-  }&address=${address}&tag=latest`;
+  return `${apihost}&module=account&action=tokenbalance&contractaddress=${tokenAddress}&address=${address}&tag=latest`;
 };
 
 export default async (req, res) => {
