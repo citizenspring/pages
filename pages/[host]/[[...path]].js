@@ -286,7 +286,11 @@ export default function Home({ page }) {
     <div className="w-full">
       <Head>
         <title>{title || defaultValues.title}</title>
-        <link rel="icon" href={favicon || defaultValues.favicon} />
+        <link
+          rel="icon"
+          href={favicon || defaultValues.favicon}
+          sizes="32x32"
+        />
         <meta
           name="description"
           property="og:description"
@@ -294,11 +298,11 @@ export default function Home({ page }) {
         />
         <meta
           property="og:image"
-          content={absoluteUrl(image || defaultValues.image)}
+          content={absoluteUrl(image || defaultValues.image, host)}
         />
         <meta
           property="og:image:type"
-          content={imageType(image || defaultValues.image)}
+          content={imageType(image || defaultValues.image, host)}
         />
       </Head>
 
