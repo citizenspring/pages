@@ -54,15 +54,20 @@ export async function getStaticProps({ params }) {
   let slug = "index";
   const host = params.host;
 
-  // console.log(">>> params", params);
+  console.log(">>> params", params);
 
   if (params.path) {
     if (params.path[params.path.length - 1] === "edit") {
       params.path.pop();
       edit = true;
     }
+    if (params.path[0] === host) {
+      params.path.shift();
+    }
     slug = params.path.join("/");
   }
+
+  console.log(">>> slug", slug);
 
   let doc = {},
     error = null,
