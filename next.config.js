@@ -42,6 +42,7 @@ const subdomainsRedirections = {
     discord: "https://discord.gg/awfSTf6EHK",
     whatsapp: "https://chat.whatsapp.com/JQ4fttn0KEH79xAyryYs4e",
     zoom: "https://us02web.zoom.us/j/6025635806",
+    figma: "https://www.figma.com/files/team/1288058715406744670/daobrussels",
     telegram: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
     calendar:
       "https://calendar.google.com/calendar/embed?src=haijn9je0u2ci9efj7g0it8tk4%40group.calendar.google.com&ctz=Europe%2FBrussels",
@@ -143,5 +144,16 @@ module.exports = {
         destination: "/:host/:path*",
       },
     ];
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+      config.resolve.fallback = {
+        fs: false,
+        path: false,
+      };
+    }
+
+    return config;
   },
 };
