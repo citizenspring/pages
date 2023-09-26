@@ -2,6 +2,7 @@
   "playstreets.brussels": {
     "hosts": [
       "playstreets.brussels",
+      "www.playstreets.brussels",
       "playstreets.local"
     ],
     "sitemap": {
@@ -162,6 +163,7 @@
   "openfacilitation.brussels": {
     "hosts": [
       "openfacilitation.brussels",
+      "www.openfacilitation.brussels",
       "openfacilitation.brussels.local"
     ],
     "sitemap": {
@@ -177,6 +179,7 @@
   "citizenwallet.xyz": {
     "hosts": [
       "citizenwallet.xyz",
+      "www.citizenwallet.xyz",
       "citizenwallet.local"
     ],
     "theme": {
@@ -211,6 +214,7 @@
   "dao.brussels": {
     "hosts": [
       "dao.brussels",
+      "www.dao.brussels",
       "dao.local"
     ],
     "sitemap": {
@@ -256,6 +260,7 @@
   "citizenspring.earth": {
     "hosts": [
       "citizenspring.earth",
+      "www.citizenspring.earth",
       "citizenspring.local"
     ],
     "sitemap": {
@@ -341,6 +346,7 @@
   "citizencorner.brussels": {
     "hosts": [
       "citizencorner.brussels",
+      "www.citizencorner.brussels",
       "citizencorner.local"
     ],
     "sitemap": {
