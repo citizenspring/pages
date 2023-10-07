@@ -1,0 +1,22 @@
+.content .button.primary {
+  background-color: #563087 !important;
+}
+.content .button.primary:hover {
+  background-color: #290755 !important;
+}
+
+.content .button.secondary {
+  border-color: #290755 !important;
+}
+
+.content a {
+  color: #563087 !important;
+}
+
+.content a:hover {
+  color: #290755 !important;
+}
+
+.content h3 span {
+  color: #290755 !important;
+}
