@@ -7,6 +7,8 @@
 
 .content .button.secondary {
   border-color: #290755 !important;
+  background-color: white !important;
+  color: #290755 !important;
 }
 
 .content a {
@@ -18,5 +20,7 @@
 }
 
 .content h3 span {
+  font-weight: 900;
+  font-size: 16pt;
   color: #290755 !important;
 }

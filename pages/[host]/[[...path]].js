@@ -1,6 +1,11 @@
 import Head from "next/head";
 import { getHTMLFromGoogleDocId } from "../../lib/googledoc";
-import { getPageMetadata, absoluteUrl, imageType } from "../../lib/lib";
+import {
+  getPageMetadata,
+  absoluteUrl,
+  imageType,
+  loadCustomCSS,
+} from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
 import ErrorInvalidDocId from "../../components/ErrorInvalidDocId";
@@ -133,6 +138,8 @@ export async function getStaticProps({ params }) {
     ).src;
   }
 
+  const customCss = loadCustomCSS(host);
+
   const page = {
     title: pageInfo.title || doc.title || null,
     description: pageInfo.description || doc.description || null,
@@ -143,6 +150,7 @@ export async function getStaticProps({ params }) {
     outline: doc.outline || null,
     googleDocId: googleDocId || null,
     iframeSrc: iframeSrc || null,
+    customCss,
     host,
     error,
   };
@@ -304,6 +312,7 @@ export default function Home({ page }) {
           property="og:image:type"
           content={imageType(image || defaultValues.image, host)}
         />
+        {page.customCss && <style>{page.customCss}</style>}
       </Head>
 
       <main className="relative min-h-screen md:flex w-full overflow-hidden">
