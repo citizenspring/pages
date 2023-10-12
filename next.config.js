@@ -12,7 +12,7 @@ const subdomainsRedirections = {
     wireframes:
       "https://www.figma.com/file/bH8gD0i9xsPsHyXKga67LT/wireframes?type=design&node-id=0-1&mode=design&t=Htqwd5dMKDZfDtiz-0",
     figma:
-      "https://www.figma.com/files/team/1266323262588917604/Citizen-Wallet",
+      "https://www.figma.com/file/qwtJ5S8VDWMVvxRqgCvLrE/branding?type=design&mode=design&t=SGJAkygqco9TtzkP-0",
     calendar:
       "https://calendar.google.com/calendar/embed?src=c19265b9b3f270a100ed7ddf0c077dbedae83f84f439186e0996e0c71b7365f6%40group.calendar.google.com&ctz=Europe%2FBrussels",
     deck: "https://drive.google.com/open?id=1JANeY8e-EfmKXM8mqTTKtwOgYZ4xbE1I",
@@ -33,8 +33,8 @@ const subdomainsRedirections = {
   },
   "citizenspring.earth": {
     zoom: "https://us02web.zoom.us/j/6025635806",
-    drive:
-      "https://drive.google.com/drive/u/0/folders/1ooAOhv3OGXAforyuYUA9i2B0kb1uP471",
+    zinne: "https://zinne.glide.page",
+    drive: "https://drive.google.com/drive/folders/0AOI4BBfAd3WXUk9PVA",
   },
   "dao.brussels": {
     drive:
