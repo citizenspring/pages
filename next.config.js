@@ -92,6 +92,8 @@ module.exports = {
       "lh4.googleusercontent.com",
       "lh5.googleusercontent.com",
       "lh6.googleusercontent.com",
+      "lh7.googleusercontent.com",
+      "lh7-us.googleusercontent.com",
       "dl.airtable.com",
       "pbs.twimg.com",
     ],
