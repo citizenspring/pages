@@ -80,6 +80,10 @@ const tokenContractAddresses = {
       address: "0x0000000000000000000000000000000000001010",
       decimals: 18,
     },
+    ZINNE: {
+      address: 0x0785d720279f42326846d5396b5f44b97d0bfecd,
+      decimals: 6,
+    },
   },
 };
 
