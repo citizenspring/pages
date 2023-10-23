@@ -28,12 +28,17 @@ export default async (req, res) => {
   }
 
   const htmlText = await fetchResponse.text();
-  const regex = /<img(?: alt="")? src="([^"]+)"/gi;
+  const regex = /<img[^>]+src="([^"]+)"[^>]*>/gi;
   let match;
   const matches = [];
   while ((match = regex.exec(htmlText)) !== null) {
     matches.push(match[1]); // Extract the src attribute value
-    const img = await fetchImage(match[1]);
+    let img;
+    try {
+      img = await fetchImage(match[1]);
+    } catch (e) {
+      console.log("!!! /api/image > fetchImage error", e);
+    }
     if (img.md5 === req.query.imageHash) {
       // console.log(">>> image found", img);
       const oneYearInSeconds = 31536000;
