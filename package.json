@@ -35,6 +35,7 @@
     "moment": "^2.29.1",
     "momentjs": "^2.0.0",
     "next": "12.3.1",
+    "node-fetch": "^3.3.2",
     "numeral": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
