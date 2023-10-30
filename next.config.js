@@ -45,6 +45,7 @@ const subdomainsRedirections = {
     figma: "https://www.figma.com/files/team/1288058715406744670/daobrussels",
     telegram: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
     photos: "https://photos.app.goo.gl/f921RyUyJAEAUy7S8",
+    wallet: "https://dao.brussels/wallet",
     notion:
       "https://www.notion.so/daobrussels/DAO-Brussels-e84bb3439d174a21a64bea071d266e8d",
     calendar:
