@@ -18,6 +18,7 @@ const subdomainsRedirections = {
     deck: "https://drive.google.com/open?id=1JANeY8e-EfmKXM8mqTTKtwOgYZ4xbE1I",
     tasks: "https://app.dework.xyz/citizenwallet",
     discord: "https://discord.gg/fsdmswqqMm",
+    telegram: "https://t.me/+r5kF0wZQ3643OWIx",
   },
   "citizencorner.brussels": {
     calendar:
