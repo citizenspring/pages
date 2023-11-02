@@ -43,7 +43,8 @@ const subdomainsRedirections = {
     discord: "https://discord.gg/awfSTf6EHK",
     whatsapp: "https://chat.whatsapp.com/JQ4fttn0KEH79xAyryYs4e",
     zoom: "https://us02web.zoom.us/j/6025635806",
-    figma: "https://www.figma.com/files/team/1288058715406744670/daobrussels",
+    figma:
+      "https://www.figma.com/file/j650orH4LNkssEydb2bcfc/DAO.Brussels-whiteboard?type=whiteboard&node-id=0%3A1&t=BhsrA01iVaWUV3rp-1",
     telegram: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
     photos: "https://photos.app.goo.gl/f921RyUyJAEAUy7S8",
     wallet: "https://dao.brussels/wallet",
