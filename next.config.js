@@ -15,7 +15,7 @@ const subdomainsRedirections = {
       "https://www.figma.com/file/qwtJ5S8VDWMVvxRqgCvLrE/branding?type=design&mode=design&t=SGJAkygqco9TtzkP-0",
     calendar:
       "https://calendar.google.com/calendar/embed?src=c19265b9b3f270a100ed7ddf0c077dbedae83f84f439186e0996e0c71b7365f6%40group.calendar.google.com&ctz=Europe%2FBrussels",
-    deck: "https://drive.google.com/open?id=1JANeY8e-EfmKXM8mqTTKtwOgYZ4xbE1I",
+    deck: "https://drive.google.com/open?id=1OOxDEpbNXj_PI9cqnOre6SkEdqBTDxAz",
     tasks: "https://app.dework.xyz/citizenwallet",
     discord: "https://discord.gg/fsdmswqqMm",
     telegram: "https://t.me/+r5kF0wZQ3643OWIx",
