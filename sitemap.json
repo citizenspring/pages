@@ -202,6 +202,12 @@
         "title": "Citizen Wallet - About",
         "googleDocId": "kd0MuJ6OYHs4dXhXtlrvRPqXvOX7bcPCjBJIU0"
       },
+      "communitycall": {
+        "title": "Weekly Community Call - Citizen Wallet",
+        "description": "Join us on our weekly community call to discuss the present and future of the Citizen Wallet",
+        "image": "/communitycall-ogimage.jpg",
+        "googleDocId": "10Y3MbRXRNyH-yYHggnjnJQiPp5YaLPcwIlV1KAGNHY4"
+      },
       "privacy": {
         "aliases": [
           "privacypolicy"
