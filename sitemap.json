@@ -208,6 +208,21 @@
         "image": "/communitycall-ogimage.jpg",
         "googleDocId": "10Y3MbRXRNyH-yYHggnjnJQiPp5YaLPcwIlV1KAGNHY4"
       },
+      "funding": {
+        "title": "Funding - Citizen Wallet",
+        "description": "Support the Citizen Wallet as a digital public good.",
+        "googleDocId": "1zssWuMWSTSztzNy1n0mRM-Ey33AFxDDIB5EhonLyaLk"
+      },
+      "funding/gitcoin": {
+        "title": "Gitcoin grants - Citizen Wallet",
+        "description": "Support the Citizen Wallet as a digital public good on Gitcoin and get your donation matched.",
+        "googleDocId": "1v-5KORvTlFzjc1urDsWzWvGs8rKopjdBl-0axQCIZ1A"
+      },
+      "funding/celo": {
+        "title": "CELO grant - Citizen Wallet",
+        "description": "CELO is supporting the development of the Citizen Wallet as a digital public good via prezenti.xyz.",
+        "googleDocId": "15KefsrWcGmTCOgs-7Y-4w7WKHQRFA0HoCG98d2n-VYA"
+      },
       "privacy": {
         "aliases": [
           "privacypolicy"
