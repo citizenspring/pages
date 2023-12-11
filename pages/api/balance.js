@@ -96,6 +96,7 @@ const tokenContractAddresses = {
 const apihosts = {
   ethereum: `https://api.etherscan.io/api?apikey=${process.env.ETHERSCAN_API_KEY}`,
   polygon: `https://api.polygonscan.com/api?apikey=${process.env.POLYGONSCAN_API_KEY}`,
+  optimism: `https://api-optimistic.etherscan.io/api?apikey=${process.env.OPTIMISMSCAN_API_KEY}`,
 };
 
 const api_endpoint = (chain, address, token) => {
@@ -130,8 +131,6 @@ export default async (req, res) => {
     }
     decimals = tokenContractAddresses[chain][token].decimals;
   }
-
-  // console.log("api/balance: data received", data);
 
   const result = {
     chain,
