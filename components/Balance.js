@@ -10,7 +10,7 @@ import { formatUnits } from "@ethersproject/units";
  * - opencollective:regensunite/EUR
  */
 const api_endpoint = (chain, address, token) => {
-  const matches = address.match(/([a-z]+):([^\s]+)(?:\/)([A-Z]{3,5})?$/i);
+  const matches = address.match(/([a-z]+):([^\s]+)(?:\/)([a-zA-Z]{3,5})?$/i);
   if (matches) {
     const [, _chain, _address, _token] = matches;
     return `/api/balance?chain=${_chain}&address=${_address}&token=${_token}`;

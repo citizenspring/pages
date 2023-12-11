@@ -91,18 +91,38 @@ const tokenContractAddresses = {
       decimals: 18,
     },
   },
+  celo: {
+    CELO: {
+      address: "",
+      decimals: 18,
+    },
+    CUSD: {
+      address: "0x765DE816845861e75A25fCA122bb6898B8B1282a",
+      decimals: 18,
+    },
+    CEUR: {
+      address: "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
+      decimals: 18,
+    },
+    DAI: {
+      address: "0xE4fE50cdD716522A56204352f00AA110F731932d",
+      decimals: 18,
+    },
+  },
 };
 
 const apihosts = {
   ethereum: `https://api.etherscan.io/api?apikey=${process.env.ETHERSCAN_API_KEY}`,
   polygon: `https://api.polygonscan.com/api?apikey=${process.env.POLYGONSCAN_API_KEY}`,
   optimism: `https://api-optimistic.etherscan.io/api?apikey=${process.env.OPTIMISMSCAN_API_KEY}`,
+  celo: `https://api.celoscan.io/api?apikey=${process.env.CELOSCAN_API_KEY}`,
 };
 
 const api_endpoint = (chain, address, token) => {
   const apihost = apihosts[chain || "ethereum"];
   const tokenAddress =
-    token && tokenContractAddresses[chain || "ethereum"][token].address;
+    token &&
+    tokenContractAddresses[chain || "ethereum"][token.toUpperCase()].address;
 
   if (!token || !tokenAddress)
     return `${apihost}&module=account&action=balance&address=${address}&tag=latest`;
@@ -129,7 +149,7 @@ export default async (req, res) => {
     } catch (e) {
       console.log(">>> Error fetching", apicall, e);
     }
-    decimals = tokenContractAddresses[chain][token].decimals;
+    decimals = tokenContractAddresses[chain][token.toUpperCase()].decimals;
   }
 
   const result = {
