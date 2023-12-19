@@ -224,7 +224,7 @@ export default function Home({ page }) {
   }
 
   function logit() {
-    const y = window.pageYOffset;
+    const y = window.scrollY;
     if (y % 5 !== 0) return false;
 
     let section = null,
