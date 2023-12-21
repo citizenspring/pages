@@ -65,7 +65,7 @@ const subdomainsRedirections = {
       "https://jz04xmgcexm.typeform.com/to/HQxBKQdg?typeform-source=apply.regensunite.earth",
     discord: "https://discord.gg/QcfPAJaWb2",
     bogota: "https://regensunite.co/bogota",
-    zoom: "https://us06web.zoom.us/j/5686896709?pwd=FJRqQm1095ybw8t6WChubzkbleNpHS.1",
+    zoom: "https://us06web.zoom.us/j/85376213456",
     brussels: "https://www.regensunite.earth/event/regens-unite-brussels-2023",
     london: "https://www.regensunite.earth/event/regens-unite-london",
   },
