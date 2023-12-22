@@ -59,7 +59,7 @@ export async function getStaticProps({ params }) {
   let slug = "index";
   const host = params.host;
 
-  console.log(">>> params", params);
+  // console.log(">>> params", params);
 
   if (params.path) {
     if (params.path[params.path.length - 1] === "edit") {
@@ -72,7 +72,7 @@ export async function getStaticProps({ params }) {
     slug = params.path.join("/");
   }
 
-  console.log(">>> slug", slug);
+  console.log("GET", host, slug);
 
   let doc = {},
     error = null,
@@ -81,7 +81,7 @@ export async function getStaticProps({ params }) {
   try {
     pageInfo = getPageMetadata(host, slug);
   } catch (e) {
-    console.log(">>> error", e);
+    console.log(">>> getPageMetadata error", host, slug, e);
     error = "invalid_host";
     pageInfo = {};
   }
