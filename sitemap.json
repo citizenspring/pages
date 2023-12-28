@@ -397,54 +397,77 @@
         "googleDocId": "1gEw7u-Fh3ZDhqy_qCzvyMKIHt7o9Ac584kcJQrEjceg"
       },
       "about": {
+        "title": "About",
         "googleDocId": "1iT52-iZixBxFTsJjQo6SYAixaKtZIM5Gg3ZsAal6B4E"
       },
       "faq": {
+        "title": "FAQ",
         "googleDocId": "1oE7zKzwXV0V3ME5NWRDjENmRrqQKIFYIhPdCphsgYQA"
       },
-      "2022/when-citizens-spring": {
+      "stories/2022/when-citizens-spring": {
         "title": "When citizens spring ",
         "description": "What happens when citizens do participate? Leen Schelfhout and Xavier Damman, May 2022",
         "googleDocId": "1wsX0T0SXvi4u4xra7t8e5eMcKLjvAGbULxYWt92yqV0",
         "image": "/when-citizens-spring-cover.jpg"
       },
-      "citizenbikegarden": {
+      "projects/citizenbikegarden": {
+        "aliases": [
+          "citizenbikegarden"
+        ],
+        "title": "Citizen Bike Garden 🚲🌻",
         "description": "A citizen initiative to build a bike shed with a community garden and a blackboard to communicate with neighbors",
         "googleDocId": "1U_Yxqb2UyE0_47d6SeD_k79fkLZmOtLn8XTPAuuNBsA"
       },
-      "citizengarden": {
+      "projects/citizengarden": {
+        "aliases": [
+          "citizengarden"
+        ],
         "title": "Citizen Garden",
         "description": "A tiny community garden trying to find its place in a city made for cars",
         "googleDocId": "1_GPtdLQ2hx-fGCjvRC9dlSZ2Qdd8od5ap5IsJ909EuE"
       },
-      "academy": {
+      "projects/academy": {
+        "aliases": [
+          "academy"
+        ],
         "title": "Citizen Spring Academy 🌱🌻",
         "description": "Get €5.000 to start a new sustainable place in Brussels with the help of a fellow citizen entrepreneur.",
         "googleDocId": "1Ru5vxtTuOQOsOldapez1DaLUBatQjdf2tXI_WCrRrz8",
         "image": "/citizenspring-academy-fb.png"
       },
-      "house": {
+      "community-houses/veganjungle": {
         "aliases": [
+          "house",
+          "veganjungle",
           "veganhouse"
         ],
+        "title": "Vegan Jungle House",
         "googleDocId": "16SdrHEPc6UvyNbROeksQrFjeMSIJs_aK-mN40cjsPe8"
       },
-      "villers": {
-        "title": "Rue de Villers - Meet the Citizens",
-        "googleDocId": "17Zo0_9RkBQbN3Oe8JcKguH2ijKxgrTSJeqAT6DwOsnw"
-      },
-      "regenhouse": {
-        "title": "Regen House - Rue de Villers",
+      "community-houses/regenhouse": {
+        "aliases": [
+          "regenhouse"
+        ],
+        "title": "Regen House",
         "description": "A place for fellow regens to stay in Brussels",
         "googleDocId": "1lfbE3OtgIHkUe2f2Y52DAs1zuc6Dhoe35EL2rBaqUD4"
       },
-      "citizencorner": {
+      "villers": {
+        "hidden": true,
+        "title": "Rue de Villers - Meet the Citizens",
+        "googleDocId": "17Zo0_9RkBQbN3Oe8JcKguH2ijKxgrTSJeqAT6DwOsnw"
+      },
+      "projects/citizencorner": {
+        "aliases": [
+          "citizencorner"
+        ],
         "title": "Citizen Corner 🌱🌻 ",
         "description": "A place in Schaerbeek, Brussels, for citizens to meet, learn and co-create.",
         "googleDocId": "1Gpq1Jzb7GBK9YQqgKnP8K8ShU3IPPWfD93qmrepQPm4",
         "image": "/citizencorner-building.jpg"
       },
       "cryptoart": {
+        "hidden": true,
         "title": "Cryptoart Corner 🎨 💻",
         "description": "A place in the capital of europe to bring local artists to the crypto world",
         "googleDocId": "13Q7o_jQUZXRpwgpj0r9_Gr0OGrFr9jhXouf2fY9QYGs",

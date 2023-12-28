@@ -17,7 +17,7 @@ const Footer = ({ googleDocId, sitemap }) => {
     }
     if (key.indexOf("/") !== -1) {
       const subtitle = key.substring(0, key.indexOf("/"));
-      columns[subtitle] = { title: subtitle, pages: [] };
+      columns[subtitle] = { title: subtitle.replace(/[_\-]/g, " "), pages: [] };
     }
   }
 
@@ -62,7 +62,7 @@ const Footer = ({ googleDocId, sitemap }) => {
       id="footer"
       className="bg-gray-800 text-white mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
     >
-      <div className="container max-w-[1024px] mx-auto flex flex-col sm:flex-row justify-around">
+      <div className="container max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-around">
         <a href="/" title={`${homeTitle} homepage`}>
           <div className="space-y-4 mb-8 mr-10 min-w-[164px]">
             {columns.index.icon && (
@@ -87,7 +87,7 @@ const Footer = ({ googleDocId, sitemap }) => {
                 columns[c].title.length < 30
             )
             .map((colName) => (
-              <div className="space-y-4 mb-8 min-w-[164px] max-w-[196px] ml-0 mr-8">
+              <div className="space-y-4 mb-8 min-w-[128px] max-w-[196px] ml-0 mr-8">
                 <h2 className="text-lg mt-0 font-semibold capitalize">
                   {columns[colName].href && (
                     <Link
