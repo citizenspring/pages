@@ -18,6 +18,7 @@ module.exports = {
                 "ul",
                 "li",
                 "pagebreak",
+                "footer",
                 "p",
                 "h1",
                 "h2",

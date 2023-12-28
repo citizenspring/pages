@@ -37,19 +37,6 @@
       }
     }
   },
-  "pages.citizenspring.earth": {
-    "hosts": [
-      "pages.citizenspring.earth",
-      "pages.local"
-    ],
-    "sitemap": {
-      "index": {
-        "title": "pages.citizenspring.earth: a quick website for your citizen initiative",
-        "description": "Create a quick website that anyone in your community can edit",
-        "googleDocId": "1uYVq7EfSbRh8dP4xSaEKoLMB9B2Y-_bMtkkFX-hWDEw"
-      }
-    }
-  },
   "dao.allforclimate.earth": {
     "hosts": [
       "dao.allforclimate.local"
