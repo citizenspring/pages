@@ -21,6 +21,7 @@ export async function getStaticPaths() {
   const paths = [];
   Object.keys(sitemap).forEach((hostKey) => {
     sitemap[hostKey].hosts.forEach((host) => {
+      if (host.match(/\.local$/)) return; // do not prerender for local environment
       if (!sitemap[hostKey].prerender) return;
       Object.keys(sitemap[hostKey].sitemap).forEach((key) => {
         if (key.match(/^collectives/)) return;
@@ -239,7 +240,9 @@ export default function Home(props) {
 
   function changeCurrentSection(section) {
     setCurrentSection(section);
-    document.querySelectorAll("#outline a").forEach((el) => {
+    const anchors = document.querySelectorAll("#outline a");
+    if (anchors.length === 0) return;
+    anchors.forEach((el) => {
       const href = el.getAttribute("href");
       if (href === `#${section}`) {
         el.classList.add("bg-gray-300");
@@ -263,6 +266,7 @@ export default function Home(props) {
     let section = null,
       index = 0;
 
+    if (!outline || outline.length === 0) return;
     outline.forEach((item, i) => {
       if (y >= item.offsetTop - 60) {
         section = item.slug;
@@ -281,7 +285,9 @@ export default function Home(props) {
       return;
     }
     setCurrentDocWidth(Number(docEl.offsetWidth) || 120);
-    docEl.querySelectorAll("h1,h2,h3,h4,h5,h6").forEach((el) => {
+    const subtitles = docEl.querySelectorAll("h1,h2,h3,h4,h5,h6");
+    if (subtitles.length === 0) return;
+    subtitles.forEach((el) => {
       const slug = el.getAttribute("id");
       const item = outline.find((o) => o.slug === slug);
       if (!item) return;

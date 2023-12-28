@@ -149,6 +149,16 @@ module.exports = {
             value: "(?<host>.*)",
           },
         ],
+        source: "/_next/:path*",
+        destination: "/_next/:path*",
+      },
+      {
+        has: [
+          {
+            type: "host",
+            value: "(?<host>.*)",
+          },
+        ],
         source: "/:path*",
         destination: "/:host/:path*",
       },
