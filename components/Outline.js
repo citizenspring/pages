@@ -66,19 +66,17 @@ function Outline({ homeTitle, homeIcon, outline, onChange }) {
       >
         <div className="md:min-h-screen md:overflow-y-auto pl-1 pb-8">
           <div className="sm:hidden absolute top-0 left-0 w-80 bg-gray-100/90 h-12"></div>
-          <Link href="/">
-            <a title="Back to homepage">
-              <div className="pl-3 pt-6 flex">
-                {homeIcon && (
-                  <img
-                    src={homeIcon}
-                    alt="favicon"
-                    className="h-7 mt-8 ml-0 mr-2"
-                  />
-                )}
-                <h2>{homeTitle}</h2>
-              </div>
-            </a>
+          <Link href="/" title="Back to homepage">
+            <div className="pl-3 pt-6 flex">
+              {homeIcon && (
+                <img
+                  src={homeIcon}
+                  alt="favicon"
+                  className="h-7 mt-8 ml-0 mr-2"
+                />
+              )}
+              <h2>{homeTitle}</h2>
+            </div>
           </Link>
           <h3 className="pl-3 pt-0">On this page</h3>
           {outline

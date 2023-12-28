@@ -55,7 +55,7 @@ const Footer = ({ googleDocId, sitemap }) => {
     title: (sitemap.edit && sitemap.edit.description) || "Edit this page",
     href: `https://docs.google.com/document/d/${googleDocId}/edit`,
   });
-  console.log(">>> footer", columns);
+  // console.log(">>> footer", columns);
 
   return (
     <footer
@@ -87,7 +87,10 @@ const Footer = ({ googleDocId, sitemap }) => {
                 columns[c].title.length < 30
             )
             .map((colName) => (
-              <div className="space-y-4 mb-8 min-w-[128px] max-w-[196px] ml-0 mr-8">
+              <div
+                key={`footer-${colName}`}
+                className="space-y-4 mb-8 min-w-[128px] max-w-[196px] ml-0 mr-8"
+              >
                 <h2 className="text-lg mt-0 font-semibold capitalize">
                   {columns[colName].href && (
                     <Link
@@ -101,7 +104,10 @@ const Footer = ({ googleDocId, sitemap }) => {
                 </h2>
                 <ul className="space-y-2 list-none">
                   {columns[colName].pages.map((page) => (
-                    <li className="list-none ml-0 normal-case">
+                    <li
+                      key={`footer-${page.slug}`}
+                      className="list-none ml-0 normal-case"
+                    >
                       <Link className="hover:underline " href={page.href}>
                         {page.title || page.slug}
                       </Link>

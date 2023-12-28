@@ -1,3 +1,8 @@
+.content.index p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .content .button.primary {
   background-color: #563087 !important;
 }

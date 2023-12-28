@@ -41,7 +41,7 @@ export default function RenderGoogleDoc({ html }) {
             src={node.attribs.src}
             width={node.attribs.width}
             height={node.attribs.height}
-            layout="responsive"
+            className="responsive"
           />
         );
       }

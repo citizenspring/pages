@@ -6,10 +6,12 @@ import crypto from "crypto";
 
 export default async (req, res) => {
   if (!req.query.googleDocId) {
-    return res.status(200).json({ error: "no googleDocId provided" });
+    res.status(200).json({ error: "no googleDocId provided" });
+    return;
   }
   if (!req.query.imageHash) {
-    return res.status(200).json({ error: "no imageHash provided" });
+    res.status(200).json({ error: "no imageHash provided" });
+    return;
   }
 
   const googledocURL = `https://docs.google.com/document/d/${req.query.googleDocId}`;
@@ -18,13 +20,15 @@ export default async (req, res) => {
     // console.log(">>> fetching", googledocURL);
     fetchResponse = await fetch(`${googledocURL}/pub`);
     if (fetchResponse.status !== 200) {
-      return res
+      res
         .status(fetchResponse.status)
         .json({ error: fetchResponse.statusText });
+      return;
     }
   } catch (e) {
     console.log("!!! getHTMLFromGoogleDocId > fetch error", e);
-    return res.status(500).json({ error: e.message });
+    res.status(500).json({ error: e.message });
+    return;
   }
 
   const htmlText = await fetchResponse.text();
@@ -45,10 +49,11 @@ export default async (req, res) => {
       res.setHeader("Cache-Control", `public, max-age=${oneYearInSeconds}`);
       res.setHeader("Content-Type", img.filetype); // Adjust the content type as needed
       res.setHeader("Content-Length", img.filesize); // Adjust the content type as needed
-      return res.status(200).end(img.buffer);
+      res.status(200).end(img.buffer);
+      return;
     }
   }
-  return res.status(404).end();
+  res.status(404).end();
 };
 
 async function fetchImage(src) {
@@ -58,7 +63,7 @@ async function fetchImage(src) {
     console.error("!!! fetchImage > fetch error", response.status, response);
     return {};
   }
-  const buffer = await response.buffer();
+  const buffer = Buffer.from(await response.arrayBuffer());
   // console.log(">>> response.headers", response.headers);
   const md5 = crypto.createHash("md5").update(buffer).digest("hex");
   const filesize = response.headers.get("content-length");

@@ -91,17 +91,19 @@ module.exports = {
   },
   swcMinify: false,
   images: {
-    domains: [
-      "lh1.googleusercontent.com",
-      "lh2.googleusercontent.com",
-      "lh3.googleusercontent.com",
-      "lh4.googleusercontent.com",
-      "lh5.googleusercontent.com",
-      "lh6.googleusercontent.com",
-      "lh7.googleusercontent.com",
-      "lh7-us.googleusercontent.com",
-      "dl.airtable.com",
-      "pbs.twimg.com",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.airtable.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.twimg.com",
+      },
     ],
   },
   async redirects() {

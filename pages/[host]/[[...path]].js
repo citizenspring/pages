@@ -45,6 +45,14 @@ export async function getStaticPaths() {
             path: [...key.split("/")],
           },
         });
+        if (key === "index") {
+          paths.push({
+            params: {
+              host,
+              path: [],
+            },
+          });
+        }
       });
     });
   });
@@ -60,8 +68,6 @@ export async function getStaticProps({ params }) {
   let path, edit;
   let slug = "index";
   const host = params.host;
-
-  // console.log(">>> params", params);
 
   if (params.path) {
     if (params.path[params.path.length - 1] === "edit") {
@@ -153,6 +159,7 @@ export async function getStaticProps({ params }) {
     body: doc.body || null,
     outline: doc.outline || null,
     googleDocId: googleDocId || null,
+    slug: pageInfo.slug || null,
     iframeSrc: iframeSrc || null,
     customCss,
     host,
@@ -336,7 +343,7 @@ export default function Home({ page }) {
           <div className="flex flex-col w-full mx-auto justify-center">
             <div
               id="document"
-              className="content px-4 mx-auto max-w-screen-md flex-1"
+              className={`${page.slug} content px-4 mx-auto max-w-screen-md flex-1`}
             >
               <RenderGoogleDoc html={body} />
             </div>
@@ -351,11 +358,13 @@ export default function Home({ page }) {
 
         {/* make sure tailwind includes the table tr td .imageWrapper.fullWidth classes in production */}
         <table className="hidden">
-          <tr>
-            <td>
-              <span className="imageWrapper fullWidth"></span>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <span className="imageWrapper fullWidth"></span>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </main>
     </div>
