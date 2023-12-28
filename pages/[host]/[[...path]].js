@@ -5,6 +5,7 @@ import {
   absoluteUrl,
   imageType,
   loadCustomCSS,
+  getSitemap,
 } from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
@@ -21,6 +22,7 @@ export async function getStaticPaths() {
       Object.keys(sitemap[hostKey].sitemap).forEach((key) => {
         if (key.match(/^collectives/)) return;
         if (sitemap[hostKey].sitemap[key].redirect) return; // `redirect` can not be returned from getStaticProps during prerendering
+        if (!sitemap[hostKey].sitemap[key].googleDocId) return;
         paths.push({
           params: {
             host,
@@ -76,10 +78,12 @@ export async function getStaticProps({ params }) {
 
   let doc = {},
     error = null,
+    hostSitemap,
     pageInfo;
 
   try {
-    pageInfo = getPageMetadata(host, slug);
+    hostSitemap = getSitemap(host);
+    pageInfo = getPageMetadata(host, slug, hostSitemap);
   } catch (e) {
     console.log(">>> getPageMetadata error", host, slug, e);
     error = "invalid_host";
@@ -152,6 +156,7 @@ export async function getStaticProps({ params }) {
     iframeSrc: iframeSrc || null,
     customCss,
     host,
+    sitemap: hostSitemap,
     error,
   };
 
@@ -178,6 +183,7 @@ export default function Home({ page }) {
     error,
     iframeSrc,
     host,
+    sitemap,
   } = page;
 
   let defaultValues;
@@ -315,7 +321,7 @@ export default function Home({ page }) {
         {page.customCss && <style>{page.customCss}</style>}
       </Head>
 
-      <main className="relative min-h-screen md:flex w-full overflow-hidden">
+      <main className="relative min-h-screen w-full overflow-hidden">
         {outline && (
           <Outline
             homeTitle={homeTitle}
@@ -324,23 +330,27 @@ export default function Home({ page }) {
             onChange={() => computeOffset()}
           />
         )}
-        <div className="content px-4 mx-auto max-w-screen-md flex-1">
-          {!body && !error && <p>Loading...</p>}
-          {errorComponent}
-          {body && (
-            <div id="document">
+        {!body && !error && <p>Loading...</p>}
+        {errorComponent}
+        {body && (
+          <div className="flex flex-col w-full mx-auto justify-center">
+            <div
+              id="document"
+              className="content px-4 mx-auto max-w-screen-md flex-1"
+            >
               <RenderGoogleDoc html={body} />
-              <Footer
-                homeTitle={homeTitle}
-                homeIcon={homeIcon}
-                googleDocId={googleDocId}
-              />
             </div>
-          )}
-        </div>
+            <Footer
+              sitemap={sitemap}
+              homeTitle={homeTitle}
+              homeIcon={homeIcon}
+              googleDocId={googleDocId}
+            />
+          </div>
+        )}
 
         {/* make sure tailwind includes the table tr td .imageWrapper.fullWidth classes in production */}
-        <table>
+        <table className="hidden">
           <tr>
             <td>
               <span className="imageWrapper fullWidth"></span>

@@ -1,0 +1,46 @@
+.content .button.primary {
+  background-color: #ff0080 !important;
+}
+.content .button.primary:hover {
+  background-color: #290755 !important;
+}
+
+.content .button.secondary {
+  border-color: #ff0080 !important;
+  background-color: white !important;
+  color: #ff0080 !important;
+}
+
+.content a {
+  color: #ff0080 !important;
+}
+
+.content a:hover {
+  color: #290755 !important;
+}
+
+.content h3 span {
+  font-weight: 900;
+  font-size: 16pt;
+  color: #290755 !important;
+}
+
+#footer {
+  background-color: color-mix(in srgb, #ff0080, black 50%);
+}
+
+#footer .icon {
+  filter: invert(1);
+  width: 100%;
+  height: auto;
+  max-width: 64px;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: color-mix(in srgb, #ff0080, white 50%);
+  text-decoration: underline;
+}
