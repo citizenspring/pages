@@ -58,7 +58,7 @@ const Footer = ({ googleDocId, sitemap }) => {
   // console.log(">>> footer", columns);
 
   return (
-    <footer
+    <div
       id="footer"
       className="bg-gray-800 text-white mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
     >
@@ -118,7 +118,7 @@ const Footer = ({ googleDocId, sitemap }) => {
             ))}
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

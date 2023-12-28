@@ -139,8 +139,8 @@ module.exports = {
             value: "(?<host>.*)",
           },
         ],
-        source: "/",
-        destination: "/:host",
+        source: "/_next/:path*",
+        destination: "/_next/:path*",
       },
       {
         has: [
@@ -149,8 +149,8 @@ module.exports = {
             value: "(?<host>.*)",
           },
         ],
-        source: "/_next/:path*",
-        destination: "/_next/:path*",
+        source: "/",
+        destination: "/:host",
       },
       {
         has: [
