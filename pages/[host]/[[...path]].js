@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import Head from "next/head";
 import { getHTMLFromGoogleDocId } from "../../lib/googledoc";
 import {
@@ -57,7 +58,11 @@ export async function getStaticPaths() {
     });
   });
 
-  // console.log(JSON.stringify(paths, null, "  "));
+  // console.log(
+  //   paths
+  //     .map((p) => `${p.params.host} ${p.params.path.join("/")}`)
+  //     .filter((p) => p.match(/dao.local/))
+  // );
   return {
     paths,
     fallback: true,
@@ -117,6 +122,7 @@ export async function getStaticProps({ params }) {
 
   if (!iframeSrc) {
     if (!googleDocId) {
+      console.error(">>> invalid_googledocid", googleDocId);
       error = error || "invalid_googledocid";
     } else {
       try {
@@ -176,7 +182,12 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Home({ page }) {
+export default function Home(props) {
+  if (!props.page) {
+    notFound();
+    return null;
+  }
+  const { page } = props;
   if (!page) return <div />;
   const {
     title,
