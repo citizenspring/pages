@@ -284,6 +284,7 @@
     }
   },
   "dao.brussels": {
+    "prerender": true,
     "hosts": [
       "dao.brussels",
       "www.dao.brussels",

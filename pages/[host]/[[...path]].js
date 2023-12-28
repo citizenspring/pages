@@ -15,11 +15,13 @@ import RenderGoogleDoc from "../../components/RenderGoogleDoc";
 import FullPageIframe from "../../components/FullPageIframe";
 import sitemap from "../../sitemap.json";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const paths = [];
   Object.keys(sitemap).forEach((hostKey) => {
     sitemap[hostKey].hosts.forEach((host) => {
+      if (!sitemap[hostKey].prerender) return;
       Object.keys(sitemap[hostKey].sitemap).forEach((key) => {
         if (key.match(/^collectives/)) return;
         if (sitemap[hostKey].sitemap[key].redirect) return; // `redirect` can not be returned from getStaticProps during prerendering
@@ -183,6 +185,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Home(props) {
+  const router = useRouter();
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   if (!props.page) {
     notFound();
     return null;
