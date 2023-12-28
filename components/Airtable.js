@@ -28,12 +28,12 @@ function Airtable({ base, tables }) {
   const api_call = `/api/airtable?base=${base}&tables=${tables}&query=${encodeURIComponent(
     query
   )}`;
-  console.log(">>> calling api_call", api_call);
+  console.log(">>> SWR fetch", api_call);
   const { data, error } = useSWR(api_call, fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
-  console.log(">>> data received", data);
+  // console.log(">>> data received", data);
   return (
     <div
       role="list"

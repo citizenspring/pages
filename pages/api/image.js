@@ -26,7 +26,11 @@ export default async (req, res) => {
       return;
     }
   } catch (e) {
-    console.log("!!! getHTMLFromGoogleDocId > fetch error", e);
+    console.log(
+      "!!! getHTMLFromGoogleDocId > cannot fetch",
+      `${googledoc}/pub`,
+      e
+    );
     res.status(500).json({ error: e.message });
     return;
   }
