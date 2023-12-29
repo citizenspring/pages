@@ -351,10 +351,10 @@ export default function Home(props) {
           property="og:image:type"
           content={imageType(image || defaultValues.image, host)}
         />
-        {page.customCss && <style>{page.customCss}</style>}
       </Head>
 
       <main className="relative min-h-screen w-full overflow-hidden">
+        {page.customCss && <style>{page.customCss}</style>}
         {outline && (
           <Outline
             homeTitle={homeTitle}
