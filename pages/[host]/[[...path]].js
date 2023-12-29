@@ -158,6 +158,7 @@ export async function getStaticProps({ params }) {
   }
 
   const customCss = loadCustomCSS(host);
+  const styles = customCss + "\n" + doc.styles;
 
   const page = {
     title: pageInfo.title || doc.title || null,
@@ -170,7 +171,7 @@ export async function getStaticProps({ params }) {
     googleDocId: googleDocId || null,
     slug: pageInfo.slug || null,
     iframeSrc: iframeSrc || null,
-    customCss,
+    styles,
     host,
     sitemap: hostSitemap,
     error,
@@ -354,7 +355,7 @@ export default function Home(props) {
       </Head>
 
       <main className="relative min-h-screen w-full overflow-hidden">
-        {page.customCss && <style>{page.customCss}</style>}
+        {page.styles && <style>{page.styles}</style>}
         {outline && (
           <Outline
             homeTitle={homeTitle}
