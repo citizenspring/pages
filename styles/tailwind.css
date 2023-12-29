@@ -1,3 +1,5 @@
+@import "../styles/dummy.css";
+
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;

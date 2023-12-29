@@ -109,12 +109,12 @@ module.exports = {
     const domains = Object.keys(subdomainsRedirections);
     const redirections = [];
     domains.forEach((domain) => {
-      console.log("\nRedirections for", domain);
+      // console.log("\nRedirections for", domain);
       const subdomains = Object.keys(subdomainsRedirections[domain]);
       subdomains.forEach((subdomain) => {
-        console.log(
-          `> ${subdomain}.${domain} -> ${subdomainsRedirections[domain][subdomain]}`
-        );
+        // console.log(
+        // `> ${subdomain}.${domain} -> ${subdomainsRedirections[domain][subdomain]}`
+        // );
         redirections.push({
           source: "/(.*)",
           has: [
