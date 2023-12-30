@@ -370,7 +370,7 @@ export default function Home(props) {
           <div className="flex flex-col w-full mx-auto justify-center">
             <div
               id="document"
-              className={`${page.slug} content px-4 mx-auto max-w-screen-md flex-1`}
+              className={`${page.slug} content px-4 mx-auto w-full max-w-screen-md flex-1`}
             >
               <RenderGoogleDoc html={body} />
             </div>
