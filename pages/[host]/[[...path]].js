@@ -158,7 +158,7 @@ export async function getStaticProps({ params }) {
   }
 
   const customCss = loadCustomCSS(host);
-  const styles = customCss + "\n" + doc.styles;
+  const styles = doc.styles + "\n" + customCss;
 
   const page = {
     title: pageInfo.title || doc.title || null,
