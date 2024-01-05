@@ -314,6 +314,16 @@
         "googleDocId": "1x_VJ8nWebSyDkyCrph2WB8bm010iNMPeUZeME7As9-Y",
         "description": "Crypto events in Brussels: Meet fellow citizens in Brussels interested in all things crypto, web3, NFTs, DAOs, blockchains, cryptogames, DeFI, ReFI, ..."
       },
+      "cryptowednesday": {
+        "title": "Crypto Wednesday ",
+        "description": "Come meet the community every first Wednesday of the month at BeCentral (above Brussels Central Station) at 7:30pm.",
+        "googleDocId": "1x_VJ8nWebSyDkyCrph2WB8bm010iNMPeUZeME7As9-Y"
+      },
+      "cryptowednesday/reports": {
+        "title": "Crypto Wednesday Reports",
+        "description": "What went well, what could be improved and action items for each Crypto Wednesday",
+        "googleDocId": "1qYqFwiwRVwodObJRFupO-4ltLnhKKAYkWbr04taxf74"
+      },
       "daosummit": {
         "hidden": true,
         "title": "DAO Summit - a week to discover working for communities",
