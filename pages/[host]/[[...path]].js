@@ -69,6 +69,7 @@ export async function getStaticProps({ params }) {
     if (!host.config) {
       throw new Error("No host config found");
     }
+    console.log(">>> host", host);
     pageInfo = getPageMetadata(host.config, slug);
     console.log(">>> pageInfo", pageInfo);
   } catch (e) {
@@ -161,7 +162,7 @@ export default function Home(props) {
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return <div className="text-center mt-72 mx-8">Generating page...</div>;
   }
   if (!props.page) {
     notFound();
