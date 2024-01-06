@@ -1,47 +1,56 @@
 import Link from "next/link";
 
-const Footer = ({ googleDocId, sitemap }) => {
-  let homeTitle = "Home";
-  let homeIcon;
+const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
   // const sections = { "index" : { title: "Home", href: "/", pages: [] }, "contribute": { title: "Contribute", pages: [] } };
   const columns = {
-    index: { pages: [] },
+    index: {
+      pages: [],
+      icon: websiteIcon && websiteIcon.src,
+      title: websiteTitle,
+    },
   };
-  for (const key in sitemap) {
-    const page = sitemap[key];
+  for (const path in sitemap) {
+    const page = sitemap[path];
+    const slug = page.slug || path.substring(1);
     if (page.hidden) continue;
-    if (key === "index") continue;
-    if (key === "edit") continue;
-    if (key === "contribute") {
-      columns[key] = { title: key, pages: [] };
+    if (slug === "index") continue;
+    if (slug === "edit") continue;
+    if (slug === "contribute") {
+      columns[slug] = { title: slug, pages: [] };
     }
-    if (key.indexOf("/") !== -1) {
-      const subtitle = key.substring(0, key.indexOf("/"));
+    if (slug.indexOf("/") !== -1) {
+      const subtitle = slug.substring(0, slug.indexOf("/"));
       columns[subtitle] = { title: subtitle.replace(/[_\-]/g, " "), pages: [] };
     }
   }
 
-  for (const key in sitemap) {
-    const page = sitemap[key];
+  for (const path in sitemap) {
+    const page = sitemap[path];
+    const slug = page.slug || path.substring(1);
     if (page.hidden) continue;
-    if (key === "edit") continue;
+    if (slug === "edit") continue;
     if (page.redirect) {
       page.href = page.redirect;
     } else {
-      page.href = `/${key === "index" ? "" : key}`;
+      page.href = `/${slug === "index" ? "" : slug}`;
     }
-    if (columns[key]) {
-      if (key === "index") {
-        homeTitle = page.title;
-        homeIcon = page.svgicon || page.icon || page.favicon;
-        columns[key].title = "Home";
+    if (columns[slug]) {
+      if (slug === "index") {
+        // websiteTitle = page.title;
+        // websiteIcon = { src: page.svgicon || page.icon || page.favicon };
+        columns["index"].title = websiteTitle || "Home";
+        columns["index"].googleDocId = page.googleDocId;
       } else {
-        columns[key].title = page.title;
+        columns["index"].title = page.title;
       }
-      columns[key].icon = page.svgicon || page.icon || page.favicon;
-      columns[key].href = page.href;
-    } else if (key.indexOf("/") !== -1) {
-      const subtitle = key.substring(0, key.indexOf("/"));
+      columns[slug].icon =
+        page.svgicon ||
+        page.icon ||
+        page.favicon ||
+        (websiteIcon && websiteIcon.src);
+      columns[slug].href = page.href;
+    } else if (slug.indexOf("/") !== -1) {
+      const subtitle = slug.substring(0, slug.indexOf("/"));
       columns[subtitle].pages.push(page);
     } else {
       columns["index"].pages.push(page);
@@ -55,7 +64,12 @@ const Footer = ({ googleDocId, sitemap }) => {
     title: (sitemap.edit && sitemap.edit.description) || "Edit this page",
     href: `https://docs.google.com/document/d/${googleDocId}/edit`,
   });
-  // console.log(">>> footer", columns);
+  if (googleDocId !== columns["index"].googleDocId) {
+    columns["contribute"].pages.push({
+      title: (sitemap.edit && sitemap.edit.description) || "Edit this website",
+      href: `https://docs.google.com/document/d/${columns["index"].googleDocId}/edit`,
+    });
+  }
 
   return (
     <div
@@ -63,19 +77,19 @@ const Footer = ({ googleDocId, sitemap }) => {
       className="bg-gray-800 text-white mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
     >
       <div className="container max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-around">
-        <a href="/" title={`${homeTitle} homepage`}>
+        <a href="/" title={`${websiteTitle} homepage`}>
           <div className="space-y-4 mb-8 mr-10 min-w-[164px]">
-            {columns.index.icon && (
+            {websiteIcon && (
               <img
-                src={columns.index.icon}
+                src={websiteIcon.src}
                 id="footerIcon"
-                alt={`${homeTitle} icon`}
+                alt={`${websiteTitle} icon`}
                 className="icon h-10 mx-0"
               />
             )}
-            {!columns.index.icon && <span>🏠</span>}
+            {!websiteIcon && <span>🏠</span>}
 
-            <h1 className="text-2xl font-semibold">{homeTitle}</h1>
+            <h1 className="text-2xl font-semibold">{websiteTitle}</h1>
           </div>
         </a>
         <div className="flex flex-wrap flex-col sm:flex-row">
@@ -84,6 +98,7 @@ const Footer = ({ googleDocId, sitemap }) => {
               (c) =>
                 columns[c].pages &&
                 columns[c].pages.length > 0 &&
+                columns[c].title &&
                 columns[c].title.length < 30
             )
             .map((colName) => (

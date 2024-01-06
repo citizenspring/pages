@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import crypto from "crypto";
 
 // We proxy images because Google Docs returns different image urls for the same image
@@ -45,7 +44,7 @@ export default async (req, res) => {
     try {
       img = await fetchImage(match[1]);
     } catch (e) {
-      console.log("!!! /api/image > fetchImage error", e);
+      console.error("!!! /api/image > fetchImage error", e);
     }
     if (img.md5 === req.query.imageHash) {
       // console.log(">>> image found", img);

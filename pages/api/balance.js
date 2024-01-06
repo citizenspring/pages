@@ -147,7 +147,7 @@ export default async (req, res) => {
     try {
       data = await fetch(apicall).then((response) => response.json());
     } catch (e) {
-      console.log(">>> Error fetching", apicall, e);
+      console.error(">>> Error fetching", apicall, e);
     }
     decimals = tokenContractAddresses[chain][token.toUpperCase()].decimals;
   }

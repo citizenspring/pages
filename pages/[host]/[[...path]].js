@@ -6,66 +6,32 @@ import {
   absoluteUrl,
   imageType,
   loadCustomCSS,
-  getSitemap,
+  getHostConfig,
 } from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
 import ErrorInvalidDocId from "../../components/ErrorInvalidDocId";
 import RenderGoogleDoc from "../../components/RenderGoogleDoc";
 import FullPageIframe from "../../components/FullPageIframe";
-import sitemap from "../../sitemap.json";
+import hosts from "../../hosts.json";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const paths = [];
-  Object.keys(sitemap).forEach((hostKey) => {
-    sitemap[hostKey].hosts.forEach((host) => {
+  Object.keys(hosts).forEach((hostKey) => {
+    hosts[hostKey].hosts.forEach((host) => {
       if (host.match(/\.local$/)) return; // do not prerender for local environment
-      if (!sitemap[hostKey].prerender) return;
-      Object.keys(sitemap[hostKey].sitemap).forEach((key) => {
-        if (key.match(/^collectives/)) return;
-        if (sitemap[hostKey].sitemap[key].redirect) return; // `redirect` can not be returned from getStaticProps during prerendering
-        if (!sitemap[hostKey].sitemap[key].googleDocId) return;
-        paths.push({
-          params: {
-            host,
-            path: [sitemap[hostKey].sitemap[key].googleDocId],
-          },
-        });
-        if (sitemap[hostKey].sitemap[key].aliases) {
-          sitemap[hostKey].sitemap[key].aliases.map((alias) => {
-            paths.push({
-              params: {
-                host,
-                path: [...alias.split("/")],
-              },
-            });
-          });
-        }
-        paths.push({
-          params: {
-            host,
-            path: [...key.split("/")],
-          },
-        });
-        if (key === "index") {
-          paths.push({
-            params: {
-              host,
-              path: [],
-            },
-          });
-        }
+      if (!hosts[hostKey].prerender) return;
+      paths.push({
+        params: {
+          host,
+          path: [],
+        },
       });
     });
   });
 
-  // console.log(
-  //   paths
-  //     .map((p) => `${p.params.host} ${p.params.path.join("/")}`)
-  //     .filter((p) => p.match(/dao.local/))
-  // );
   return {
     paths,
     fallback: true,
@@ -75,31 +41,38 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   let path, edit;
   let slug = "index";
-  const host = params.host;
+  const hostname = params.host;
 
   if (params.path) {
     if (params.path[params.path.length - 1] === "edit") {
       params.path.pop();
       edit = true;
     }
-    if (params.path[0] === host) {
+    if (params.path[0] === hostname) {
       params.path.shift();
     }
     slug = params.path.join("/");
   }
 
-  console.log("GET", host, slug);
+  console.log("GET", hostname, slug);
+
+  const host = {
+    hostname,
+  };
 
   let doc = {},
     error = null,
-    hostSitemap,
     pageInfo;
 
   try {
-    hostSitemap = getSitemap(host);
-    pageInfo = getPageMetadata(host, slug, hostSitemap);
+    host.config = await getHostConfig(hostname);
+    if (!host.config) {
+      throw new Error("No host config found");
+    }
+    pageInfo = getPageMetadata(host.config, slug);
+    console.log(">>> pageInfo", pageInfo);
   } catch (e) {
-    console.log(">>> getPageMetadata error", host, slug, e);
+    console.log(">>> getPageMetadata error", hostname, slug, e);
     error = "invalid_host";
     pageInfo = {};
   }
@@ -129,7 +102,7 @@ export async function getStaticProps({ params }) {
       error = error || "invalid_googledocid";
     } else {
       try {
-        doc = await getHTMLFromGoogleDocId(googleDocId);
+        doc = await getHTMLFromGoogleDocId(googleDocId, host.config);
       } catch (e) {
         error = e.message;
         if (error === "not_published") {
@@ -157,14 +130,12 @@ export async function getStaticProps({ params }) {
     ).src;
   }
 
-  const customCss = loadCustomCSS(host);
+  const customCss = loadCustomCSS(hostname);
   const styles = doc.styles + "\n" + customCss;
 
   const page = {
     title: pageInfo.title || doc.title || null,
     description: pageInfo.description || doc.description || null,
-    favicon: pageInfo.favicon || null,
-    icon: pageInfo.icon || null,
     image: imagePreview || null,
     body: doc.body || null,
     outline: doc.outline || null,
@@ -172,13 +143,11 @@ export async function getStaticProps({ params }) {
     slug: pageInfo.slug || null,
     iframeSrc: iframeSrc || null,
     styles,
-    host,
-    sitemap: hostSitemap,
     error,
   };
 
   return {
-    props: { page },
+    props: { host, page },
     // we will attempt to re-generate the page:
     // - when a request comes in
     // - at most once every 180 seconds
@@ -198,32 +167,18 @@ export default function Home(props) {
     notFound();
     return null;
   }
-  const { page } = props;
+  const { host, page } = props;
   if (!page) return <div />;
   const {
     title,
     description,
-    icon,
-    favicon,
     outline,
     body,
     image,
     googleDocId,
     error,
     iframeSrc,
-    host,
-    sitemap,
   } = page;
-
-  let defaultValues;
-  try {
-    defaultValues = getPageMetadata(page.host, "index");
-  } catch (e) {
-    defaultValues = {};
-  }
-
-  const homeTitle = defaultValues.title;
-  const homeIcon = defaultValues.icon || defaultValues.favicon;
 
   const [currentSection, setCurrentSection] = useState();
   const [currentDocWidth, setCurrentDocWidth] = useState(0);
@@ -233,9 +188,9 @@ export default function Home(props) {
       <FullPageIframe
         src={iframeSrc}
         title={title}
-        description={description || defaultValues.description}
-        favicon={favicon || defaultValues.favicon}
-        image={absoluteUrl(image || defaultValues.image, host)}
+        description={description}
+        favicon={host.config.icon}
+        image={absoluteUrl(image, host)}
       />
     );
 
@@ -247,7 +202,7 @@ export default function Home(props) {
       const href = el.getAttribute("href");
       if (href === `#${section}`) {
         el.classList.add("bg-gray-300");
-        console.log(">>> adding active to", el);
+        // console.log(">>> adding active to", el);
       } else {
         el.classList.remove("bg-gray-300");
       }
@@ -333,24 +288,21 @@ export default function Home(props) {
   return (
     <div className="w-full">
       <Head>
-        <title>{title || defaultValues.title}</title>
+        <title>{title}</title>
         <link
           rel="icon"
-          href={favicon || defaultValues.favicon}
+          href={host.config && host.config.icon.src}
           sizes="32x32"
         />
         <meta
           name="description"
           property="og:description"
-          content={description || defaultValues.description}
+          content={description || ""}
         />
-        <meta
-          property="og:image"
-          content={absoluteUrl(image || defaultValues.image, host)}
-        />
+        <meta property="og:image" content={absoluteUrl(image, host.hostname)} />
         <meta
           property="og:image:type"
-          content={imageType(image || defaultValues.image, host)}
+          content={imageType(image, host.hostname)}
         />
       </Head>
 
@@ -358,8 +310,8 @@ export default function Home(props) {
         {page.styles && <style>{page.styles}</style>}
         {outline && (
           <Outline
-            homeTitle={homeTitle}
-            homeIcon={homeIcon}
+            websiteTitle={host.config.title}
+            websiteIcon={host.config.icon}
             outline={outline}
             onChange={() => computeOffset()}
           />
@@ -375,9 +327,9 @@ export default function Home(props) {
               <RenderGoogleDoc html={body} />
             </div>
             <Footer
-              sitemap={sitemap}
-              homeTitle={homeTitle}
-              homeIcon={homeIcon}
+              sitemap={host.config.sitemap}
+              websiteTitle={host.config.title}
+              websiteIcon={host.config.icon}
               googleDocId={googleDocId}
             />
           </div>

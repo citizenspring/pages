@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function Outline({ homeTitle, homeIcon, outline, onChange }) {
+function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
   if (!outline || !outline.length || outline.length < 8) return null;
   const [isActive, setActive] = useState(false);
 
@@ -68,14 +68,14 @@ function Outline({ homeTitle, homeIcon, outline, onChange }) {
           <div className="sm:hidden absolute top-0 left-0 w-80 bg-gray-100/90 h-12"></div>
           <Link href="/" title="Back to homepage">
             <div className="pl-3 pt-6 flex">
-              {homeIcon && (
+              {websiteIcon && (
                 <img
-                  src={homeIcon}
+                  src={websiteIcon}
                   alt="favicon"
                   className="h-7 mt-8 ml-0 mr-2"
                 />
               )}
-              <h2>{homeTitle}</h2>
+              <h2>{websiteTitle}</h2>
             </div>
           </Link>
           <h3 className="pl-3 pt-0">On this page</h3>

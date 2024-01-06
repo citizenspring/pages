@@ -255,10 +255,6 @@
         "description": "CELO is supporting the development of the Citizen Wallet as a digital public good via prezenti.xyz.",
         "googleDocId": "15KefsrWcGmTCOgs-7Y-4w7WKHQRFA0HoCG98d2n-VYA"
       },
-      "about": {
-        "title": "About",
-        "googleDocId": "kd0MuJ6OYHs4dXhXtlrvRPqXvOX7bcPCjBJIU0"
-      },
       "about/deck": {
         "aliases": [
           "deck"
@@ -386,6 +382,7 @@
       "www.citizenspring.earth",
       "citizenspring.local"
     ],
+    "googleDocId": "1gEw7u-Fh3ZDhqy_qCzvyMKIHt7o9Ac584kcJQrEjceg",
     "sitemap": {
       "index": {
         "title": "Citizen Spring 🌻",
