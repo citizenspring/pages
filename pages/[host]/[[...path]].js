@@ -19,14 +19,31 @@ import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const paths = [];
-  Object.keys(hosts).forEach((hostKey) => {
-    hosts[hostKey].hosts.forEach((host) => {
-      if (host.match(/\.local$/)) return; // do not prerender for local environment
-      if (!hosts[hostKey].prerender) return;
+  const promises = [];
+  console.log(">>> getStaticPaths");
+  Object.keys(hosts).forEach((primaryHostname) => {
+    if (!hosts[primaryHostname].prerender) return;
+    hosts[primaryHostname].hosts.forEach((hostname) => {
+      if (hostname.match(/\.local$/)) return; // do not prerender for local environment
       paths.push({
         params: {
-          host,
+          host: hostname,
           path: [],
+        },
+      });
+      promises.push(getHostConfig(hostname));
+    });
+  });
+
+  const hostConfigs = await Promise.all(promises);
+  hostConfigs.forEach((hostConfig) => {
+    console.log(">>> getStaticPaths for", hostConfig.hostname);
+    Object.keys(hostConfig.sitemap).forEach((path) => {
+      if (!hostConfig.sitemap[path].googleDocId) return;
+      paths.push({
+        params: {
+          host: hostConfig.hostname,
+          path: path === "/" ? [] : path.split("/").filter((p) => p),
         },
       });
     });
@@ -69,11 +86,11 @@ export async function getStaticProps({ params }) {
     if (!host.config) {
       throw new Error("No host config found");
     }
-    console.log(">>> host", host);
+    // console.info(">>> host", host);
     pageInfo = getPageMetadata(host.config, slug);
-    console.log(">>> pageInfo", pageInfo);
+    // console.info(">>> pageInfo", pageInfo);
   } catch (e) {
-    console.log(">>> getPageMetadata error", hostname, slug, e);
+    console.error(">>> getPageMetadata error", hostname, slug, e);
     error = "invalid_host";
     pageInfo = {};
   }

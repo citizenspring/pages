@@ -185,6 +185,7 @@
     }
   },
   "citizenwallet.xyz": {
+    "prerender": true,
     "hosts": [
       "citizenwallet.xyz",
       "www.citizenwallet.xyz",

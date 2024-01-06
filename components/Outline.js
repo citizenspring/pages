@@ -70,7 +70,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
             <div className="pl-3 pt-6 flex">
               {websiteIcon && (
                 <img
-                  src={websiteIcon}
+                  src={websiteIcon.src}
                   alt="favicon"
                   className="h-7 mt-8 ml-0 mr-2"
                 />
