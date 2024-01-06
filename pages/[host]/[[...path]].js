@@ -20,7 +20,10 @@ import { useRouter } from "next/router";
 export async function getStaticPaths() {
   const paths = [];
   const promises = [];
-  console.log(">>> getStaticPaths");
+  console.log(">>> getStaticPaths", process.env.NODE_ENV);
+  if (process.env.NODE_ENV === "development") {
+    return { paths: [], fallback: true };
+  }
   Object.keys(hosts).forEach((primaryHostname) => {
     if (!hosts[primaryHostname].prerender) return;
     hosts[primaryHostname].hosts.forEach((hostname) => {

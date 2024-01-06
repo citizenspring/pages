@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
-  // const sections = { "index" : { title: "Home", href: "/", pages: [] }, "contribute": { title: "Contribute", pages: [] } };
   const columns = {
     index: {
       pages: [],
@@ -38,10 +37,10 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
       if (slug === "index") {
         // websiteTitle = page.title;
         // websiteIcon = { src: page.svgicon || page.icon || page.favicon };
-        columns["index"].title = websiteTitle || "Home";
+        columns["index"].title = page.title || websiteTitle || "Home";
         columns["index"].googleDocId = page.googleDocId;
       } else {
-        columns["index"].title = page.title;
+        columns[slug].title = page.title;
       }
       columns[slug].icon =
         page.svgicon ||
