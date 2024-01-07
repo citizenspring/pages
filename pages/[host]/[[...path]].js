@@ -89,7 +89,7 @@ export async function getStaticProps({ params }) {
     if (!host.config) {
       throw new Error("No host config found");
     }
-    // console.info(">>> host", host.config.sitemap);
+    // console.info(">>> host.config", host.config);
     pageInfo = getPageMetadata(host.config, slug);
     // console.info(">>> pageInfo", pageInfo);
   } catch (e) {

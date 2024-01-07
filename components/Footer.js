@@ -31,8 +31,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
     if (page.redirect) {
       page.href = page.redirect;
     } else {
-      if (page.href && page.href.match(/docs\.google\.com/))
-        page.href = `/${slug === "index" ? "" : slug}`;
+      page.href = `/${slug === "index" ? "" : slug}`;
     }
     if (columns[slug]) {
       if (slug === "index") {
