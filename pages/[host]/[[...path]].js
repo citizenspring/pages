@@ -89,7 +89,7 @@ export async function getStaticProps({ params }) {
     if (!host.config) {
       throw new Error("No host config found");
     }
-    // console.info(">>> host", host);
+    // console.info(">>> host", host.config.sitemap);
     pageInfo = getPageMetadata(host.config, slug);
     // console.info(">>> pageInfo", pageInfo);
   } catch (e) {
@@ -124,6 +124,7 @@ export async function getStaticProps({ params }) {
     } else {
       try {
         doc = await getHTMLFromGoogleDocId(googleDocId, host.config);
+        // console.log(doc);
       } catch (e) {
         error = e.message;
         if (error === "not_published") {
@@ -155,7 +156,7 @@ export async function getStaticProps({ params }) {
   const styles = doc.styles + "\n" + customCss;
 
   const page = {
-    title: pageInfo.title || doc.title || null,
+    title: doc.title || pageInfo.title || null,
     description: pageInfo.description || doc.description || null,
     image: imagePreview || null,
     body: doc.body || null,
