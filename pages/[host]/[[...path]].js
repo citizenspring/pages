@@ -43,6 +43,7 @@ export async function getStaticPaths() {
     console.log(">>> getStaticPaths for", hostConfig.hostname);
     Object.keys(hostConfig.sitemap).forEach((path) => {
       if (!hostConfig.sitemap[path].googleDocId) return;
+      if (hostConfig.sitemap[path].redirect) return; // `redirect` can not be returned from getStaticProps during prerendering
       paths.push({
         params: {
           host: hostConfig.hostname,
