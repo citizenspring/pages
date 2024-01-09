@@ -290,6 +290,11 @@
       "www.dao.brussels",
       "dao.local"
     ],
+    "title": "DAO Brussels",
+    "description": "Reinventing the city as a Decentralized Autonomous Organisation.",
+    "googleDocId": "1_RcH-bZdOTicDFoPSn3Vw86WOc6RawRcMrHAcuaeVKU",
+    "favicon": "/favicon.ico",
+    "svgicon": "/daobrussels-icon.svg",
     "sitemap": {
       "index": {
         "title": "DAO Brussels",

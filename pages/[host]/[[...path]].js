@@ -183,7 +183,7 @@ export default function Home(props) {
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
   if (router.isFallback) {
-    return <div className="text-center mt-72 mx-8">Generating page...</div>;
+    return <div className="text-center mt-72 mx-8">Loading...</div>;
   }
   if (!props.page) {
     notFound();
