@@ -191,6 +191,9 @@
       "www.citizenwallet.xyz",
       "citizenwallet.local"
     ],
+    "googleDocId": "1mHwwebrTmk2u2Sxc7D8PmcTwwIaBGTrqeorltoB5VDc",
+    "title": "Citizen Wallet",
+    "favicon": "/favicon.ico",
     "theme": {
       "primaryColor": "#000000",
       "secondaryColor": "#FFFFFF"
