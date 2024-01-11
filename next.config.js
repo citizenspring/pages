@@ -4,7 +4,7 @@ const subdomainsRedirections = {
       "https://drive.google.com/drive/folders/1TqHruYroZDoVvDXOgz8823E5GofxHSeH",
   },
   "citizenwallet.xyz": {
-    zoom: "https://us06web.zoom.us/j/5686896709?pwd=FJRqQm1095ybw8t6WChubzkbleNpHS.1",
+    zoom: "https://us06web.zoom.us/u/keoYbBXkrb",
     signal:
       "https://signal.group/#CjQKIK7lRZGN89uFUJqZ31npeVKbVHfo5Z15yl9XFoAeh2OrEhDfnmWNlW98l-OpBKzAnPET",
     drive: "https://drive.google.com/open?id=16fm3DNfOsL7HJ_uz4DuL9krNRh72YoRS",
@@ -33,7 +33,7 @@ const subdomainsRedirections = {
     whatsapp: "https://chat.whatsapp.com/GWPZyBseJalHomDjIFu1sm",
   },
   "citizenspring.earth": {
-    zoom: "https://us06web.zoom.us/j/5686896709?pwd=FJRqQm1095ybw8t6WChubzkbleNpHS.1",
+    zoom: "https://us06web.zoom.us/u/keoYbBXkrb",
     zinne: "https://zinne.glide.page",
     drive: "https://drive.google.com/drive/folders/0AOI4BBfAd3WXUk9PVA",
   },
@@ -42,7 +42,7 @@ const subdomainsRedirections = {
       "https://drive.google.com/drive/folders/1r3kSwu8_w4ju0fn5TQOhg7HCQW2XwnmH",
     discord: "https://discord.gg/awfSTf6EHK",
     whatsapp: "https://chat.whatsapp.com/JQ4fttn0KEH79xAyryYs4e",
-    zoom: "https://us06web.zoom.us/j/5686896709?pwd=FJRqQm1095ybw8t6WChubzkbleNpHS.1",
+    zoom: "https://us06web.zoom.us/u/keoYbBXkrb",
     figma:
       "https://www.figma.com/file/j650orH4LNkssEydb2bcfc/DAO.Brussels-whiteboard?type=whiteboard&node-id=0%3A1&t=BhsrA01iVaWUV3rp-1",
     telegram: "https://t.me/joinchat/5NbP0-Vl5Vg3MTgx",
@@ -65,7 +65,7 @@ const subdomainsRedirections = {
       "https://jz04xmgcexm.typeform.com/to/HQxBKQdg?typeform-source=apply.regensunite.earth",
     discord: "https://discord.gg/QcfPAJaWb2",
     bogota: "https://regensunite.co/bogota",
-    zoom: "https://us06web.zoom.us/j/85376213456",
+    zoom: "https://us06web.zoom.us/u/keoYbBXkrb",
     brussels: "https://www.regensunite.earth/event/regens-unite-brussels-2023",
     london: "https://www.regensunite.earth/event/regens-unite-london",
   },
