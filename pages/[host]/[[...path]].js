@@ -84,7 +84,8 @@ export async function getStaticProps({ params }) {
 
   let doc = {},
     error = null,
-    pageInfo;
+    pageInfo,
+    googleDocId = isGoogleDocId(slug) ? slug : null;
 
   try {
     host.config = await getHostConfig(hostname);
@@ -93,14 +94,14 @@ export async function getStaticProps({ params }) {
     }
     // console.info(">>> host.config", host.config);
     pageInfo = getPageMetadata(host.config, slug);
-    // console.info(">>> pageInfo", pageInfo);
+    console.info(">>> pageInfo", pageInfo);
+    googleDocId = pageInfo.googleDocId;
   } catch (e) {
     console.error(">>> getPageMetadata error", hostname, slug, e);
     error = "invalid_host";
     pageInfo = {};
   }
 
-  let googleDocId = pageInfo.googleDocId || isGoogleDocId(slug) ? slug : null;
   const iframeSrc = pageInfo.iframeSrc;
 
   if (edit) {
