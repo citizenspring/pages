@@ -614,6 +614,11 @@
       "docs.regensunite.local",
       "pages.regensunite.earth"
     ],
+    "title": "Regens Unite",
+    "description": "Meet fellow regens that have different pieces of the puzzle 🧩 to regenerate people 🌱, communities 🌻 and the planet 🌍",
+    "image": "/regensunite-banner-small.jpg",
+    "favicon": "/favicon.ico",
+    "googleDocId": "1hhINyD2nwdhXX3nAyaZp_T89znWaNZ4jOhAxX08nCrg",
     "sitemap": {
       "index": {
         "title": "Regens Unite",
