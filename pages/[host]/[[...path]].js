@@ -7,6 +7,7 @@ import {
   imageType,
   loadCustomCSS,
   getHostConfig,
+  isGoogleDocId,
 } from "../../lib/lib";
 import Outline from "../../components/Outline";
 import Footer from "../../components/Footer";
@@ -99,10 +100,14 @@ export async function getStaticProps({ params }) {
     pageInfo = {};
   }
 
-  const googleDocId = pageInfo.googleDocId || (params.path && params.path[0]);
+  let googleDocId = pageInfo.googleDocId || isGoogleDocId(slug) ? slug : null;
   const iframeSrc = pageInfo.iframeSrc;
 
   if (edit) {
+    if (!googleDocId && pageInfo.redirect) {
+      pageInfo = getPageMetadata(host.config, pageInfo.redirect.substring(1));
+      googleDocId = pageInfo.googleDocId;
+    }
     return {
       redirect: {
         destination: `https://docs.google.com/document/d/${googleDocId}/edit`,
