@@ -28,3 +28,23 @@
 #footer {
   background-color: #290755;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1b1b1b;
+    color: #fff;
+  }
+  .content p,
+  .content p span,
+  .content li span {
+    color: #fff;
+  }
+  .content span a {
+    color: #8cb4ff !important;
+  }
+  .content h1 span,
+  .content h2 span,
+  .content h3 span {
+    color: #fff !important;
+  }
+}
