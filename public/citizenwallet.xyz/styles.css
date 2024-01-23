@@ -26,20 +26,20 @@
 }
 
 #footer {
-  background-color: #290755;
+  background-color: #290755 !important;
 }
 
 @media (prefers-color-scheme: dark) {
   body,
   main {
-    background-color: #201538;
+    background-color: #201538 !important;
     color: #fff;
   }
   #outline .menu,
   #outline .sidebar,
   #outline h3,
   #footer {
-    background-color: #0d0128;
+    background-color: #0d0128 !important;
     color: #fff;
   }
   .content p,
