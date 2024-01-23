@@ -1,3 +1,5 @@
+import React from "react";
+
 export default ({ tweetUrl }) => {
   return (
     <div className="tweet" style={{ maxWidth: "560px", margin: "0 auto" }}>

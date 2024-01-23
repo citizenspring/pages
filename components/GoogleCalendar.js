@@ -1,3 +1,5 @@
+import React from "react";
+
 export default ({ ctz, src }) => {
   return (
     <div

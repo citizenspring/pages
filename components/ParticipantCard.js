@@ -1,5 +1,5 @@
+import React from "react";
 import Image from "next/image";
-import AvatarFromTwitter from "./AvatarFromTwitter";
 import Icon from "./Icon";
 
 function ParticipantCard({ data, className, key }) {
@@ -20,15 +20,6 @@ function ParticipantCard({ data, className, key }) {
                 layout="responsive"
                 role="img"
                 className="rounded-full object-cover h-32 w-32 shadow-md"
-              />
-            )}
-            {!data.profilePicture && data.twitter && (
-              <AvatarFromTwitter
-                className="rounded-full object-cover h-32 w-32 shadow-md"
-                twitterUsername={data.twitter.replace(
-                  /https?:\/\/(www\.)?twitter\.com\//g,
-                  ""
-                )}
               />
             )}
           </div>

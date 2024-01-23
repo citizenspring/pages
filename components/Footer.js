@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 
 const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
@@ -73,7 +74,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
   return (
     <div
       id="footer"
-      className="bg-gray-800 text-white mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
+      className="bg-gray-800 dark:bg-[#0d0128] text-white mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
     >
       <div className="container max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-around">
         <a href="/" title={`${websiteTitle} homepage`}>

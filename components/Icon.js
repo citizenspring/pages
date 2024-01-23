@@ -1,3 +1,5 @@
+import React from "react";
+
 function getSVG(name, size, color) {
   return (
     <svg

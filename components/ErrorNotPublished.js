@@ -1,3 +1,5 @@
+import React from "react";
+
 const ErrorNotPublished = ({ googleDocId }) => (
   <div className="mx-auto w-4/6">
     <h2>This Google Doc hasn't been published yet by the author</h2>

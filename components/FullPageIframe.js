@@ -1,7 +1,8 @@
+import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 
-import { imageType } from "../lib/lib";
+import { imageType } from "../lib/lib.js";
 
 export default function FullPageIframe({
   src,

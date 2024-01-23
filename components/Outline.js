@@ -15,9 +15,11 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
 
   return (
     <div id="outline">
-      <div className={`menu fixed z-30 top-0 left-0 bg-gray-100/90`}>
+      <div
+        className={`menu fixed z-30 top-0 left-0 bg-gray-100/90 dark:bg-[#0d0128]`}
+      >
         <button
-          className="p-4 focus:outline-none active:bg-gray-300"
+          className="p-4 focus:outline-none active:bg-gray-300 dark:active:bg-[#0d0128] text-white"
           onClick={() => toggleMenu()}
         >
           {!isActive && (
@@ -26,7 +28,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
               className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="white"
             >
               <path
                 strokeLinecap="round"
@@ -55,7 +57,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
         </button>
       </div>
       <div
-        className={`sidebar overflow-auto bg-gray-100 text-black-800 left-0 transform 
+        className={`sidebar overflow-auto bg-gray-100 dark:bg-[#0d0128] text-black-800 left-0 transform 
         w-full relative pb-2 mb-8
         ${isActive ? "" : "hidden sm:fixed sm:-translate-x-full"}"} 
         transition duration-200 ease-in-out
@@ -67,29 +69,29 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
         <div className="md:min-h-screen md:overflow-y-auto pl-1 pb-8">
           <div className="sm:hidden absolute top-0 left-0 w-80 bg-gray-100/90 h-12"></div>
           <Link href="/" title="Back to homepage">
-            <div className="pl-3 pt-6 flex">
+            <div className="pl-3 pt-6 flex text-white">
               {websiteIcon && (
                 <img
                   src={websiteIcon.src}
                   alt="favicon"
-                  className="h-7 mt-8 ml-0 mr-2"
+                  className="h-7 mt-8 ml-0 mr-2 icon"
                 />
               )}
-              <h2>{websiteTitle}</h2>
+              <h2 className="dark:text-gray-50">{websiteTitle}</h2>
             </div>
           </Link>
-          <h3 className="pl-3 pt-0">On this page</h3>
+          <h3 className="pl-3 pt-0 dark:text-gray-50">On this page</h3>
           {outline
             .filter((item) => item.level > 0)
             .map((item, i) => {
               return (
                 <a
-                  className="block rounded hover:bg-gray-200 transition duration-200"
+                  className="block rounded hover:bg-gray-200 dark:hover:bg-slate-300"
                   href={`#${item.slug}`}
                   key={`${i}-${item.slug}`}
                 >
                   <div
-                    className={`text-gray-800 ${
+                    className={`text-gray-800 dark:text-gray-50 dark:hover:text-gray-800 ${
                       (item.level == 1 && "ml-2 font-bold") ||
                       (item.level == 2 && "ml-4") ||
                       (item.level == 3 && "ml-6") ||
