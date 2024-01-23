@@ -60,14 +60,16 @@ span {
 
 h1,
 h1 span {
-  @apply text-3xl mt-8 mb-4;
+  @apply text-3xl mt-8 mb-4 dark:!text-white;
 }
 
 h2,
 h2 span,
 h3,
-h3 span {
-  @apply font-normal mt-8 mb-2 text-2xl;
+h3 span,
+h4,
+h4 span {
+  @apply font-normal mt-8 mb-2 text-2xl dark:!text-white;
 }
 
 h3 {
@@ -85,6 +87,11 @@ h5 {
 
 p {
   @apply my-4;
+}
+
+p span,
+li span {
+  @apply dark:!text-gray-300;
 }
 
 hr {

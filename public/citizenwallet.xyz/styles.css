@@ -31,7 +31,14 @@
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1b1b1b;
+    background-color: #201538;
+    color: #fff;
+  }
+  #outline .menu,
+  #outline .sidebar,
+  #outline h3,
+  #footer {
+    background-color: #0d0128;
     color: #fff;
   }
   .content p,

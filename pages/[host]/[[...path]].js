@@ -1,3 +1,4 @@
+import React from "react";
 import { notFound } from "next/navigation";
 import Head from "next/head";
 import { getHTMLFromGoogleDocId } from "../../lib/googledoc";
@@ -335,12 +336,12 @@ export default function Home(props) {
         />
       </Head>
 
-      <main className="relative min-h-screen w-full overflow-hidden">
+      <main className="relative min-h-screen w-full overflow-hidden dark:bg-[#201538] dark:text-gray-100">
         {page.styles && <style>{page.styles}</style>}
         {outline && (
           <Outline
             websiteTitle={host.config.title}
-            websiteIcon={host.config.icon}
+            websiteIcon={host.config.svgicon || host.config.icon}
             outline={outline}
             onChange={() => computeOffset()}
           />

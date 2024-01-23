@@ -51,9 +51,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1b1b1b;
-    color: #fff;
+  #outline .icon {
+    filter: invert(1);
+  }
+
+  #footer {
+    background-color: color-mix(in srgb, #0d0128, black 50%);
   }
   .content p,
   .content p span,
