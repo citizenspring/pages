@@ -16,10 +16,10 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
   return (
     <div id="outline">
       <div
-        className={`menu fixed z-30 top-0 left-0 bg-gray-100/90 dark:bg-[#0d0128]`}
+        className={`menu fixed z-30 top-0 left-0 bg-gray-100/90 dark:bg-gray-900`}
       >
         <button
-          className="p-4 focus:outline-none active:bg-gray-300 dark:active:bg-[#0d0128] text-white"
+          className="p-4 focus:outline-none active:bg-gray-300 dark:active:bg-gray-900 text-white"
           onClick={() => toggleMenu()}
         >
           {!isActive && (

@@ -336,7 +336,7 @@ export default function Home(props) {
         />
       </Head>
 
-      <main className="relative min-h-screen w-full overflow-hidden dark:bg-[#201538] dark:text-gray-100">
+      <main className="relative min-h-screen w-full overflow-hidden dark:bg-gray-800 dark:text-gray-100">
         {page.styles && <style>{page.styles}</style>}
         {outline && (
           <Outline
