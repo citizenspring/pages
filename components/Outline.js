@@ -14,10 +14,8 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
   }
 
   return (
-    <div id="outline">
-      <div
-        className={`menu fixed z-30 top-0 left-0 bg-gray-100/90 dark:bg-gray-900`}
-      >
+    <div id="outline" className="bg-gray-100/90 dark:bg-gray-900">
+      <div className={`menu fixed z-30 top-0 left-0`}>
         <button
           className="p-4 focus:outline-none active:bg-gray-300 dark:active:bg-gray-900 text-white"
           onClick={() => toggleMenu()}
@@ -57,7 +55,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
         </button>
       </div>
       <div
-        className={`sidebar overflow-auto bg-gray-100 dark:bg-[#0d0128] text-black-800 left-0 transform 
+        className={`sidebar overflow-auto text-black-800 left-0 transform 
         w-full relative pb-2 mb-8
         ${isActive ? "" : "hidden sm:fixed sm:-translate-x-full"}"} 
         transition duration-200 ease-in-out
@@ -67,7 +65,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
         `}
       >
         <div className="md:min-h-screen md:overflow-y-auto pl-1 pb-8">
-          <div className="sm:hidden absolute top-0 left-0 w-80 bg-gray-100/90 h-12"></div>
+          <div className="sm:hidden absolute top-0 left-0 w-80 h-12"></div>
           <Link href="/" title="Back to homepage">
             <div className="pl-3 pt-6 flex text-white">
               {websiteIcon && (
@@ -86,7 +84,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
             .map((item, i) => {
               return (
                 <a
-                  className="block rounded hover:bg-gray-200 dark:hover:bg-slate-300"
+                  className="block rounded hover:bg-gray-200 dark:hover:bg-slate-300 mx-1"
                   href={`#${item.slug}`}
                   key={`${i}-${item.slug}`}
                 >
