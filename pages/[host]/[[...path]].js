@@ -154,10 +154,10 @@ export async function getStaticProps({ params }) {
   let imagePreview = pageInfo.image;
   if (!imagePreview && doc.images) {
     imagePreview = (
-      doc.images.find((img) => img.width > 512) ||
+      doc.images.find((img) => img.width > 320) ||
       doc.images[0] ||
       {}
-    ).src;
+    ).proxySrc;
   }
 
   const customCss = loadCustomCSS(hostname);
