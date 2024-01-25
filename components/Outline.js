@@ -14,19 +14,21 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
   }
 
   return (
-    <div id="outline" className="bg-gray-100/90 dark:bg-gray-900">
-      <div className={`menu fixed z-30 top-0 left-0`}>
+    <div id="outline">
+      <div
+        className={`menu fixed z-30 top-0 left-0 bg-gray-100/90 dark:bg-gray-900`}
+      >
         <button
-          className="p-4 focus:outline-none active:bg-gray-300 dark:active:bg-gray-900 text-white"
+          className="p-4 focus:outline-none active:bg-gray-300 dark:active:bg-gray-900 dark:text-white"
           onClick={() => toggleMenu()}
         >
           {!isActive && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-6 w-6 dark:invert"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="white"
+              stroke="black"
             >
               <path
                 strokeLinecap="round"
@@ -39,10 +41,10 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
           {isActive && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-6 w-6 dark:invert"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="black"
             >
               <path
                 strokeLinecap="round"
@@ -55,7 +57,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
         </button>
       </div>
       <div
-        className={`sidebar overflow-auto text-black-800 left-0 transform 
+        className={`sidebar overflow-auto text-black-800 left-0 transform bg-gray-100/90 dark:bg-gray-900
         w-full relative pb-2 mb-8
         ${isActive ? "" : "hidden sm:fixed sm:-translate-x-full"}"} 
         transition duration-200 ease-in-out
@@ -67,7 +69,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
         <div className="md:min-h-screen md:overflow-y-auto pl-1 pb-8">
           <div className="sm:hidden absolute top-0 left-0 w-80 h-12"></div>
           <Link href="/" title="Back to homepage">
-            <div className="pl-3 pt-6 flex text-white">
+            <div className="pl-3 pt-6 flex">
               {websiteIcon && (
                 <img
                   src={websiteIcon.src}
