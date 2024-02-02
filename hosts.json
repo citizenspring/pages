@@ -41,6 +41,9 @@
     "hosts": [
       "dao.allforclimate.local"
     ],
+    "title": "All for Climate DAO",
+    "description": "A community of active citizens creating a more sustainable future",
+    "googleDocId": "1QPGenxAvjHlnonviYQrjqrdFHDsvX8UEqBrIyn5wZpM",
     "sitemap": {
       "index": {
         "title": "All for Climate DAO",
