@@ -187,6 +187,22 @@
       }
     }
   },
+  "xavier.brussels": {
+    "hosts": [
+      "xavier.brussels",
+      "www.xavier.brussels",
+      "xavier.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Xavier Damman",
+        "description": "Citizen, dad, entrepreneur, regen.",
+        "image": "/xdamman-avatar.jpg",
+        "favicon": "/favicon.ico",
+        "googleDocId": "1GbUmVMiGBLu6EcQRhLlUi8B_p8OrnxS_AIAXwiogbXs"
+      }
+    }
+  },
   "citizenwallet.xyz": {
     "prerender": true,
     "hosts": [
