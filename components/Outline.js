@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
+function Outline({ className, websiteTitle, websiteIcon, outline, onChange }) {
   if (!outline || !outline.length || outline.length < 8) return null;
   const [isActive, setActive] = useState(false);
 
@@ -14,7 +14,7 @@ function Outline({ websiteTitle, websiteIcon, outline, onChange }) {
   }
 
   return (
-    <div id="outline">
+    <div id="outline" className={className}>
       <div
         className={`menu fixed z-30 top-0 left-0 bg-gray-100/90 dark:bg-gray-900`}
       >

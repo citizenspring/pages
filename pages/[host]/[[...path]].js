@@ -340,6 +340,7 @@ export default function Home(props) {
         {page.styles && <style>{page.styles}</style>}
         {outline && (
           <Outline
+            className="absolute top-0 left-0"
             websiteTitle={host.config.title}
             websiteIcon={host.config.svgicon || host.config.icon}
             outline={outline}
