@@ -203,6 +203,22 @@
       }
     }
   },
+  "sunnyleen.earth": {
+    "hosts": [
+      "sunnyleen.earth",
+      "www.sunnyleen.earth",
+      "sunnyleen.local"
+    ],
+    "sitemap": {
+      "index": {
+        "title": "Sunny Leen",
+        "description": "Human design, gene keys, deep democracy, regenerative culture, and more. Always with a sunny smile 😃 ☀️",
+        "image": "/leen-avatar.jpg",
+        "favicon": "/favicon.ico",
+        "googleDocId": "1HUzXcqTwjawvYHczxGr4PZcv7ntWQUtKzkpVuzEwpAc"
+      }
+    }
+  },
   "citizenwallet.xyz": {
     "prerender": true,
     "hosts": [
