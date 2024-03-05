@@ -5,15 +5,11 @@
       "www.playstreets.brussels",
       "playstreets.local"
     ],
-    "sitemap": {
-      "index": {
-        "title": "Playstreets Brussels",
-        "description": "Everything you need to organize a playstreet in Brussels",
-        "image": "/cover-color.png",
-        "favicon": "/favicon.ico",
-        "googleDocId": "1ZnK8rr87bmMoQGGLEMvqezDDfQUoc8PgcgMC69F0xkM"
-      }
-    }
+    "title": "Playstreets Brussels",
+    "description": "Everything you need to organize a playstreet in Brussels",
+    "image": "/cover-color.png",
+    "favicon": "/favicon.ico",
+    "googleDocId": "1ZnK8rr87bmMoQGGLEMvqezDDfQUoc8PgcgMC69F0xkM"
   },
   "dao.allforclimate.earth": {
     "hosts": [
