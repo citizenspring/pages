@@ -74,6 +74,21 @@
       "secondaryColor": "#FFFFFF"
     }
   },
+  "nfcwallet.xyz": {
+    "prerender": true,
+    "hosts": [
+      "nfcwallet.xyz",
+      "www.nfcwallet.xyz",
+      "nfcwallet.local"
+    ],
+    "googleDocId": "1MpKBmnzSu0e6IhTjwLwI3POw5bHSDeZewwgIs7JYpDM",
+    "title": "NFC Wallet",
+    "favicon": "/favicon.ico",
+    "theme": {
+      "primaryColor": "#000000",
+      "secondaryColor": "#FFFFFF"
+    }
+  },
   "dao.brussels": {
     "prerender": true,
     "hosts": [
