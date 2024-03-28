@@ -102,6 +102,19 @@
     "favicon": "/favicon.ico",
     "svgicon": "/daobrussels-icon.svg"
   },
+  "commonshub.brussels": {
+    "prerender": true,
+    "hosts": [
+      "commonshub.brussels",
+      "www.commonshub.brussels",
+      "commonshub.local"
+    ],
+    "title": "Commons Hub Brussels",
+    "description": "A place for citizens to rebuild the commons",
+    "googleDocId": "1DHiPZBKAuY_OVnkAYNxE3TUHPyyw8W6YpdxGvh4T6zM",
+    "favicon": "/favicon.ico",
+    "svgicon": "/CommonsHubLogo.svg"
+  },
   "citizenspring.earth": {
     "hosts": [
       "citizenspring.earth",

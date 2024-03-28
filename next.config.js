@@ -37,6 +37,13 @@ const subdomainsRedirections = {
     zinne: "https://zinne.glide.page",
     drive: "https://drive.google.com/drive/folders/0AOI4BBfAd3WXUk9PVA",
   },
+  "commonshub.brussels": {
+    zoom: "https://us06web.zoom.us/j/5686896709",
+    figma:
+      "https://www.figma.com/file/heiaq1JfKousrMtkYm8sKs/Commons-Hub-Brussels?type=design&node-id=0%3A1&mode=design&t=0YNRjteSPmbXhzj6-1",
+    drive:
+      "https://drive.google.com/drive/u/0/folders/1Iy9xZm7vwg5YwAU0gh6xSoM6cNPH6Ye4",
+  },
   "dao.brussels": {
     drive:
       "https://drive.google.com/drive/folders/1r3kSwu8_w4ju0fn5TQOhg7HCQW2XwnmH",
