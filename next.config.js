@@ -93,6 +93,50 @@ const subdomainsRedirections = {
   },
 };
 
+// proxy to Framer app
+const rewrites = [
+  {
+    has: [{ type: "host", value: "commonshub.brussels" }],
+    source: "/",
+    destination: "https://able-psychology-281025.framer.app",
+  },
+  {
+    has: [{ type: "host", value: "commonshub.brussels" }],
+    source: "/:path*",
+    destination: "https://able-psychology-281025.framer.app/:path*",
+  },
+  {
+    has: [
+      {
+        type: "host",
+        value: "(?<host>.*)",
+      },
+    ],
+    source: "/_next/:path*",
+    destination: "/_next/:path*",
+  },
+  {
+    has: [
+      {
+        type: "host",
+        value: "(?<host>.*)",
+      },
+    ],
+    source: "/",
+    destination: "/:host",
+  },
+  {
+    has: [
+      {
+        type: "host",
+        value: "(?<host>.*)",
+      },
+    ],
+    source: "/:path*",
+    destination: "/:host/:path*",
+  },
+];
+
 module.exports = {
   env: {
     OC_GRAPHQL_API: "https://api.opencollective.com/graphql/v1/",
@@ -140,38 +184,7 @@ module.exports = {
     return redirections;
   },
   async rewrites() {
-    return [
-      {
-        has: [
-          {
-            type: "host",
-            value: "(?<host>.*)",
-          },
-        ],
-        source: "/_next/:path*",
-        destination: "/_next/:path*",
-      },
-      {
-        has: [
-          {
-            type: "host",
-            value: "(?<host>.*)",
-          },
-        ],
-        source: "/",
-        destination: "/:host",
-      },
-      {
-        has: [
-          {
-            type: "host",
-            value: "(?<host>.*)",
-          },
-        ],
-        source: "/:path*",
-        destination: "/:host/:path*",
-      },
-    ];
+    return { beforeFiles: rewrites };
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

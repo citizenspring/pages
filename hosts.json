@@ -106,6 +106,7 @@
     "prerender": true,
     "hosts": [
       "commonshub.brussels",
+      "docs.commonshub.brussels",
       "www.commonshub.brussels",
       "commonshub.local"
     ],
