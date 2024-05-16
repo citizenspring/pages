@@ -39,6 +39,7 @@ const subdomainsRedirections = {
   },
   "commonshub.brussels": {
     zoom: "https://us06web.zoom.us/j/5686896709",
+    whatsapp: "https://chat.whatsapp.com/H7yLf16yiVrHInK7XpfEg3",
     deck: "https://docs.google.com/presentation/d/135POHqxUFv_G0_lZHTc7prTs1pvxm-40f02QiZbvPqU/edit?usp=sharing",
     figma:
       "https://www.figma.com/file/heiaq1JfKousrMtkYm8sKs/Commons-Hub-Brussels?type=design&node-id=0%3A1&mode=design&t=0YNRjteSPmbXhzj6-1",
