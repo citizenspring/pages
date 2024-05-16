@@ -105,36 +105,6 @@ const rewrites = [
     source: "/:path*",
     destination: "https://able-psychology-281025.framer.app/:path*",
   },
-  {
-    has: [
-      {
-        type: "host",
-        value: "(?<host>.*)",
-      },
-    ],
-    source: "/_next/:path*",
-    destination: "/_next/:path*",
-  },
-  {
-    has: [
-      {
-        type: "host",
-        value: "(?<host>.*)",
-      },
-    ],
-    source: "/",
-    destination: "/:host",
-  },
-  {
-    has: [
-      {
-        type: "host",
-        value: "(?<host>.*)",
-      },
-    ],
-    source: "/:path*",
-    destination: "/:host/:path*",
-  },
 ];
 
 module.exports = {
@@ -184,7 +154,41 @@ module.exports = {
     return redirections;
   },
   async rewrites() {
-    return { beforeFiles: rewrites };
+    return {
+      beforeFiles: rewrites,
+      fallback: [
+        {
+          has: [
+            {
+              type: "host",
+              value: "(?<host>.*)",
+            },
+          ],
+          source: "/_next/:path*",
+          destination: "/_next/:path*",
+        },
+        {
+          has: [
+            {
+              type: "host",
+              value: "(?<host>.*)",
+            },
+          ],
+          source: "/",
+          destination: "/:host",
+        },
+        {
+          has: [
+            {
+              type: "host",
+              value: "(?<host>.*)",
+            },
+          ],
+          source: "/:path*",
+          destination: "/:host/:path*",
+        },
+      ],
+    };
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
