@@ -94,18 +94,23 @@ const subdomainsRedirections = {
 };
 
 // proxy to Framer app
-const rewrites = [
-  {
-    has: [{ type: "host", value: "commonshub.brussels" }],
+const proxy = {
+  "commonshub.brussels": "https://able-psychology-281025.framer.app",
+};
+
+const proxyRewrites = [];
+Object.keys(proxy).forEach((domain) => {
+  proxyRewrites.push({
+    has: [{ type: "host", value: domain }],
     source: "/",
-    destination: "https://able-psychology-281025.framer.app",
-  },
-  {
-    has: [{ type: "host", value: "commonshub.brussels" }],
+    destination: proxy[domain],
+  });
+  proxyRewrites.push({
+    has: [{ type: "host", value: domain }],
     source: "/:path*",
-    destination: "https://able-psychology-281025.framer.app/:path*",
-  },
-];
+    destination: `${proxy[domain]}/:path*`,
+  });
+});
 
 module.exports = {
   env: {
@@ -155,8 +160,8 @@ module.exports = {
   },
   async rewrites() {
     return {
-      beforeFiles: rewrites,
-      fallback: [
+      beforeFiles: proxyRewrites,
+      afterFiles: [
         {
           has: [
             {
