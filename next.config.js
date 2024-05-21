@@ -42,7 +42,7 @@ const subdomainsRedirections = {
     whatsapp: "https://chat.whatsapp.com/H7yLf16yiVrHInK7XpfEg3",
     deck: "https://docs.google.com/presentation/d/135POHqxUFv_G0_lZHTc7prTs1pvxm-40f02QiZbvPqU/edit?usp=sharing",
     figma:
-      "https://www.figma.com/file/heiaq1JfKousrMtkYm8sKs/Commons-Hub-Brussels?type=design&node-id=0%3A1&mode=design&t=0YNRjteSPmbXhzj6-1",
+      "https://www.figma.com/board/wz3aTgdY8PGO0hEtefUGlI/White-board?node-id=0%3A1&t=eSeBuoTSzi4ywvgm-1",
     drive:
       "https://drive.google.com/drive/u/0/folders/1Iy9xZm7vwg5YwAU0gh6xSoM6cNPH6Ye4",
   },
