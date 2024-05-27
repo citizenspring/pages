@@ -38,6 +38,7 @@ const subdomainsRedirections = {
     drive: "https://drive.google.com/drive/folders/0AOI4BBfAd3WXUk9PVA",
   },
   "commonshub.brussels": {
+    map: "https://maps.app.goo.gl/7RYbPtJZEW8u9GCA8",
     zoom: "https://us06web.zoom.us/j/5686896709",
     whatsapp: "https://chat.whatsapp.com/H7yLf16yiVrHInK7XpfEg3",
     deck: "https://docs.google.com/presentation/d/135POHqxUFv_G0_lZHTc7prTs1pvxm-40f02QiZbvPqU/edit?usp=sharing",
