@@ -22,7 +22,6 @@ import { useRouter } from "next/router";
 export async function getStaticPaths() {
   const paths = [];
   const promises = [];
-  console.log(">>> getStaticPaths", process.env.NODE_ENV);
   if (process.env.NODE_ENV === "development") {
     return { paths: [], fallback: true };
   }
@@ -188,6 +187,28 @@ export async function getStaticProps({ params }) {
 export default function Home(props) {
   const router = useRouter();
 
+  const { host, page } = props;
+
+  const [currentSection, setCurrentSection] = useState();
+  const [currentDocWidth, setCurrentDocWidth] = useState(0);
+
+  useEffect(() => {
+    // we only highlight the current section on large screens
+    // where the outline is visible side by side
+    if (window.innerWidth < 768) return () => {};
+
+    function addListeners() {
+      window.addEventListener("scroll", logit);
+      window.addEventListener("resize", computeOffset);
+    }
+    computeOffset();
+    addListeners();
+    return () => {
+      window.removeEventListener("scroll", logit);
+      window.removeEventListener("resize", computeOffset);
+    };
+  });
+
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
   if (router.isFallback) {
@@ -197,8 +218,9 @@ export default function Home(props) {
     notFound();
     return null;
   }
-  const { host, page } = props;
+
   if (!page) return <div />;
+
   const {
     title,
     description,
@@ -209,9 +231,6 @@ export default function Home(props) {
     error,
     iframeSrc,
   } = page;
-
-  const [currentSection, setCurrentSection] = useState();
-  const [currentDocWidth, setCurrentDocWidth] = useState(0);
 
   if (iframeSrc)
     return (
@@ -281,23 +300,6 @@ export default function Home(props) {
       item.el = el;
     });
   }
-
-  useEffect(() => {
-    // we only highlight the current section on large screens
-    // where the outline is visible side by side
-    if (window.innerWidth < 768) return () => {};
-
-    function addListeners() {
-      window.addEventListener("scroll", logit);
-      window.addEventListener("resize", computeOffset);
-    }
-    computeOffset();
-    addListeners();
-    return () => {
-      window.removeEventListener("scroll", logit);
-      window.removeEventListener("resize", computeOffset);
-    };
-  });
 
   let errorComponent = null;
   if (error) {

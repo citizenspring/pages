@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 function Outline({ className, websiteTitle, websiteIcon, outline, onChange }) {
-  if (!outline || !outline.length || outline.length < 8) return null;
   const [isActive, setActive] = useState(false);
+  if (!outline || !outline.length || outline.length < 8) return null;
 
   function toggleMenu() {
     if (onChange) {

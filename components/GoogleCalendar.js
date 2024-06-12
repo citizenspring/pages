@@ -1,6 +1,11 @@
 import React from "react";
 
-export default ({ ctz, src }) => {
+export default ({ params }) => {
+  if (!params) return null;
+  const urlParams = new URLSearchParams(params);
+  const src = urlParams.get("src");
+  const ctz = urlParams.get("ctz");
+  if (!src) return null;
   return (
     <div
       className="iframe calendar full-width"
