@@ -57,7 +57,12 @@
     "description": "Human design, gene keys, deep democracy, regenerative culture, and more. Always with a sunny smile 😃 ☀️",
     "image": "/leen-avatar.jpg",
     "favicon": "/favicon.ico",
-    "googleDocId": "1HUzXcqTwjawvYHczxGr4PZcv7ntWQUtKzkpVuzEwpAc"
+    "sitemap": {
+      "index": {
+        "googleDocId": "1HUzXcqTwjawvYHczxGr4PZcv7ntWQUtKzkpVuzEwpAc",
+        "redirect": "https://www.linkedin.com/in/leen-schelfhout/"
+      }
+    }
   },
   "citizenwallet.xyz": {
     "prerender": true,
