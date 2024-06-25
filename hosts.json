@@ -64,11 +64,9 @@
       }
     }
   },
-  "citizenwallet.xyz": {
+  "docs.citizenwallet.xyz": {
     "prerender": true,
     "hosts": [
-      "citizenwallet.xyz",
-      "www.citizenwallet.xyz",
       "citizenwallet.local"
     ],
     "googleDocId": "1mHwwebrTmk2u2Sxc7D8PmcTwwIaBGTrqeorltoB5VDc",
