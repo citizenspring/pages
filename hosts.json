@@ -24,15 +24,11 @@
       "openletter.local",
       "docs.openletter.local"
     ],
-    "sitemap": {
-      "index": {
-        "title": "Open Letter",
-        "description": "Create an open letter and sign it together.",
-        "image": "/icon.png",
-        "favicon": "/favicon.ico",
-        "googleDocId": "1IKK5W7SsYH9rmMOKP1xwVqq7aPwqW6qTpYKYty8nL84"
-      }
-    }
+    "title": "Open Letter",
+    "description": "Create an open letter and sign it together.",
+    "image": "/icon.png",
+    "favicon": "/favicon.ico",
+    "googleDocId": "1IKK5W7SsYH9rmMOKP1xwVqq7aPwqW6qTpYKYty8nL84"
   },
   "openfacilitation.brussels": {
     "hosts": [
