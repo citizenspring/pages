@@ -46,6 +46,8 @@ const subdomainsRedirections = {
     whatsapp: "https://chat.whatsapp.com/H7yLf16yiVrHInK7XpfEg3",
     deck: "https://docs.google.com/presentation/d/135POHqxUFv_G0_lZHTc7prTs1pvxm-40f02QiZbvPqU/edit?usp=sharing",
     figma:
+      "https://www.figma.com/design/heiaq1JfKousrMtkYm8sKs/Commons-Hub-Brussels?node-id=26-3&t=OTzxrXQMTjhY0Qxu-1",
+    whiteboard:
       "https://www.figma.com/board/wz3aTgdY8PGO0hEtefUGlI/White-board?node-id=0%3A1&t=eSeBuoTSzi4ywvgm-1",
     drive:
       "https://drive.google.com/drive/u/0/folders/1Iy9xZm7vwg5YwAU0gh6xSoM6cNPH6Ye4",
