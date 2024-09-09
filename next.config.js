@@ -41,6 +41,7 @@ const subdomainsRedirections = {
     map: "https://maps.app.goo.gl/Bkd4479WPyTe5qzd9",
     notion: "https://commonshub-brussels.notion.site",
     zoom: "https://us06web.zoom.us/j/5686896709",
+    discord: "https://discord.gg/PK5eU46uSG",
     calendar:
       "https://calendar.google.com/calendar/embed?src=c_336112114c844a0d6ed178f0bfcbea8b69253b3f2c83b5ce3ed2c230e1b7a298%40group.calendar.google.com&ctz=Europe%2FBrussels",
     whatsapp: "https://chat.whatsapp.com/H7yLf16yiVrHInK7XpfEg3",
