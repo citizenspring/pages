@@ -53,6 +53,7 @@
       "pay.local"
     ],
     "title": "Brussels PAY",
+    "favicon": "/favicon.ico",
     "description": "Citizen initiative to reclaim transaction fees on digital payments to fund the commons",
     "googleDocId": "1wVmuOVYQcU_ixbguolTBzxKKz88RP_RV06ZkSzm7YKA"
   },

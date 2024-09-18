@@ -1,0 +1,74 @@
+.content.index p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.content .button.primary {
+  background-color: #0b00be !important;
+}
+.content .button.primary:hover {
+  background-color: #0900bea3 !important;
+}
+
+.content .button.secondary {
+  border-color: #0900bea3 !important;
+  background-color: white !important;
+  color: #0900bea3 !important;
+}
+
+.content a {
+  color: #0b00be !important;
+}
+
+.content a:hover {
+  color: #0900bea3 !important;
+}
+
+.content h3 span {
+  font-weight: 900;
+  font-size: 16pt;
+  color: #0900bea3 !important;
+}
+
+#footer {
+  background-color: color-mix(in srgb, #34348c, black 50%);
+}
+
+#footer .icon {
+  filter: invert(1);
+  width: 100%;
+  height: auto;
+  max-width: 64px;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: color-mix(in srgb, #34348c, white 50%);
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  #outline .icon {
+    filter: invert(1);
+  }
+
+  #footer {
+    background-color: color-mix(in srgb, #0d0128, black 50%);
+  }
+  .content p,
+  .content p span,
+  .content li span {
+    color: #fff;
+  }
+  .content span a {
+    color: #8cb4ff !important;
+  }
+  .content h1 span,
+  .content h2 span,
+  .content h3 span {
+    color: #fff !important;
+  }
+}
