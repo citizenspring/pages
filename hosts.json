@@ -46,6 +46,16 @@
       }
     }
   },
+  "pay.brussels": {
+    "hosts": [
+      "pay.brussels",
+      "www.pay.brussels",
+      "pay.local"
+    ],
+    "title": "Brussels PAY",
+    "description": "Citizen initiative to reclaim transaction fees on digital payments to fund the commons",
+    "googleDocId": "1wVmuOVYQcU_ixbguolTBzxKKz88RP_RV06ZkSzm7YKA"
+  },
   "xavier.brussels": {
     "hosts": [
       "xavier.brussels",
