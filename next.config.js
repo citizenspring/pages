@@ -37,6 +37,10 @@ const subdomainsRedirections = {
     zinne: "https://zinne.glide.page",
     drive: "https://drive.google.com/drive/folders/0AOI4BBfAd3WXUk9PVA",
   },
+  "pay.brussels": {
+    drive:
+      "https://drive.google.com/drive/u/0/folders/1G1M_ixJFeLCOTwmaJtzpGkD5a-RqJ07x",
+  },
   "commonshub.brussels": {
     map: "https://maps.app.goo.gl/Bkd4479WPyTe5qzd9",
     notion: "https://commonshub-brussels.notion.site",
