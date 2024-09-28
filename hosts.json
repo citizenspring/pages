@@ -141,6 +141,19 @@
     "favicon": "/favicon.ico",
     "svgicon": "/CommonsHubLogo.svg"
   },
+  "books.commonshub.brussels": {
+    "prerender": true,
+    "hosts": [
+      "books.commonshub.brussels",
+      "www.books.commonshub.brussels",
+      "books.commonshub.local"
+    ],
+    "title": "Commons Hub Brussels - Library",
+    "description": "Borrow books from the Commons Hub Brussels library",
+    "googleDocId": "18R0LWCsziGlQilxqxCS_IBt7Vl_sPE0uClNsv8CyApk",
+    "favicon": "/favicon.ico",
+    "svgicon": "/CommonsHubLogo.svg"
+  },
   "citizenspring.earth": {
     "hosts": [
       "citizenspring.earth",
