@@ -57,14 +57,15 @@
     "description": "Citizen initiative to reclaim transaction fees on digital payments to fund the commons",
     "googleDocId": "1wVmuOVYQcU_ixbguolTBzxKKz88RP_RV06ZkSzm7YKA"
   },
-  "xavier.brussels": {
+  "xavierdamman.com": {
     "hosts": [
       "xavier.brussels",
       "www.xavier.brussels",
+      "www.xavierdamman.com",
       "xavier.local"
     ],
     "title": "Xavier Damman",
-    "description": "Citizen, dad, entrepreneur, regen.",
+    "description": "Citizen, dad, entrepreneur, commoner, regen.",
     "image": "/xdamman-avatar.jpg",
     "favicon": "/favicon.ico",
     "googleDocId": "1GbUmVMiGBLu6EcQRhLlUi8B_p8OrnxS_AIAXwiogbXs"
