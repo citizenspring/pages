@@ -1,0 +1,65 @@
+p span,
+li span {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
+
+h1 {
+  margin-bottom: 0px !important;
+}
+
+h1 + p,
+h1 + p + p {
+  margin: 0px !important;
+}
+
+h1 span {
+  font-size: 36px !important;
+}
+
+h2 {
+  margin-bottom: 6px !important;
+}
+
+h2 span {
+  font-size: 28px !important;
+}
+
+h3 {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+h3 span {
+  font-size: 22px !important;
+}
+
+h3 + p {
+  margin-top: 0px !important;
+}
+
+h4 {
+  margin-top: 6px !important;
+  margin-bottom: 2px !important;
+}
+
+h4 + p {
+  margin-top: 0px !important;
+}
+
+h4 span {
+  font-size: 18px !important;
+}
+
+.content a,
+.content span a,
+.content span:has(a) {
+  text-decoration: none !important;
+  color: #007bff !important;
+}
+
+.content a:hover,
+.content span a:hover {
+  text-decoration: underline !important;
+  color: #339dff !important;
+}

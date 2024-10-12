@@ -338,7 +338,7 @@ export default function Home(props) {
         />
       </Head>
 
-      <main className="relative min-h-screen w-full overflow-hidden dark:bg-gray-800 dark:text-gray-100">
+      <main className="relative min-h-screen w-full overflow-hidden dark:bg-black dark:text-gray-100">
         {page.styles && <style>{page.styles}</style>}
         {outline && (
           <Outline
@@ -351,7 +351,7 @@ export default function Home(props) {
         {!body && !error && <p>Loading...</p>}
         {errorComponent}
         {body && (
-          <div className="flex flex-col w-full mx-auto justify-center">
+          <div className="flex flex-col w-full mx-auto justify-center dark:bg-gray-950">
             <div
               id="document"
               className={`${page.slug} content px-4 mx-auto w-full max-w-screen-md flex-1`}
