@@ -6,7 +6,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
     index: {
       pages: [],
       icon: websiteIcon && websiteIcon.src,
-      title: websiteTitle,
+      title: "Home",
     },
   };
   for (const path in sitemap) {
@@ -38,7 +38,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
       if (slug === "index") {
         // websiteTitle = page.title;
         // websiteIcon = { src: page.svgicon || page.icon || page.favicon };
-        columns["index"].title = page.title || websiteTitle || "Home";
+        columns["index"].title = "Home" || page.title || websiteTitle || "Home";
         columns["index"].googleDocId = page.googleDocId;
       } else {
         columns[slug].title = page.title;
@@ -89,7 +89,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
             )}
             {!websiteIcon && <span>🏠</span>}
 
-            <h1 className="text-2xl font-semibold">{websiteTitle}</h1>
+            <h1 className="text-xl font-semibold">{websiteTitle}</h1>
           </div>
         </a>
         <div className="flex flex-wrap flex-col sm:flex-row">
@@ -106,7 +106,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
                 key={`footer-${colName}`}
                 className="space-y-4 mb-8 min-w-[128px] max-w-[196px] ml-0 mr-8"
               >
-                <h2 className="text-lg mt-0 font-semibold capitalize">
+                <h2 className="mt-0 font-semibold capitalize text-base">
                   {columns[colName].href && (
                     <Link
                       className="hover:underline "
@@ -121,7 +121,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
                   {columns[colName].pages.map((page) => (
                     <li
                       key={`footer-${page.slug}`}
-                      className="list-none ml-0 normal-case"
+                      className="list-none ml-0 normal-case text-sm"
                     >
                       <Link className="hover:underline " href={page.href}>
                         {page.title || page.slug}

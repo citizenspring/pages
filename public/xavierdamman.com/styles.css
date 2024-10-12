@@ -63,3 +63,7 @@ h4 span {
   text-decoration: underline !important;
   color: #339dff !important;
 }
+
+#footer img.icon {
+  border-radius: 100% !important;
+}
