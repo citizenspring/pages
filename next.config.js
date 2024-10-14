@@ -3,6 +3,11 @@ const subdomainsRedirections = {
     drive:
       "https://drive.google.com/drive/folders/1TqHruYroZDoVvDXOgz8823E5GofxHSeH",
   },
+  "xavierdamman.com": {
+    telegram: "https://t.me/xdamman",
+    drive:
+      "https://drive.google.com/drive/u/0/folders/1akFT2Au9-WqbsTNNKsa9-tsVYHs1U42-",
+  },
   "citizenwallet.xyz": {
     zoom: "https://us06web.zoom.us/j/5686896709",
     signal:
