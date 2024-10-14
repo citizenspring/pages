@@ -351,7 +351,7 @@ export default function Home(props) {
         {!body && !error && <p>Loading...</p>}
         {errorComponent}
         {body && (
-          <div className="flex flex-col w-full mx-auto justify-center dark:bg-gray-950">
+          <div className="flex flex-col w-full mx-auto justify-center dark:bg-gray-950 pt-8 sm:pt-0">
             <div
               id="document"
               className={`${page.slug} content px-4 mx-auto w-full max-w-screen-md flex-1`}
