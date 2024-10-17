@@ -12,7 +12,6 @@ function Outline({ className, websiteTitle, websiteIcon, outline, onChange }) {
     window.scrollTo(0, 0);
     setActive(!isActive);
   }
-
   return (
     <div id="outline" className={className}>
       <div
@@ -57,16 +56,16 @@ function Outline({ className, websiteTitle, websiteIcon, outline, onChange }) {
         </button>
       </div>
       <div
-        className={`sidebar overflow-auto text-black-800 left-0 transform bg-gray-100/90 dark:bg-gray-900
+        className={`sidebar text-black-800 left-0 transform bg-gray-100/90 dark:bg-gray-900
         w-full relative pb-2 mb-8
-        ${isActive ? "" : "hidden sm:fixed sm:-translate-x-full"}"} 
+        ${isActive ? "" : "hidden sm:fixed sm:-translate-x-full"}
         transition duration-200 ease-in-out
         sm:pb-8 sm:pr-2
-        md:fixed
-        md:min-h-screen z-20 md:w-80
+        md:fixed md:top-0 md:bottom-0
+        md:overflow-hidden z-20 md:w-80
         `}
       >
-        <div className="md:min-h-screen md:overflow-y-auto pl-1 pb-8">
+        <div className="h-full overflow-y-auto pl-1 pb-8 md:absolute md:inset-0">
           <div className="sm:hidden absolute top-0 left-0 w-80 h-12"></div>
           <Link href="/" title="Back to homepage">
             <div className="pl-3 pt-6 flex">
@@ -81,37 +80,39 @@ function Outline({ className, websiteTitle, websiteIcon, outline, onChange }) {
             </div>
           </Link>
           <h3 className="pl-3 pt-0 dark:text-gray-50">On this page</h3>
-          {outline
-            .filter((item) => item.level > 0)
-            .map((item, i) => {
-              return (
-                <a
-                  className="block rounded hover:bg-gray-200 dark:hover:bg-slate-300 mx-1"
-                  href={`#${item.slug}`}
-                  key={`${i}-${item.slug}`}
-                >
-                  <div
-                    className={`text-gray-800 dark:text-gray-50 dark:hover:text-gray-800 ${
-                      (item.level == 1 && "ml-2 font-bold") ||
-                      (item.level == 2 && "ml-4") ||
-                      (item.level == 3 && "ml-6") ||
-                      (item.level == 4 && "ml-8 text-sm py-0.5") ||
-                      (item.level == 5 && "ml-10 text-sm") ||
-                      (item.level == 6 && "ml-12 text-sm")
-                    }  p-1`}
+          <div className="h-[calc(100vh-12.5rem)] overflow-y-auto">
+            {outline
+              .filter((item) => item.level > 0)
+              .map((item, i) => {
+                return (
+                  <a
+                    className="block rounded hover:bg-gray-200 dark:hover:bg-slate-300 mx-1"
+                    href={`#${item.slug}`}
+                    key={`${i}-${item.slug}`}
                   >
-                    {item.title}
-                  </div>
-                </a>
-              );
-            })}
+                    <div
+                      className={`text-gray-800 dark:text-gray-50 dark:hover:text-gray-800 ${
+                        (item.level == 1 && "ml-2 font-bold") ||
+                        (item.level == 2 && "ml-4") ||
+                        (item.level == 3 && "ml-6") ||
+                        (item.level == 4 && "ml-8 text-sm py-0.5") ||
+                        (item.level == 5 && "ml-10 text-sm") ||
+                        (item.level == 6 && "ml-12 text-sm")
+                      }  p-1`}
+                    >
+                      {item.title}
+                    </div>
+                  </a>
+                );
+              })}
+          </div>
         </div>
       </div>
-      <div
+      {/* <div
         className={`hidden md:block xl:hidden relative transition width duration-800 ease-in-out ${
           isActive ? "w-80" : "w-0"
         }  sidebarunder z-10 h-screen`}
-      ></div>
+      ></div> */}
     </div>
   );
 }
