@@ -63,7 +63,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   let path, edit;
   let slug = "index";
-  const hostname = params.host;
+  let hostname = params.host;
 
   if (params.path) {
     if (params.path[params.path.length - 1] === "edit") {
@@ -72,6 +72,9 @@ export async function getStaticProps({ params }) {
     }
     if (params.path[0] === hostname) {
       params.path.shift();
+    }
+    if (params.path[0] === "127.0.0.1") {
+      hostnameparams.path.shift();
     }
     slug = params.path.join("/");
   }
