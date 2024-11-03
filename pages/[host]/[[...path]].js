@@ -80,7 +80,7 @@ export async function getStaticProps({ params }) {
     }
   }
 
-  console.log("GET", { host: hostname, slug, params });
+  console.log("GET", { hostname, slug, params });
 
   const host = {
     hostname,
