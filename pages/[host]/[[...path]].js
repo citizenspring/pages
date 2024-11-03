@@ -65,6 +65,7 @@ export async function getStaticProps({ params }) {
   let slug = "index";
   let hostname = params.host;
 
+  console.log("1. GET", hostname, slug, JSON.stringify(params, null, 2));
   if (params.path) {
     if (params.path[params.path.length - 1] === "edit") {
       params.path.pop();
@@ -79,7 +80,7 @@ export async function getStaticProps({ params }) {
     slug = params.path.join("/");
   }
 
-  console.log("GET", hostname, slug);
+  console.log("2. GET", hostname, slug, JSON.stringify(params, null, 2));
 
   const host = {
     hostname,
