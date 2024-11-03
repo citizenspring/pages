@@ -74,7 +74,7 @@ export async function getStaticProps({ params }) {
       params.path.shift();
     }
     if (params.path[0] === "127.0.0.1") {
-      hostnameparams.path.shift();
+      hostname = params.path.shift();
     }
     slug = params.path.join("/");
   }
