@@ -46,10 +46,9 @@
       }
     }
   },
-  "pay.brussels": {
+  "docs.pay.brussels": {
     "hosts": [
-      "pay.brussels",
-      "www.pay.brussels",
+      "docs.pay.brussels",
       "pay.local"
     ],
     "title": "Brussels PAY",
