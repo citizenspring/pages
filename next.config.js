@@ -43,6 +43,7 @@ const subdomainsRedirections = {
     drive: "https://drive.google.com/drive/folders/0AOI4BBfAd3WXUk9PVA",
   },
   "pay.brussels": {
+    whatsapp: "https://chat.whatsapp.com/Lmi6p0m7sdP6B5kRjWindw",
     figma:
       "https://www.figma.com/design/pzbyrueePeVNPqlxqkNLgw/Brussels-Pay?node-id=0-1&t=lSKn3ZqdkmLn2y0s-1",
     drive:
