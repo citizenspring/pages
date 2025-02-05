@@ -3,6 +3,13 @@ const subdomainsRedirections = {
     drive:
       "https://drive.google.com/drive/folders/1TqHruYroZDoVvDXOgz8823E5GofxHSeH",
   },
+  "opencollective.com": {
+    telegram: "https://t.me/opencollective",
+    nostr:
+      "nostr:npub1hsr6x2zhw3y6zzndcfel0xwcckkhf05w2ghnulelsppcruq4c3qqzv5whg",
+    drive:
+      "https://drive.google.com/drive/u/2/folders/1ShlkSnQvExg81ph7Z-oJAFAP9fl8U2ib",
+  },
   "xavierdamman.com": {
     telegram: "https://t.me/xdamman",
     drive:
@@ -55,7 +62,7 @@ const subdomainsRedirections = {
     zoom: "https://us06web.zoom.us/j/5686896709",
     discord: "https://discord.gg/PK5eU46uSG",
     slides:
-      "https://docs.google.com/presentation/d/e/2PACX-1vRTjl0eEyCDxEEKp73Gvqc1tiTyvoaAXYnT738x7NdrFRe_4Gd-rA4fZtjYqcyKXypzEweOKir3XG1K/pub?start=true&loop=true&delayms=8000",
+      "https://docs.google.com/presentation/d/e/2PACX-1vRTjl0eEyCDxEEKp73Gvqc1tiTyvoaAXYnT738x7NdrFRe_4Gd-rA4fZtjYqcyKXypzEweOKir3XG1K/pub?start=true&loop=true&delayms=10000",
     screen:
       "https://www.canva.com/design/DAGcLJVkpsY/KAqfrZE9xbsitM6WGItCJQ/edit",
     calendar:

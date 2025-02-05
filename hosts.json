@@ -56,6 +56,16 @@
     "description": "Citizen initiative to reclaim transaction fees on digital payments to fund the commons",
     "googleDocId": "1wVmuOVYQcU_ixbguolTBzxKKz88RP_RV06ZkSzm7YKA"
   },
+  "wiki.opencollective.com": {
+    "hosts": [
+      "wiki.opencollective.local"
+    ],
+    "title": "Open Collective - wiki",
+    "description": "Co-operating system for open communities.",
+    "image": "/opencollective-logo.jpg",
+    "favicon": "/favicon.ico",
+    "googleDocId": "18Xvb1aw7DRoxgdruewwpDOuVIWSwKairakdeGxRqGEM"
+  },
   "xavierdamman.com": {
     "hosts": [
       "xavier.brussels",
