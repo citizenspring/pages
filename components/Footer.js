@@ -74,7 +74,7 @@ const Footer = ({ googleDocId, sitemap, websiteTitle, websiteIcon }) => {
   return (
     <div
       id="footer"
-      className="bg-gray-800 dark:bg-black text-white mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
+      className="bg-gray-800 dark:bg-[#181818] text-[#B0B0B0] mt-12 py-12 px-6 md:px-12 lg:px-24 w-full"
     >
       <div className="container max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-around">
         <a href="/" title={`${websiteTitle} homepage`}>

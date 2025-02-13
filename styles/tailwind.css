@@ -30,7 +30,7 @@ span {
 .content a,
 .content span a {
   text-decoration: none;
-  @apply no-underline text-green-700;
+  @apply no-underline text-green-700 dark:text-[#BB86FC];
 }
 
 .content .button {
@@ -51,11 +51,11 @@ span {
 }
 
 .content a:hover {
-  @apply text-green-900;
+  @apply text-green-900 dark:text-[#3700B3];
 }
 
 .content a:visited {
-  @apply text-green-600;
+  @apply text-green-600 dark:text-[#9E71C7];
 }
 
 h1,
@@ -91,7 +91,7 @@ p {
 
 p span,
 li span {
-  @apply dark:!text-gray-300;
+  @apply dark:!text-[#E0E0E0];
 }
 
 hr {
@@ -100,6 +100,18 @@ hr {
   height: 1px;
   width: 100%;
   margin: 3rem 0 2rem 0;
+}
+
+#footer a {
+  @apply dark:text-[#A0A0A0];
+}
+
+#footer a:hover {
+  @apply dark:text-[#FFFFFF];
+}
+
+#footer a:visited {
+  @apply dark:text-[#888888];
 }
 
 div.pagebreak {
