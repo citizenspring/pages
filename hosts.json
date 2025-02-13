@@ -66,6 +66,16 @@
     "favicon": "/favicon.ico",
     "googleDocId": "18Xvb1aw7DRoxgdruewwpDOuVIWSwKairakdeGxRqGEM"
   },
+  "opencollective.xyz": {
+    "hosts": [
+      "opencollective.local"
+    ],
+    "title": "Open Collective web3",
+    "description": "A co-op-erating system for your community.",
+    "image": "/opencollective-logo.jpg",
+    "favicon": "/favicon.ico",
+    "googleDocId": "1cYY4mcTPWUSa_mUCf5CZ2HNWYIAsIR3elKpSJEWnAmE"
+  },
   "xavierdamman.com": {
     "hosts": [
       "xavier.brussels",
