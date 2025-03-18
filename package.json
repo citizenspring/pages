@@ -37,6 +37,7 @@
     "graphql-request": "^4.2.0",
     "html-entities": "^2.3.2",
     "html-react-parser": "^5.1.1",
+    "marked": "^15.0.7",
     "moment": "^2.29.1",
     "next": "^14.0.4",
     "node-cache": "^5.1.2",
