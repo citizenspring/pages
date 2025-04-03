@@ -62,7 +62,7 @@ const subdomainsRedirections = {
     zoom: "https://us06web.zoom.us/j/5686896709",
     discord: "https://discord.gg/PK5eU46uSG",
     slides:
-      "https://docs.google.com/presentation/d/e/2PACX-1vRTjl0eEyCDxEEKp73Gvqc1tiTyvoaAXYnT738x7NdrFRe_4Gd-rA4fZtjYqcyKXypzEweOKir3XG1K/pub?start=true&loop=true&delayms=10000",
+      "https://docs.google.com/presentation/d/e/2PACX-1vRTjl0eEyCDxEEKp73Gvqc1tiTyvoaAXYnT738x7NdrFRe_4Gd-rA4fZtjYqcyKXypzEweOKir3XG1K/pub?start=true&loop=true&delayms=13000",
     screen:
       "https://www.canva.com/design/DAGcLJVkpsY/KAqfrZE9xbsitM6WGItCJQ/edit",
     calendar:
