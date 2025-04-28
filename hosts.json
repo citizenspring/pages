@@ -32,6 +32,8 @@
   },
   "openfacilitation.brussels": {
     "hosts": [
+      "openfacilitation.com",
+      "www.openfacilitation.com",
       "openfacilitation.brussels",
       "www.openfacilitation.brussels",
       "openfacilitation.brussels.local"
