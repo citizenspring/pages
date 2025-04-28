@@ -98,7 +98,7 @@ export async function getStaticProps({ params }) {
     }
     // console.info(">>> host.config", host.config);
     pageInfo = getPageMetadata(host.config, slug);
-    console.info(">>> pageInfo", pageInfo);
+    console.info(">>> pageInfo", slug, pageInfo);
     googleDocId = pageInfo.googleDocId;
   } catch (e) {
     console.error(">>> getPageMetadata error", hostname, slug, e);
