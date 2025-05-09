@@ -60,6 +60,7 @@ const subdomainsRedirections = {
     map: "https://maps.app.goo.gl/Bkd4479WPyTe5qzd9",
     notion: "https://commonshub-brussels.notion.site",
     zoom: "https://us06web.zoom.us/j/5686896709",
+    photos: "https://photos.app.goo.gl/pj4Yo1kqwqSCMN16A",
     discord: "https://discord.gg/PK5eU46uSG",
     slides:
       "https://docs.google.com/presentation/d/e/2PACX-1vRTjl0eEyCDxEEKp73Gvqc1tiTyvoaAXYnT738x7NdrFRe_4Gd-rA4fZtjYqcyKXypzEweOKir3XG1K/pub?start=true&loop=true&delayms=13000",
