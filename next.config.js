@@ -69,7 +69,7 @@ const subdomainsRedirections = {
     "daobrussels.screen":
       "https://docs.google.com/presentation/d/e/2PACX-1vR2ZGsJuM_2gnm4V8ys7qLXlFCPGQOg0ct7Na-ZroYdLKamD-wkdPgP16uh4u1I2oLMKFL3V4KqZ52A/pub?start=true&loop=true&delayms=10000",
     calendar:
-      "https://calendar.google.com/calendar/embed?src=c_336112114c844a0d6ed178f0bfcbea8b69253b3f2c83b5ce3ed2c230e1b7a298%40group.calendar.google.com&ctz=Europe%2FBrussels",
+      "https://commonshub.brussels/calendar",
     whatsapp: "https://chat.whatsapp.com/H7yLf16yiVrHInK7XpfEg3",
     deck: "https://docs.google.com/presentation/d/135POHqxUFv_G0_lZHTc7prTs1pvxm-40f02QiZbvPqU/edit?usp=sharing",
     figma:
