@@ -19,7 +19,7 @@
     "url": "git+https://github.com/citizenspring/pages.git"
   },
   "engines": {
-    "node": "^18.0.0"
+    "node": "^25.2.1"
   },
   "author": "Xavier Damman <@xdamman>",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "html-react-parser": "^5.1.1",
     "marked": "^15.0.7",
     "moment": "^2.29.1",
-    "next": "^14.0.4",
+    "next": "^15.5.12",
     "node-cache": "^5.1.2",
     "numeral": "^2.0.6",
     "react": "^18.2.0",
